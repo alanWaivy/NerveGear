@@ -86,7 +86,6 @@ input{
     padding: 6px 8px;
     border-radius: 6px;
     overflow: hidden;
-    transition: all 0.2s ease;
     display: inline-block;
 }
 .checkbox-wrapper-4 .cbx:not(:last-child) {
