@@ -69,7 +69,6 @@
               <span class="dot" onclick='currentSlide(1)'></span>
               <span class="dot" onclick='currentSlide(2)'></span>
               <span class="dot" onclick='currentSlide(3)'></span>
-              <span class="dot" onclick='currentSlide(4)'></span>
             </div>
             
             </div>
@@ -164,7 +163,7 @@
 
             window.addEventListener("load",function() {
                 showSlides(slideIndex);
-                myTimer = setInterval(function(){plusSlides(1)}, 4000);
+                myTimer = setInterval(function(){plusSlides(1)}, 2000);
             
                 //COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
                 slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
