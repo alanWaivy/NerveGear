@@ -68,6 +68,7 @@ input{
     border-radius: 5px;
     cursor: pointer;
     transition: opacity 300ms;
+    font-weight: 500;
 }
 
 #submit:hover{
