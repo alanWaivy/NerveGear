@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <form action="login.php">
-        <span>Sign Up</span>
+        <h2>Sign Up</h2>
         <p>Lorem ipsum dolor sit Numquam voluptatem facere non expedita consequatur dolor amet nihil esse porro.</p>
         <span>
             <input type="text"      name="fname"    placeholder="First Name"        required>
@@ -17,10 +20,28 @@
         <input type="email"     name="email"    placeholder="Email Address"     required>
         <input type="password"  name="pass"     placeholder="Password"          required>
         <input type="password"  name="cpass"    placeholder="Confirm Password"  required>
-        <span>
-            <input type="checkbox"  name="check"    required>Lorem ipsum dolor accusantium in cumque labore.
-        </span>
-        <input type="submit"    name="register" value="Submit">
+
+        <div class="checkbox-wrapper-4">
+
+            <input class="inp-cbx" id="morning" type="checkbox" required>
+
+            <label class="cbx" for="morning">
+                <span>
+                    <svg width="12px" height="10px">
+                    <use xlink:href="#check-4"></use>
+                    </svg>
+                </span>
+                <span>Lorem ipsum dolor accusantium in cumque labore.</span>
+            </label>
+
+            <svg class="inline-svg">
+                <symbol id="check-4" viewbox="0 0 12 10">
+                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                </symbol>
+            </svg>
+        </div>
+
+        <input type="submit"    name="register" id="submit">
     </form>
 </body>
 </html>
