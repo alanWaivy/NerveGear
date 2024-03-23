@@ -6,6 +6,16 @@ body{
 nav{
     display: flex;
     background-color: blue;
+    align-items: center;
+    justify-content: center;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    flex: 1;
+    justify-content: center;
+    gap: 15px;
 }
 
 
