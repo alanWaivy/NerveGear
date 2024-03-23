@@ -33,21 +33,9 @@ form p{
     text-align: center;
 }
 
-form span:nth-child(3){
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-form span:nth-child(3) input{
-    width: 45%;
-    padding: 10px 0;
-}
-
 form
-input:nth-child(4),
-input:nth-child(5),
-input:nth-child(6)
+input:nth-child(3),
+input:nth-child(4)
 {
     width: 100%;
     padding: 10px 0;
@@ -73,6 +61,10 @@ input{
 
 #submit:hover{
     opacity: 80%;
+}
+
+.checkbox-wrapper-4{
+    align-self: flex-start;
 }
 
 .checkbox-wrapper-4 * {
