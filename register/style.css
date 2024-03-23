@@ -58,6 +58,7 @@ input{
     border: 0;
     border-radius: 20px;
     text-align: center;
+    transition: outline 300ms;
 }
 
 input:focus{
