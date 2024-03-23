@@ -5,12 +5,12 @@ body{
 
 nav{
     display: flex;
-    background-color: blue;
+    background-color: white;
     align-items: center;
     justify-content: center;
 }
 
-ul{
+nav ul{
     display: flex;
     list-style: none;
     flex: 1;
@@ -18,4 +18,13 @@ ul{
     gap: 15px;
 }
 
+nav div img{
+    width: 50px;
+}
 
+nav div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
