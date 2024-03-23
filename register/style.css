@@ -112,7 +112,7 @@ input:focus{
     height: 18px;
     border-radius: 4px;
     transform: scale(1);
-    border: 1px solid #cccfdb;
+    border: 1px solid #000000;
     transition: all 0.2s ease;
     box-shadow: 0 1px 1px rgba(0,16,75,0.05);
 }
@@ -136,15 +136,15 @@ input:focus{
     line-height: 18px;
 }
 .checkbox-wrapper-4 .cbx:hover span:first-child {
-    border-color: #07f;
+    border-color: rgb(0, 0, 0);
 }
 .checkbox-wrapper-4 .inp-cbx {
     position: absolute;
     visibility: hidden;
 }
 .checkbox-wrapper-4 .inp-cbx:checked + .cbx span:first-child {
-    background: #07f;
-    border-color: #07f;
+    background: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
     animation: wave-4 0.4s ease;
 }
 .checkbox-wrapper-4 .inp-cbx:checked + .cbx span:first-child svg {
