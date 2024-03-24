@@ -58,3 +58,161 @@ nav .logo{
     align-items: center;
     gap: 10px;
 }
+/*slide style start*/
+
+
+  #slider{
+    width:100%;
+    position:relative;
+    min-height:500px;
+  
+     overflow:hidden;
+  }
+  
+  .slide{
+    width:100%;
+    transition:1s;
+    position:absolute;
+  }
+  
+
+  
+  /*new css */
+  
+
+  .part1 {
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .part1 .firstPslide {
+
+    font-size: 20px;
+    font-weight: 600;
+    color: #00A3FF;
+
+  }
+
+  .part1 .secondPslide {
+    color: #595959;
+  }
+
+  .part1 h1 {
+
+    font-size: 70px;
+    
+  }
+
+
+  .container {
+    display: flex;
+    justify-content: center;
+    height: 32em;
+    
+  }
+
+  #slide01 {
+    background: rgb(255,255,255);
+background: linear-gradient(22deg, rgba(255,255,255,1) 0%, rgba(250,195,173,1) 100%);
+  }
+  #slide02 {
+    background: rgb(255,255,255);
+background: linear-gradient(27deg, rgba(255,255,255,1) 0%, rgba(120,76,178,1) 100%);
+
+  }
+  #slide03 {
+    background: rgb(255,255,255);
+    background: linear-gradient(24deg, rgba(255,255,255,1) 11%, rgba(186,177,25,1) 100%);
+
+  }
+
+  .part2 img  {
+      height: auto;
+      width: 500px;
+  }
+  .container {
+    gap: 13em;
+  }
+
+  .part2 {
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .button img {
+      width: 10px;
+      height: auto;
+      padding-bottom: 1px;
+      padding-top: 1px;
+  }
+
+  .button p {
+    color: white;
+    font-weight: 550;
+    font-size: 14px!important
+  }
+
+  .button{
+    display: flex;
+    gap: 10px;
+    background: #00A3FF;
+    padding: 12px 10px;
+    margin-top: 20px;
+    border-radius: 4px;
+  }
+
+  .buttonA {
+    text-decoration: none;
+    transition: opacity 300ms;
+    
+  }
+  .buttonA img {
+    transition: margin-left 300ms;
+  }
+
+  .buttonA:hover img {
+   margin-left:5px
+  }
+
+  
+  
+
+ /*slide 2*/
+ 
+ #slide02 .part2 img {
+    height: auto;
+    width: 750px!important;
+ }
+
+ #slide02 .container {
+    gap: 0em;
+ }
+
+ #slide02 .part2 {
+  margin-right: -86px;
+ }
+
+/* slide 03*/
+
+#slide03 .part1 .firstPslide {
+  font-weight: 500;
+  font-size: 17;
+}
+
+#slide03 .part2 img {
+
+  width: 650px;
+}
+
+#slide03 .container {
+  gap: 4em;
+}
+
+/* slide style end */
+
