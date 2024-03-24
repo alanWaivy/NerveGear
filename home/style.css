@@ -669,8 +669,37 @@ text-align: center;
 
 }
 
+.asSection {
+  height: 500px;
+  background-image: url("https://github.com/alanWaivy/nerveGear/blob/main/pics/image%20for%20the%20homepage.png?raw=true");
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-around;
+  background-repeat: no-repeat;
+  background-position: center;
 
+}
 
+.asSection .part1 {
+    width: 40%;
+    background: gray;
+    margin: 8% 0px;
+    padding: 0px 20px;
+}
+
+.asSection .part2 {
+  width: 40%;
+}
+
+.asSection button {
+  border: none;
+  padding: 7px 25px;
+  background: #00A3FF;
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+}
+.
 
 /*about us style end*/
 
@@ -679,7 +708,7 @@ text-align: center;
 
 
 
-footer{
+footer {
   background-color: black;
   display: flex;
   flex-direction: column;
