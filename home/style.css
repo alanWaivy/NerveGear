@@ -699,7 +699,7 @@ text-align: center;
   font-size: 15px;
   border-radius: 5px;
 }
-.
+
 
 /*about us style end*/
 
@@ -708,7 +708,7 @@ text-align: center;
 
 
 
-footer {
+footer{
   background-color: black;
   display: flex;
   flex-direction: column;
