@@ -25,14 +25,14 @@ nav a b{
     font-weight: 20;
 }
 
-section #login{
+nav #login{
     padding: 5px 15px 8px 15px;
     background-color: #378CE7 ;
     border-radius: 5px;
     color: white;
 }
 
-section a {
+nav a {
     text-decoration: none;
     color: black;
 }
