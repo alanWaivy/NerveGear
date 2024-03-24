@@ -274,9 +274,13 @@ background: linear-gradient(27deg, rgba(255,255,255,1) 0%, rgba(120,76,178,1) 10
   justify-content: space-evenly;
   align-content: center;
   align-items: center;
-  margin: 0px 30px;
+  margin: 10px 30px;
 }
 
+.brandsSec img {
+  width: 50px;
+  height: auto;
+}
 
 /* brands style end */
 
@@ -473,6 +477,183 @@ color: white;
 }
 
 /*arrows style end*/
+
+/*bs slide show */
+.slide-container{
+  margin-right:30px;
+}
+
+div#bsSecondImg {
+  margin-left: -80px;
+  margin-bottom: -38px;
+}
+
+#bsSecondImg img {
+  width: 460px;
+}
+
+.bsPart2 .container{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  height:550px;
+}
+
+  .slideshow-container {
+      position: relative;
+      width: 400px;
+      overflow: hidden;
+      padding-top: 19px;
+    }
+
+    .slide-container {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .slide1 {
+      flex: 1;
+      min-width: 100%;
+      height: 487px;
+      margin-left: -13px;
+      padding-right: 16px;
+    }
+
+    .prev, .next {
+     
+      background-color: rgba(0, 0, 0, 0);
+      color: white;
+      border: none;
+      cursor: pointer;
+      color:black;
+      padding: 10px;
+      z-index: 1;
+      font-size: xxx-large;
+      
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+
+/**dd**/
+
+
+.bsDot {
+  height: 55px;
+  width: 55px;
+  background-color: #00ff15;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
+.cart {
+  background-color: #D9D9D9;
+  display: flex;
+  flex-direction: column;
+  max-width: 330px;
+  margin-left: auto;
+ 
+  margin-bottom: 20px;
+  border-radius: 25px;
+}
+.bsPart2 .bsDot {
+  margin-left: auto !important;
+  margin-top: -19px;
+  margin-right: -10px;
+}
+
+.bsImg img {
+  height: auto;
+  width: 300px;
+  margin: 10px 20px;
+}
+
+.bsTitle p {
+  text-align: center;
+}
+
+.bsProperties {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  
+}
+
+.bsProperties .prop p {
+
+    padding: 4px 25px;
+    margin: 0px;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    
+}
+
+.bsProperties .prop {
+
+  background-color: gray;
+  width: fit-content;
+  border-radius: 25px;
+  height: fit-content;
+}
+
+
+.bsButtons {
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    
+}
+
+
+.bsButtons {
+ margin-top: 50px;
+
+}
+
+#btn01 , #btn02 {
+  padding: 10px 12px;
+  font-size: 19px;
+
+}
+
+#btn01 {
+  color: #00A3FF;
+  background: rgba(255, 255, 255, 0.767);
+  border: none;
+  transition: background 300ms;
+
+}
+
+#btn01:hover {
+background: black;
+color: white;
+}
+
+#btn02 {
+  color: white;
+  background: #00A3FF;
+  border: none!important;
+  border-radius: 0px 0px 25px 25px;
+  transition: opacity 300ms;
+
+
+}
+
+#btn02:hover {
+  opacity: .6;
+}
+
+
+
+/* bs slideshow end*/
 
 
 
