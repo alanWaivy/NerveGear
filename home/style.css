@@ -265,6 +265,10 @@ background: linear-gradient(27deg, rgba(255,255,255,1) 0%, rgba(120,76,178,1) 10
 
 /* slide style end */
 
+.brandsSec{
+  width: 100%;
+}
+
 footer{
   background-color: black;
   display: flex;
