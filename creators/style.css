@@ -5,7 +5,6 @@
 body{
     margin: 0;
     padding: 0;
-    height: 100vh;
 }
 
 nav{
@@ -64,17 +63,42 @@ nav .logo{
     gap: 10px;
 }
 
+section span{
+    font-size:3rem;
+    font-weight: bolder;
+}
+
+section{
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F6D2C3;
+}
+
+section div:nth-child(1){
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section p {
+    text-align: center;
+}
+
 footer{
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  color: white;
-  align-items: center;
-  justify-content: center;
-  height: 166px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    height: 166px;
 }
 
 footer p{
-  margin: 0;
+    margin: 0;
 }
