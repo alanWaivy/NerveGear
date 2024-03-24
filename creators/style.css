@@ -1,0 +1,80 @@
+*{
+    font-family: "outfit";
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 20px;
+    margin-bottom: -65px;
+    z-index: 6;
+    position: relative;
+    
+
+}
+
+nav a b{
+    font-family: "Bungee";
+    font-weight: 20;
+}
+
+section #login{
+    padding: 5px 15px 8px 15px;
+    background-color: #378CE7 ;
+    border-radius: 5px;
+    color: white;
+}
+
+section a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    flex: 1;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+}
+
+nav a img{
+    width: 50px;
+}
+
+nav .login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+nav .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+footer{
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  height: 166px;
+}
+
+footer p{
+  margin: 0;
+}
