@@ -265,6 +265,112 @@ background: linear-gradient(27deg, rgba(255,255,255,1) 0%, rgba(120,76,178,1) 10
 
 /* slide style end */
 
+
+
+/* brands style start */
+
+.brandsSec {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+
+/* brands style end */
+
+.bsContainer {
+  display: flex;
+  gap: 122px;
+}
+
+.bsDot {
+  height: 55px;
+  width: 55px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
+.bsPart2 {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: 200px;
+
+
+}
+.bsPart2 .bsDot {
+  margin-left: auto !important;
+  margin-top: -19px;
+  margin-right: -10px;
+}
+
+.bsImg img {
+  height: auto;
+  width: 300px;
+  margin: 23px 20px;
+}
+
+.bsTitle p {
+  text-align: center;
+}
+
+.bsProperties {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.bsProperties .prop p {
+
+    padding: 4px 20px;
+    margin: 0px;
+    color: white;
+    font-weight: 400;
+    font-size: 12px;
+    
+}
+
+.bsProperties .prop {
+  
+  background-color: gray;
+  width: fit-content;
+  border-radius: 25px;
+  height: fit-content;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 footer{
   background-color: black;
   display: flex;
