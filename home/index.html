@@ -11,9 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
 </head>
 
 <body>
+    <!-- nav bar start-->
     <nav>
         <a href="#" class="logo">
             <img src="../pics/logo.png" alt="">
@@ -32,200 +34,73 @@
             <a href="" id="signup">Sign Us</a>
         </div>
     </nav>
+    <!-- nav bar end -->
+    <!--sliding part start-->
 
-    <div class="heroPage">
-        <div class="slideshow-container">
-            <div class="slideshow-inner">
-              <div class="mySlides fade">
+  <div id="slider">
+    <!--  first slide  -->
+    <div class="slide" id="slide01"> 
+      <div class="container">
+          <div class="part1">
+            <p class="firstPslide">Upgrade your daily experience</p>
+            <h1>Apple MacBook <br>Air</h1>
+            <p class="secondPslide">ultra portable laptop, the original comes back for an encore.</p>
             
-                <img  src='./assets/img/web-crab-compressed.jpg' style='width: 100%;' alt="sally lightfoot crab"/>
-                <div class="text">Sally Lightfoot Crab</div>
-              </div>
-            
-              <div class="mySlides fade">
-            
-                <img  src='./assets/img/web-fighting-nazcas.jpg' style='width: 100%;' alt="fighting nazca boobies"/>
-                <div class="text">A scuffle between two Nazca Boobies</div>
-              </div>
-            
-              <div class="mySlides fade">
-            
-                <img  src='./assets/img/web-otovalo-waterfall.jpg' style='width: 100%;' alt="otovalo waterfall"/>
-                <div class="text">A waterfall discovered on a hike in Otovalo</div>
-              </div>
-            
-             
-              
-              </div>
-            
-            
-              <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
-              <a class="next" onclick='plusSlides(1)'>&#10095;</a>
-            </div>
-            <br/>
-            
-            
-            <div style='text-align: center;'>
-              <span class="dot" onclick='currentSlide(1)'></span>
-              <span class="dot" onclick='currentSlide(2)'></span>
-              <span class="dot" onclick='currentSlide(3)'></span>
-            </div>
-            
-            </div>
-        <style>
-            .slideshow-container {
-                max-width: 1000px;
-                position: relative;
-                margin: auto
-                            }
-
-            .mySlides {
-                display: none;
-            height: 400px;
-            border: solid 1px black;
-                
-            }
-
-            .prev,
-            .next {
-                cursor: pointer;
-                position: absolute;
-                top: 50%;
-                width: auto;
-                margin-top: -22px;
-                padding: 16px;
-                color: #222428;
-                font-weight: bold;
-                font-size: 30px;
-                transition: .6s ease;
-                border-radius: 0 3px 3px 0
-            }
-
-            .next {
-                right: -50px;
-                border-radius: 3px 3px 3px 3px
-            }
-
-            .prev {
-                left: -50px;
-                border-radius: 3px 3px 3px 3px
-            }
-
-            .prev:hover,
-            .next:hover {
-                color: #f2f2f2;
-                background-color: rgba(0, 0, 0, 0.8)
-            }
-
-            .text {
-                color: #f2f2f2;
-                font-size: 15px;
-                padding-top: 12px;
-            padding-bottom: 12px;
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                text-align: center;
-                background-color: #222428
-            }
-
-            .numbertext {
-                color: #f2f2f2;
-                font-size: 12px;
-                padding: 8px 12px;
-                position: absolute;
-                top: 0
-            }
-
-            .dot {
-                cursor: pointer;
-                height: 15px;
-                width: 15px;
-                margin: 0 2px;
-                background-color: #bbb;
-                border-radius: 50%;
-                display: inline-block;
-                transition: background-color .6s ease
-            }
-
-            .active,
-            .dot:hover {
-                background-color: #717171
-            }
-        </style>
-
-        <script>
-            var slideIndex = 1;
-
-            var myTimer;
-
-            var slideshowContainer;
-
-            window.addEventListener("load",function() {
-                showSlides(slideIndex);
-                myTimer = setInterval(function(){plusSlides(1)}, 2000);
-            
-                //COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
-                slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
-            
-                //UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
-                // slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
-            
-                slideshowContainer.addEventListener('mouseenter', pause)
-                slideshowContainer.addEventListener('mouseleave', resume)
-            })
-
-            // NEXT AND PREVIOUS CONTROL
-            function plusSlides(n){
-            clearInterval(myTimer);
-            if (n < 0){
-                showSlides(slideIndex -= 1);
-            } else {
-            showSlides(slideIndex += 1); 
-            }
-            
-            //COMMENT OUT THE LINES BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
-            
-            if (n === -1){
-                myTimer = setInterval(function(){plusSlides(n + 2)}, 4000);
-            } else {
-                myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
-            }
-            }
-
-            //Controls the current slide and resets interval if needed
-            function currentSlide(n){
-            clearInterval(myTimer);
-            myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
-            showSlides(slideIndex = n);
-            }
-
-            function showSlides(n){
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-            }
-
-            pause = () => {
-            clearInterval(myTimer);
-            }
-
-            resume = () =>{
-            clearInterval(myTimer);
-            myTimer = setInterval(function(){plusSlides(slideIndex)}, 4000);
-            }
-        </script>
+            <a class="buttonA" href="#">
+              <div class="button">
+              <p>SHOP NOW</p>
+              <img src="greaterThanSign.png" alt=">">
+            </div></a>
+          </div>
+          <div class="part2">
+            <img src="img1.png">
+          </div>
+      </div>
     </div>
+    <!-- second slide -->
+    <div class="slide" id="slide02"> 
+      <div class="container">
+          <div class="part1">
+            <p class="firstPslide">For better gaming quality</p>
+            <h1>Acer - Predator <br>Helios Neo 16</h1>
+            <p class="secondPslide">Dive into a neon-lit world with cutting-edge specs</p>
+            
+            <a class="buttonA" href="#">
+              <div class="button">
+              <p>SHOP NOW</p>
+              <img src="greaterThanSign.png" alt=">">
+            </div></a>
+          </div>
+          <div class="part2">
+            <img src="https://github.com/alanWaivy/nerveGear/blob/main/pics/laptop%20image%20for%20second%20slide%20in%20homepage.png?raw=true">
+          </div>
+      </div>
+     </div>
+      <!-- third slide -->
+     <div class="slide" id="slide03"> 
+          <div class="container">
+              <div class="part1">
+                <p class="firstPslide">edit your videos with colored quality</p>
+                <h1>Razer Blade 18</h1>
+                <p class="secondPslide">ultra portable laptop, the original comes back for<br> an encore.</p>
+                
+                <a class="buttonA" href="#">
+                  <div class="button">
+                  <p>SHOP NOW</p>
+                  <img src="greaterThanSign.png" id="gr1" alt=">">
+                </div></a>
+              </div>
+              <div class="part2">
+                <img src="https://github.com/alanWaivy/nerveGear/blob/main/pics/third%20laptop%20in%20homepage%20slides.png?raw=true">
+              </div>
+          </div>
+     </div>
+      
+      
+    </div> 
+     <!--sliding part end -->
+    
+            
 
 </body>
 
