@@ -222,3 +222,17 @@ background: linear-gradient(27deg, rgba(255,255,255,1) 0%, rgba(120,76,178,1) 10
 
 /* slide style end */
 
+footer{
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  height: 166px;
+}
+
+footer p{
+  margin: 0;
+}
