@@ -67,12 +67,12 @@ nav .logo{
     gap: 10px;
 }
 
-section span{
+.hero span{
     font-size:3rem;
     font-weight: bolder;
 }
 
-section{
+.hero{
     height: 650px;
     display: flex;
     align-items: center;
@@ -80,7 +80,7 @@ section{
     background-color: #F6D2C3;
 }
 
-section div:nth-child(1){
+.hero div:nth-child(1){
     width: 43%;
     display: flex;
     flex-direction: column;
@@ -88,21 +88,21 @@ section div:nth-child(1){
     justify-content: center;
 }
 
-section p {
+.hero p {
     text-align: center;
     font-size: larger;
     opacity: 70%;
     font-weight: bold;
 }
 
-section div div{
+.hero div div{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-section div div button{
+.hero div div button{
     width: 49%;
     height: 60px;
     border-radius: 10px;
@@ -111,6 +111,13 @@ section div div button{
     color: white;
     font-size: x-large;
     cursor: pointer;
+}
+
+.us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 footer{
