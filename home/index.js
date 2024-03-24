@@ -9,7 +9,7 @@ slides.forEach(function(elm,i){
 
 setInterval(function(){
   nextSlide();
-}, 4000);
+}, 6000);
 
 function nextSlide(){
   
