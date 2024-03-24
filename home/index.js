@@ -24,3 +24,4 @@ function nextSlide(){
 }); 
 }
 /*slide end*/
+

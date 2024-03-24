@@ -119,27 +119,269 @@
       <div class="bsPart1">
         <h2>Unleash Superior <br> Performance</h2>
         <p>Elevate your computing experience with our cutting-edge laptops. </p> 
-        <button type="button">All Product</button>
+        <button type="button">All Products</button>
       </div>
 
+   
+
+      <!---->
       <div class="bsPart2">
-          <div class="bsDot"></div>
-          <div class="bsImg">
-            <img src="/pics/img slide 1 homepage.png" alt="img">
-          </div>
-          <div class="bsTitle"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
-          <div class="bsProperties">
-            <div class="prop"><p>Gaming</p></div>
-            <div class="prop"><p>Editing</p></div>
-            <div class="prop"><p>Working</p></div>
-          </div>
-          <div class="bsButtons">
-            <button type="button" id="btn01">Add To Cart</button>
-            <button type="button" id="btn02" >Shop Now</button>
+        <style>
+        .slide-container{
+          margin-right:30px;
+        }
+        
+        
+        .bsPart2 .container{
+          display:flex;
+          justify-content:center;
+          gap:20px;
+          height:550px;
+        }
+        
+          .slideshow-container {
+              position: relative;
+              width: 400px;
+              overflow: hidden;
+            }
+        
+            .slide-container {
+              display: flex;
+              transition: transform 0.5s ease;
+            }
+        
+            .slide {
+              flex: 1;
+              min-width: 100%;
+              height: 487px;
+            }
+        
+            .prev, .next {
+             
+              background-color: rgba(0, 0, 0, 0);
+              color: white;
+              border: none;
+              cursor: pointer;
+              color:black;
+              padding: 10px;
+              z-index: 1;
+              font-size: xxx-large;
+              
+            }
+        
+            .prev {
+              left: 0;
+            }
+        
+            .next {
+              right: 0;
+            }
+        
+        /**dd**/
+        
+        
+        .bsDot {
+          height: 55px;
+          width: 55px;
+          background-color: #00ff15;
+          border-radius: 50%;
+          display: inline-block;
+        }
+        
+        
+        .cart {
+          background-color: #D9D9D9;
+          display: flex;
+          flex-direction: column;
+          max-width: 330px;
+          margin-left: auto;
+         
+          margin-bottom: 20px;
+          border-radius: 25px;
+        }
+        .bsPart2 .bsDot {
+          margin-left: auto !important;
+          margin-top: -19px;
+          margin-right: -10px;
+        }
+        
+        .bsImg img {
+          height: auto;
+          width: 300px;
+          margin: 10px 20px;
+        }
+        
+        .bsTitle p {
+          text-align: center;
+        }
+        
+        .bsProperties {
+          display: flex;
+          gap: 5px;
+          justify-content: center;
           
+        }
+        
+        .bsProperties .prop p {
+        
+            padding: 4px 25px;
+            margin: 0px;
+            color: white;
+            font-weight: 400;
+            font-size: 16px;
+            
+        }
+        
+        .bsProperties .prop {
+        
+          background-color: gray;
+          width: fit-content;
+          border-radius: 25px;
+          height: fit-content;
+        }
+        
+        
+        .bsButtons {
+        
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            
+        }
+        
+        
+        .bsButtons {
+         margin-top: 50px;
+        
+        }
+        
+        #btn01 , #btn02 {
+          padding: 10px 12px;
+          font-size: 19px;
+        
+        }
+        
+        #btn01 {
+          color: #00A3FF;
+          background: rgba(255, 255, 255, 0.767);
+          border: none;
+          transition: background 300ms;
+        
+        }
+        
+        #btn01:hover {
+        background: black;
+        color: white;
+        }
+        
+        #btn02 {
+          color: white;
+          background: #00A3FF;
+          border: none!important;
+          border-radius: 0px 0px 25px 25px;
+          transition: opacity 300ms;
+        
+        
+        }
+        
+        #btn02:hover {
+          opacity: .6;
+        }
+        
+        
+        
+        
+        </style>
+        <div class="container">
+          <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <div class="slideshow-container">
+          <div class="slide-container">
+            <div class="slide" > 
+              <div class="cart ">
+                    <div class="bsDot"></div>
+                    <div class="bsImg">
+                      <img src="/pics/img slide 1 homepage.png" alt="img">
+                    </div>
+                    <div class="bsTitle"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+                    <div class="bsProperties">
+                      <div class="prop"><p>Gaming</p></div>
+                      <div class="prop"><p>Editing</p></div>
+                      <div class="prop"><p>Working</p></div>
+                    </div>
+                    <div class="bsButtons">
+                      <button type="button" id="btn01">Add To Cart</button>
+                      <button type="button" id="btn02" >Shop Now</button>
+                    
+                </div></div> </div>
+               
+            <div class="slide" >  
+              <div class="cart ">
+                    <div class="bsDot"></div>
+                    <div class="bsImg">
+                      <img src="/pics/laptop image for second slide in homepage.png" alt="img">
+                    </div>
+                    <div class="bsTitle"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+                    <div class="bsProperties">
+                      <div class="prop"><p>Gaming</p></div>
+                      <div class="prop"><p>Editing</p></div>
+                      <div class="prop"><p>Working</p></div>
+                    </div>
+                    <div class="bsButtons">
+                      <button type="button" id="btn01">Add To Cart</button>
+                      <button type="button" id="btn02" >Shop Now</button>
+                    
+                    </div>
+            </div> </div>
+                
+            <div class="slide" >
+              <div class="cart ">
+                    <div class="bsDot"></div>
+                    <div class="bsImg">
+                      <img src="/pics/third laptop in homepage slides.png" alt="img">
+                    </div>
+                    <div class="bsTitle"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+                    <div class="bsProperties">
+                      <div class="prop"><p>Gaming</p></div>
+                      <div class="prop"><p>Editing</p></div>
+                      <div class="prop"><p>Working</p></div>
+                    </div>
+                    <div class="bsButtons">
+                      <button type="button" id="btn01">Add To Cart</button>
+                      <button type="button" id="btn02" >Shop Now</button>
+                    
+                    </div>
+            </div></div>
           </div>
-
+        </div>
+          <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        
+        </div>
+        
+        
+        <script>
+          let slideIndex = 0;
+        
+          function showSlides() {
+            const slides = document.querySelectorAll('.slide');
+            if (slideIndex >= slides.length) {
+              slideIndex = 0;
+            } else if (slideIndex < 0) {
+              slideIndex = slides.length - 1;
+            }
+            const offset = -slideIndex * 100;
+            document.querySelector('.slide-container').style.transform = `translateX(${offset}%)`;
+          }
+        
+          function moveSlide(n) {
+            slideIndex += n;
+            showSlides();
+          }
+        
+          showSlides();
+        </script>
+        
       </div>
+      
 
     </div>
 

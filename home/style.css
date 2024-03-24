@@ -274,15 +274,17 @@ background: linear-gradient(27deg, rgba(255,255,255,1) 0%, rgba(120,76,178,1) 10
   justify-content: space-evenly;
   align-content: center;
   align-items: center;
-  margin: 30px;
+  margin: 0px 30px;
 }
 
 
 /* brands style end */
 
+
+/**/
 .bsContainer {
   display: flex;
-  gap: 122px;
+  gap: 279px;
   align-items: center;
   justify-content: center;
 }
@@ -296,13 +298,13 @@ background: linear-gradient(27deg, rgba(255,255,255,1) 0%, rgba(120,76,178,1) 10
 }
 
 
-.bsPart2 {
+.cart {
   background-color: #D9D9D9;
   display: flex;
   flex-direction: column;
   max-width: 330px;
   margin-left: auto;
-  margin-right: 200px;
+ 
   margin-bottom: 20px;
   border-radius: 25px;
 }
@@ -409,7 +411,7 @@ color: white;
 }
 
 .bsPart1 {
-  margin-left:20px;
+  margin-bottom: 30px;
 }
 .bsPart1 h2{
   font-size: 50px;
@@ -419,18 +421,58 @@ color: white;
 
 .bsPart1 p {
   font-size: 20px;
+  width: 400px;
 
 }
 
 
 .bsPart1 button {
-  
+  border: none;
+  padding: 10px 50px;
+  font-size: 15px;
+  background: #378CE7;
+  color: white;
+  font-weight: 400;
+  border-radius: 6px;
+  transition: opacity 300ms;
+}
+
+.bsPart1 button:hover {
+  opacity: .8;
 }
 
 
 
+.bsPart2 {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+
+}
+
+/*arrows style start*/
 
 
+#btnright,
+#btnleft{
+  display: block;
+  margin: 0px auto;
+  width: 25px;
+  height: 25px;
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+  
+}
+#btnright{
+ transform: rotate(135deg);
+}
+
+#btnleft
+{
+ transform: rotate(-45deg);
+}
+
+/*arrows style end*/
 
 
 
