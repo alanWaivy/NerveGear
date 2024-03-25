@@ -5,6 +5,7 @@
 body{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 a{
   text-decoration: none;
@@ -266,6 +267,14 @@ background: linear-gradient(27deg, rgba(255,255,255,1) 0%, rgba(120,76,178,1) 10
 
 /* slide style end */
 
+/*glow effect 01 style start*/
+#glowEf01 {
+  position: absolute;
+  top: 250px;
+
+}
+
+/* glow effect 01 style end */
 
 
 /* brands style start */
@@ -289,6 +298,15 @@ background: linear-gradient(27deg, rgba(255,255,255,1) 0%, rgba(120,76,178,1) 10
 
 /* brands style end */
 
+/*glow effect 02 start*/
+
+#glowEf02 {
+  position: absolute;
+  right: -65px;
+  bottom: -700px;
+}
+
+/*glow effect 02 end*/
 
 /**/
 .bsContainer {
@@ -661,8 +679,24 @@ color: white;
 
 /* bs slideshow end*/
 
+/*glow effect style 03 start*/
+#glowEf03 {
+  position: absolute;
+  bottom: -1389px;
+  z-index: 5;
+}
 
+/*glow effect style 03 end*/
 
+/*glow effect style 04 start*/
+#glowEf04 {
+  position: absolute;
+  bottom: -1825px;
+  right: -12px;
+  z-index: 5;
+}
+
+/*glow effect style 04 end */
 
 /*about us style start*/
 
@@ -840,18 +874,49 @@ margin-left: 6px;
 
 
 
+/*glow effect style 05 start*/
+#glowEf05 {
+  
+  z-index: 5;
+  align-self: end;
 
+}
+
+/*glow effect style 05 end */
+
+/*glow effect style 06 start*/
+#glowEf06 {
+  
+  z-index: 5;
+  align-self: end;
+  width: 200px;
+
+}
+
+#glowEf06 img {
+  margin-bottom: -10px;
+}
+
+/*glow effect style 06 end */
 
 footer{
   background-color: black;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  gap: 26%;
   color: white;
-  align-items: center;
   justify-content: center;
   height: 166px;
 }
+
+footer #fcontainer {
+  display: flex;
+  flex-direction: column;
+ gap: 20px;
+ align-items: center;
+  justify-content: center;
+}
+
+
 
 footer p{
   margin: 0;
