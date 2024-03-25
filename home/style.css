@@ -272,6 +272,7 @@ background: linear-gradient(27deg, rgba(255,255,255,1) 0%, rgba(120,76,178,1) 10
 #glowEf01 {
   position: absolute;
   top: 250px;
+  pointer-events: none!important;
 
 }
 
@@ -305,6 +306,7 @@ background: linear-gradient(27deg, rgba(255,255,255,1) 0%, rgba(120,76,178,1) 10
   position: absolute;
   right: -65px;
   bottom: -700px;
+  
 }
 
 /*glow effect 02 end*/
@@ -315,7 +317,10 @@ background: linear-gradient(27deg, rgba(255,255,255,1) 0%, rgba(120,76,178,1) 10
   gap: 279px;
   align-items: center;
   justify-content: center;
+  z-index: 14;
+  position: relative;
 }
+
 
 .bsDot {
   height: 55px;
