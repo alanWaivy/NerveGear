@@ -221,6 +221,7 @@ background: linear-gradient(27deg, rgba(255,255,255,1) 0%, rgba(120,76,178,1) 10
 
   .buttonA {
     text-decoration: none;
+    z-index: 7;
     
   }
   .buttonA img {
