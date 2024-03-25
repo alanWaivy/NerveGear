@@ -690,6 +690,7 @@ color: white;
   position: absolute;
   bottom: -1389px;
   z-index: 5;
+  pointer-events: none!important;
 }
 
 /*glow effect style 03 end*/
@@ -738,6 +739,7 @@ text-align: center;
 .asSection .part1 h2 {
   color: white;
   font-size: 40px;
+  font-weight: 500;
   margin-top: 0px;
 }
 
@@ -748,8 +750,8 @@ text-align: center;
 .asSection button {
   border: none;
   padding: 7px 25px;
-  background: #00A3FF;
-  color: white;
+  background: white;
+  color: #00A3FF;
   font-size: 15px;
   border-radius: 5px;
   transition: opacity, transform 300ms;
