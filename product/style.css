@@ -198,6 +198,7 @@ div #bsSecondImg {
   flex-direction: column;
   max-width: 330px;
   border-radius: 25px;
+  
 }
 
 .bsDot {
@@ -351,6 +352,7 @@ nav .logo{
   row-gap: 50px;
   align-items: center;
   justify-content: space-between;
+  margin-top: -110px;
 }
 
 /*searchBar style start */
