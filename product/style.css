@@ -290,9 +290,10 @@ nav .logo{
 
 .filtering{
   display: flex;
-  gap: 15px;
+  gap: 200px;
   width: 100%;
   margin-bottom: 50px;
+  align-items: center;
 }
 
 .material-symbols-outlined {
@@ -307,6 +308,90 @@ nav .logo{
   align-items: center;
   justify-content: space-between;
 }
+
+/*searchBar style start */
+
+
+.searchBar i {
+  transform : rotateY(-180deg);
+  color:white;
+ 
+}
+
+.searchBar button {
+  border :none;
+  padding :5px 20px;
+  border-radius:25px;
+  background : #00A3FF;
+  transition: transform 300ms;
+
+}
+
+.searchBar input {
+  border :none;
+  margin-left:5px;
+  
+  
+}
+
+.searchBar input:focus {
+outline:none;
+}
+
+.searchBar {
+  height: 30px;
+  border: 1.5px #00A3FF solid;
+  width: 300px;
+  gap: 54px;
+  padding: 4px 0px;
+  border-radius: 25px;
+  padding-bottom: 0px ! Important;
+  margin-top: 20px;
+  display: flex;
+  align-content: center;
+  align-items: baseline;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  }
+
+.searchBar input::placeholder {
+  color:grey;
+  font-size:13px;
+  font-weight:700;
+  
+}
+
+.searchBar button:hover {
+  transform:scale(.9);
+  opacity:.8;
+  
+}
+/*searchBar style end */
+
+/* sortby & filter & searchBar style start */
+
+div#btns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 13px;
+}
+
+div#sb {
+  display: flex;
+  justify-content: flex-end;
+  width: 70%;
+}
+
+
+
+
+
+/* sortby & filter & searchBAr style start */
+
+
+
 footer{
   background-color: black;
   display: flex;
