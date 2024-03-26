@@ -16,18 +16,7 @@ nav a b{
     font-weight: 20;
 }
 
-nav #login{
-    padding: 5px 15px 8px 15px;
-    background-color: #378CE7 ;
-    border-radius: 5px;
-    color: white;
-    transition: opacity,transform 300ms;
-}
 
-section #login:hover {
-  opacity: .8;
-  transform: scale(.9);
-}
 
 nav a {
     text-decoration: none;
@@ -82,7 +71,7 @@ nav a img{
     width: 50px;
 }
 
-nav .login{
+nav .cart{
     display: flex;
     justify-content: center;
     align-items: center;
