@@ -12,6 +12,8 @@ a{
   text-decoration: none;
 }
 
+
+
 nav{
   display: flex;
   align-items: center;
@@ -21,6 +23,29 @@ nav{
   z-index: 6;
   position: relative;
 }
+
+/*login btns style start */
+
+.login {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+}
+.login #login:hover , .login #signup:hover  {
+
+  transform: scale(.9);
+  opacity: .8;
+}
+
+.login #login , .login #signup {
+  transition: opacity,transform 300ms;
+}
+
+/*login btns style start */
 
 nav a b{
   font-family: "Bungee";
