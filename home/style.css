@@ -2,11 +2,30 @@
     font-family: "outfit" ,sans-serif;
 }
 
+html,body {
+  scroll-behavior: smooth;
+}
+
+
 body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
+
+::-webkit-scrollbar {
+  width: 10px; /* Adjust as needed */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Grey color */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Grey color */
+  border-radius: 6px;
+}
+
 a{
   text-decoration: none;
 }
@@ -902,7 +921,7 @@ margin-left: 6px;
 }
 
 #glowEf06 img {
-  margin-bottom: -10px;
+  margin-bottom: -3px;
 }
 
 /*glow effect style 06 end */
