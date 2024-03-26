@@ -5,6 +5,7 @@
 body{
     margin: 0;
     padding: 0;
+	position: absolute;
 }
 
 body #brands{
@@ -16,11 +17,9 @@ nav{
     align-items: center;
     justify-content: center;
     padding: 5px 20px;
-    margin-bottom: 65px;
+    margin-bottom: -65px;
     z-index: 6;
     position: relative;
-    
-
 }
 
 nav a b{
@@ -33,6 +32,12 @@ nav #login{
     background-color: #378CE7 ;
     border-radius: 5px;
     color: white;
+    transition: opacity,transform 300ms;
+}
+
+section #login:hover {
+  opacity: .8;
+  transform: scale(.9);
 }
 
 nav a {
@@ -40,6 +45,40 @@ nav a {
     color: black;
 }
 
+/*hover nav start*/
+.menu li {
+  display: block;
+  height: 100%;
+  margin-right: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+
+.menu li:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  display: block;
+  transition: all 0.3s ease;
+  bottom: 25%;
+  margin-bottom: -5px!important;
+  background: #00A3FF!important;
+}
+
+.menu li:hover::after {
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
+
+
+/*hover nav  end*/
 nav ul{
     display: flex;
     list-style: none;
@@ -48,6 +87,7 @@ nav ul{
     gap: 30px;
     padding: 0;
 }
+
 
 nav a img{
     width: 50px;
@@ -120,13 +160,11 @@ nav .logo{
     justify-content: center;
 }
 
-
 /*QA style start */
 
 #QA {
     margin-bottom: 100px;
 }
-
 
 #qaHeader {
     display: flex;
@@ -137,7 +175,8 @@ nav .logo{
     align-items: center;
 }
 
-#qaHeader h1,#qaHeader p{
+#qaHeader h1,
+#qaHeader p{
     text-align: center;
 }
 
