@@ -127,7 +127,7 @@ gap:30px ;
 }
   /* profile Style end */
 .scPart1{background-color: #D9D9D9;
-  }
+  width: 50%;}
 .scProduct{background-color: #D9D9D9;}
 .scCheckboxs .scProduct{gap:30px;}
 
