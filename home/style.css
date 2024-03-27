@@ -949,13 +949,8 @@ margin-left: 6px;
 #glowEf05 {
   position: absolute;
   left: 0;
-  bottom: 0;
-  width: auto;
-  height: auto;
-  top: -160px ! Important;
-  z-index: 6;
+  top: 0; /* Adjusted to start from the top of the footer */
 }
-
 /*glow effect style 05 end */
 
 /* Adjustments to glow effect style 06 */
@@ -967,6 +962,7 @@ margin-left: 6px;
   height: auto;
   top: -40px ! Important;
 }
+
 
 footer {
   background-color: black;
