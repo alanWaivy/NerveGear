@@ -171,11 +171,34 @@ input:focus{
 }
 .designContainer {
     width: 50%;
-    background: #00A3FF;    
+    background: #00A3FF;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .formContainer {
     margin-left: 100px;
+}
+
+
+/**/
+
+#dcTxt p {
+    text-align: center;
+    color: white;
+    font-weight: 500;
+}
+
+#dcTxt {
+    width: 500px;
+}
+
+div#dcImg {
+    margin-right: 50px;
+    margin-bottom: -19px;
 }
 
