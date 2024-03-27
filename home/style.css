@@ -945,27 +945,41 @@ margin-left: 6px;
 
 
 /*glow effect style 05 start*/
-#glowEf05,#glowEf06 {
-  position: absolute;
 
+#glowEf05 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  top: -160px ! Important;
+  z-index: 6;
 }
 
 /*glow effect style 05 end */
 
-/*glow effect style 06 start*/
+/* Adjustments to glow effect style 06 */
+#glowEf06 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  top: -40px ! Important;
+}
 
-
-
-/*glow effect style 06 end */
-
-footer{
+footer {
   background-color: black;
   display: flex;
   gap: 26%;
   color: white;
   justify-content: center;
-  height: 166px;
+  height: 190px;
+  overflow: hidden;
+  position: relative; /* Add position relative to create a positioning context for absolute elements */
+  z-index: 2;
 }
+
 
 footer #fcontainer {
   display: flex;
