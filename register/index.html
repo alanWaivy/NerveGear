@@ -10,39 +10,57 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <form action="login.php" method="post">
-        <h2>Sign Up</h2>
-        <p>Don't Miss Out! Sign Up Now</p>
-        <span>
-            <input type="text"      name="fname"    placeholder="First Name"        required>
-            <input type="text"      name="lname"    placeholder="Last Name"         required>
-        </span>
-        <input type="email"     name="email"    placeholder="Email Address"     required>
-        <input type="password"  name="password" placeholder="Password"          required>
-        <input type="password"  name="cpass"    placeholder="Confirm Password"  required>
 
-        <div class="checkbox-wrapper-4">
+    <div class="container">
 
-            <input class="inp-cbx" id="morning" type="checkbox" required>
-
-            <label class="cbx" for="morning">
+        <div class="formContainer">
+            <form action="login.php" method="post">
+                <h2>Sign Up</h2>
+                <p>Don't Miss Out! Sign Up Now</p>
                 <span>
-                    <svg width="12px" height="10px">
-                    <use xlink:href="#check-4"></use>
-                    </svg>
+                    <input type="text"      name="fname"    placeholder="First Name"        required>
+                    <input type="text"      name="lname"    placeholder="Last Name"         required>
                 </span>
-                <span>agree to our Terms of Service and Privacy Policy</span>
-            </label>
-
-            <svg class="inline-svg">
-                <symbol id="check-4" viewbox="0 0 12 10">
-                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                </symbol>
-            </svg>
+                <input type="email"     name="email"    placeholder="Email Address"     required>
+                <input type="password"  name="password" placeholder="Password"          required>
+                <input type="password"  name="cpass"    placeholder="Confirm Password"  required>
+        
+                <div class="checkbox-wrapper-4">
+        
+                    <input class="inp-cbx" id="morning" type="checkbox" required>
+        
+                    <label class="cbx" for="morning">
+                        <span>
+                            <svg width="12px" height="10px">
+                            <use xlink:href="#check-4"></use>
+                            </svg>
+                        </span>
+                        <span>agree to our Terms of Service and Privacy Policy</span>
+                    </label>
+        
+                    <svg class="inline-svg">
+                        <symbol id="check-4" viewbox="0 0 12 10">
+                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </symbol>
+                    </svg>
+                </div>
+        
+                <input type="submit"    name="register" id="submit">
+                <p>Already have an account? <a href="#">Sign In</a></p>
+            </form>
         </div>
+            
+    <div class="designContainer"> 
+        <div id="dcImg">
+            <img src="/pics/login-register/man flying.png" alt="flying man" width="500px" height="auto">
+        </div>
+        <div id="dcTxt">
+            <p>Elevate your journey with our laptops – freedom, style, and limitless possibilities in the palm of your hand</p>
+        </div>
+    </div>
 
-        <input type="submit"    name="register" id="submit">
-        <p>Already have an account? <a href="#">Sign In</a></p>
-    </form>
+  
+
+    </div>
 </body>
 </html>

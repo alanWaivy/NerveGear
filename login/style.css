@@ -17,16 +17,39 @@ h2{
     margin: 0;
 }
 
-form{
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+
+}
+.designContainer {
+    width: 50%;
+    background: #00A3FF;    
+    height: 100vh;
+}
+
+.formContainer {
+    margin-left: 100px;
+}
+
+
+
+form {
     background-color: #d9d9d9;
     display: flex;
     flex-direction: column;
-    width: 400px;
     align-items: center;
     justify-content: center;
     padding: 50px;
     gap: 20px;
     border-radius: 15px;
+    max-width: 400px;
+    margin-left:55px;
+
 }
 
 form p{
@@ -144,3 +167,56 @@ input:focus{
     pointer-events: none;
     user-select: none;
 }
+
+/**/
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+
+}
+.designContainer {
+    width: 50%;
+    background: #00A3FF;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.formContainer {
+    margin-right: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+
+
+/**/
+
+
+#dcTxt p {
+    text-align: center;
+    color: white;
+    font-weight: 500;
+}
+
+#dcTxt {
+    width: 500px;
+}
+
+div#dcImg {
+    margin-right: 50px;
+    margin-bottom: -19px;
+}
+
+
+
+
