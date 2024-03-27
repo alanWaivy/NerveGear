@@ -251,14 +251,20 @@ margin-left: 6px;
 
 
 
+
+
+
 /*glow effect style 05 start*/
 
 #glowEf05 {
   position: absolute;
   left: 0;
-  top: 0; /* Adjusted to start from the top of the footer */
+  top: 2650px;
+  z-index: 8;
+  opacity: 1;
 }
 /*glow effect style 05 end */
+
 
 /* Adjustments to glow effect style 06 */
 #glowEf06 {
