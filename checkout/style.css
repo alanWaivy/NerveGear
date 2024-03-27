@@ -1,0 +1,129 @@
+/* Global styles */
+* {
+    font-family: "outfit", sans-serif; /* Set default font family */
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Hide horizontal overflow */
+  }
+  
+  a {
+    text-decoration: none; /* Remove default underline from links */
+  }
+  
+  /* Navigation styles */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 20px;
+    margin-bottom: -65px; /* Adjust for overlapping content */
+    z-index: 6;
+    position: relative;
+  }
+  
+  /* Login button styles */
+  .login {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Logo styles */
+  nav .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #000; /* Set logo color */
+  }
+  
+  nav a img {
+    width: 50px; /* Adjust image width */
+  }
+  
+  /* Navigation menu styles */
+  nav ul {
+    display: flex;
+    list-style: none;
+    flex: 1;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+  }
+  
+  /* Main navigation link styles */
+  nav a b {
+    font-family: "Bungee";
+    font-weight: 20;
+  }
+  nav a {
+    text-decoration: none;
+    color: black; /* Set default link color */
+  }
+  
+  /* Hover effect for navigation links */
+  .menu li {
+    display: block;
+    height: 100%;
+    margin-right: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow-wrap: break-word;
+    color: #000000; /* Set default text color */
+    transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1); /* Smooth transition */
+  }
+  
+  .menu li:after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    border-radius: 25px;
+    display: block;
+    transition: all 0.3s ease; /* Smooth transition */
+    bottom: 16%;
+    margin-bottom: -5px !important; /* Adjust spacing */
+    background: #00a3ff !important; /* Set default background color */
+  }
+  
+  /* Navigation link specific styles */
+  .menu #mainPage:after {
+    width: 85px; /* Adjust width for specific link */
+    height: 3px;
+  }
+  
+  .menu li:hover::after {
+    width: 100%; /* Expand on hover */
+    height: 3px;
+    background-color: #fff; /* Set hover background color */
+  }
+  
+  .menu li .all-product {
+    margin-right: 12.5px;
+    width: 117.6px; /* Adjust width for specific link */
+    overflow-wrap: break-word;
+    font-family: 'Outfit';
+    font-weight: 500;
+    font-size: 20px;
+    color: #000000; /* Set text color */
+  }
+  
+  .menu .rectangle-28 {
+    border-radius: 4px;
+    background: #00a3ff; /* Set background color */
+    align-self: flex-start;
+    width: 98px; /* Adjust width */
+    height: 5px;
+  }
+  /* profile Style start */
+.profile{display: flex;
+gap:30px ;               
+}
+  /* profile Style end */
