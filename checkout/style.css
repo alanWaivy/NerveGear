@@ -19,7 +19,6 @@
     align-items: center;
     justify-content: center;
     padding: 5px 20px;
-    margin-bottom: -65px; /* Adjust for overlapping content */
     z-index: 6;
     position: relative;
   }
