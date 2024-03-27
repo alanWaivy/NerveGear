@@ -382,10 +382,9 @@ nav .logo{
 }
 
 .searchBar input {
-  border :none;
-  margin-left:5px;
-  
-  
+    border: none;
+    margin-left: 5px;
+    width: 90%;
 }
 
 .searchBar input:focus {
@@ -396,7 +395,6 @@ outline:none;
   height: 30px;
   border: 1.5px #00A3FF solid;
   width: 300px;
-  gap: 54px;
   padding: 4px 0px;
   border-radius: 25px;
   padding-bottom: 0px ! Important;
