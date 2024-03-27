@@ -490,9 +490,6 @@ color: white;
 
 }
 
-#btn02:hover {
-  opacity: .6;
-}
 
 
 
@@ -736,13 +733,14 @@ color: white;
   background: #00A3FF;
   border: none!important;
   border-radius: 0px 0px 25px 25px;
-  transition: opacity 300ms;
+  transition: opacity,background 300ms;
 
 
 }
 
 #btn02:hover {
-  opacity: .6;
+  color: #ffffff;
+  background: rgb(0, 0, 0);
 }
 
 
