@@ -945,27 +945,16 @@ margin-left: 6px;
 
 
 /*glow effect style 05 start*/
-#glowEf05 {
-  
-  z-index: 5;
-  align-self: end;
+#glowEf05,#glowEf06 {
+  position: absolute;
 
 }
 
 /*glow effect style 05 end */
 
 /*glow effect style 06 start*/
-#glowEf06 {
-  
-  z-index: 5;
-  align-self: end;
-  width: 200px;
 
-}
 
-#glowEf06 img {
-  margin-bottom: -3px;
-}
 
 /*glow effect style 06 end */
 
