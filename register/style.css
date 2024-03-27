@@ -21,7 +21,7 @@ form{
     background-color: #d9d9d9;
     display: flex;
     flex-direction: column;
-    width: 400px;
+    max-width: 400px;
     align-items: center;
     justify-content: center;
     padding: 50px;
@@ -157,3 +157,25 @@ input:focus{
     pointer-events: none;
     user-select: none;
 }
+
+
+/**/
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+
+}
+.designContainer {
+    width: 50%;
+    background: #00A3FF;    
+    height: 100vh;
+}
+
+.formContainer {
+    margin-left: 100px;
+}
+
