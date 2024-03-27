@@ -28,7 +28,7 @@ h2{
 }
 .designContainer {
     width: 50%;
-    background: cornflowerblue;    
+    background: #00A3FF;    
     height: 100vh;
 }
 
@@ -56,12 +56,14 @@ form {
     background-color: #d9d9d9;
     display: flex;
     flex-direction: column;
-    width: 400px;
     align-items: center;
     justify-content: center;
     padding: 50px;
     gap: 20px;
     border-radius: 15px;
+    max-width: 400px;
+    margin-left:55px;
+
 }
 
 form p{
