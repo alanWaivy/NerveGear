@@ -126,11 +126,11 @@
 gap:30px ;               
 }
   /* profile Style end */
-#scContainer{display: flex;}
 .scPart1{background-color: #D9D9D9;
 }
 .scProduct{background-color: #D9D9D9;}
-.scPart1.scPart2{margin-bottom: 20px;}
+.scPart1.scPart2{display: flex;
+margin-right: 10px;}
 
 
 
