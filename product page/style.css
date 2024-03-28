@@ -294,6 +294,25 @@ nav {
 .bsButtons {
   margin-top: 50px;
 }
+.hero {
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F6D2C3;
+}
+;.hero.part02 {
+  width: 40%;
+  padding-right: 50px;
+}
+.hero.part02 .button1 {
+  width: 40%;
+  height: 60%;
+  background-color: black;
+  color: #D9D9D9;
+  border-radius: 5px;
+  font-size: x-large;
+}
   
   
   
