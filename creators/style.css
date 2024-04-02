@@ -440,19 +440,57 @@ nav {
 /* QA style end*/
 
 
+
+/*glow effect style 05 start*/
+
+#glowEf05 {
+    position: absolute;
+    left: 0;
+    top: 1952px;
+    z-index: 8;
+    opacity: 1;
+  }
+  /*glow effect style 05 end */
+  
+  /* Adjustments to glow effect style 06 */
+  #glowEf06 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    top: -40px ! Important;
+  }
+  
+
+
 /* footer start */
-footer{
+
+footer {
     background-color: black;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    gap: 26%;
     color: white;
-    align-items: center;
     justify-content: center;
-    height: 166px;
-}
-
-footer p{
+    height: 190px;
+    overflow: hidden;
+    position: relative; /* Add position relative to create a positioning context for absolute elements */
+    z-index: 2;
+  }
+  
+  
+  footer #fcontainer {
+    display: flex;
+    flex-direction: column;
+   gap: 20px;
+   align-items: center;
+    justify-content: center;
+  }
+  
+  
+  
+  footer p{
     margin: 0;
-}
+  }
+  
 /* footer end */
