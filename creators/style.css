@@ -11,100 +11,150 @@ body{
 body #brands{
     width: 100%;
 }
+/*nav style start*/
 
-nav{
+
+/*NAV STYLE START */
+
+/* Navigation styles */
+nav {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 5px 20px;
-    margin-bottom: -65px;
+    margin-bottom: -65px; /* Adjust for overlapping content */
     z-index: 6;
     position: relative;
-}
-
-nav a b{
-    font-family: "Bungee";
-    font-weight: 20;
-}
-
-nav #login{
-    padding: 5px 15px 8px 15px;
-    background-color: #378CE7 ;
-    border-radius: 5px;
-    color: white;
-    transition: opacity,transform 300ms;
-}
-
-section #login:hover {
-    opacity: .8;
-    transform: scale(.9);
-}
-
-nav a {
-    text-decoration: none;
-    color: black;
-}
-
-/*hover nav start*/
-.menu li {
-    display: block;
-    height: 100%;
-    margin-right: 30px;
-    position: relative;
+  }
+  
+  /* Login button styles */
+  .login {
     display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
     align-items: center;
-    transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-
-
-.menu li:after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 1px;
-    display: block;
-    transition: all 0.3s ease;
-    bottom: 25%;
-    margin-bottom: -5px!important;
-    background: #00A3FF!important;
-}
-
-.menu li:hover::after {
-    width: 100%;
-    height: 2px;
-    background-color: #fff;
-}
-
-/*hover nav  end*/
-nav ul{
+    gap: 10px;
+  }
+  
+  .login #login:hover,
+  .login #signup:hover {
+    transform: scale(0.9); /* Shrink on hover */
+    opacity: 0.8; /* Reduce opacity on hover */
+  }
+  
+  .login #login,
+  .login #signup {
+    transition: opacity, transform 300ms; /* Smooth transition */
+  }
+  
+  /* Logo styles */
+  nav .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #000; /* Set logo color */
+  }
+  
+  nav a img {
+    width: 50px; /* Adjust image width */
+  }
+  
+  /* Navigation menu styles */
+  nav ul {
     display: flex;
     list-style: none;
     flex: 1;
     justify-content: center;
     gap: 30px;
     padding: 0;
-}
-
-
-nav a img{
-    width: 50px;
-}
-
-nav .login{
+  }
+  
+  /* Main navigation link styles */
+  nav a b {
+    font-family: "Bungee";
+    font-weight: 20;
+  }
+  
+  nav #login {
+    padding: 5px 15px 8px 15px;
+    background-color: #378ce7; /* Set login button background color */
+    border-radius: 5px; /* Rounded corners */
+    color: white; /* Set text color */
+    transition: opacity, transform 300ms; /* Smooth transition */
+  }
+  
+  /* Hover effect for login button */
+  section #login:hover {
+    opacity: 0.8; /* Reduce opacity on hover */
+    transform: scale(0.9); /* Shrink on hover */
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: black; /* Set default link color */
+  }
+  
+  /* Hover effect for navigation links */
+  .menu li {
+    display: block;
+    height: 100%;
+    margin-right: 30px;
+    position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 20px;
-}
+    overflow-wrap: break-word;
+    color: #000000; /* Set default text color */
+    transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1); /* Smooth transition */
+  }
+  
+  .menu li:after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    border-radius: 25px;
+    display: block;
+    transition: all 0.3s ease; /* Smooth transition */
+    bottom: 16%;
+    margin-bottom: -5px !important; /* Adjust spacing */
+    background: #00a3ff !important; /* Set default background color */
+  }
+  
+  /* Navigation link specific styles */
+  .menu #mainPage:after {
+    width: 65px; /* Adjust width for specific link */
+    height: 3px;
+  }
+  
+  .menu li:hover::after {
+    width: 100%; /* Expand on hover */
+    height: 3px;
+    background-color: #fff; /* Set hover background color */
+  }
+  
+  .menu li .all-product {
+    margin-right: 12.5px;
+    width: 117.6px; /* Adjust width for specific link */
+    overflow-wrap: break-word;
+    font-family: 'Outfit';
+    font-weight: 500;
+    font-size: 20px;
+    color: #000000; /* Set text color */
+  }
+  
+  .menu .rectangle-28 {
+    border-radius: 4px;
+    background: #00a3ff; /* Set background color */
+    align-self: flex-start;
+    width: 98px; /* Adjust width */
+    height: 5px;
+  }
+  
+  /* NAV STYLE END */
 
-nav .logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
+/*nav style end*/
 .hero span{
     font-size:3rem;
     font-weight: bolder;
@@ -149,6 +199,15 @@ nav .logo{
     color: white;
     font-size: x-large;
     cursor: pointer;
+}
+
+#Hbtn01 ,#Hbtn02 {
+   transition: transform 300ms ease-in-out;
+}
+
+#Hbtn01:hover ,#Hbtn02:hover {
+  opacity: .8;
+  transform: scale(.9);
 }
 
 /* brands style start */
