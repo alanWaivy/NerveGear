@@ -1,4 +1,4 @@
-*{
+*{backdrop-filter: blur(50px);
     font-family: "outfit" ,sans-serif;
 }
 
@@ -775,14 +775,13 @@ text-align: center;
 }
 .asSection {
   height: 583px;
-  background-image: url("/pics/image\ for\ the\ homepage.png");
+  background-image: url("../pics/image\ for\ the\ homepage.png");
   margin-bottom: 100px;
   display: flex;
   justify-content: space-around;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  backdrop-filter: blur(50px);
 
 }
 
@@ -805,9 +804,7 @@ text-align: center;
   margin-top: 0px;
 }
 
-.asSection .part2 {
-  width: 40%;
-}
+
 
 .asSection button {
   border: none;
