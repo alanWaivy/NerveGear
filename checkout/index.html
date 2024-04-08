@@ -1,172 +1,348 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NerveGear</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/abfa77da96.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <script src="index.js" defer></script>
 </head>
+
 <body>
-    <!-- nav bar start-->
+
+   <!-- nav bar start-->
 <nav>
-	<a href="../home/index.html" class="logo">
+	<a href="index.html" class="logo">
 		<img src="../pics/logo.png" alt="">
 		<b>NerveGear</b>
 	</a>
 
 	<ul class="menu">
-    <li><a href="../home/index.html">Home</a></li>
-		<li><a href="../product/index.html">All Products</a></li>
+    <li id="mainPage"><a href="index.html">Home</a></li>
+    <li ><a href="../product/index.html">All Products</a></li>
 		<li><a href="../about/index.html">About Us</a></li>
 		<li><a href="../creators/index.html">Creators</a></li>
 	</ul>
-<div class="profile"><i id ="profileIcon"   class="fa-solid fa-user"></i><i id="profileCart"   class="fa-solid fa-cart-shopping"></i>
 
-</div>
+	<div class="login">
+		<a href="" id="login">Login</a>
+		<a href="" id="signup">Sign Up</a>
+	</div>
 </nav>
 <!-- nav bar end -->
 
 <!---shopping cart start -->
 <div id="scContainer">
   
-  <div class="scPart1">
-
-    <div class="scCheckboxs">
-      <h1>Shopping cart()</h1>
-      <div>
-        <input class="scCheckbox" type="checkbox">Select of items
-        <a class="scDelete">Delete select items</a>
-      </div>
-    </div>
-
-    <div class="scProduct">
-      <div class="img1">
-        <img src="../pics/img slide 1 homepage.png" width="90px" height="70px" >
-      </div>
-      <div class="Text">
-        <p class="pt1Pg">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>12005</p>
-      </div>
-      <div class="trash">
-        <i class="fa-solid fa-trash"></i>
-      </div>
-      <div class="sign">
-      	<i class="fa-solid fa-plus"></i>2
-      	<i class="fa-solid fa-minus"></i>
-			</div>
-		</div>
-
-
-		<div class="scProduct">
-			<div class="img1">
-				<img src="../pics/img slide 1 homepage.png " width="90px" height="70px" >
-			</div>
-
-			<div class="Text">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>12005</p>
-			</div>
-
-			<div class="trash">
-				<i class="fa-solid fa-trash"></i>
-			</div>
-
-			<div class="sign">
-				<i class="fa-solid fa-plus"></i>2
-				<i class="fa-solid fa-minus"></i>
-			</div>
-		</div>
-  </div>
-		<div class="scPart2">
-			<h1 class="scSummary">Summary</h1>
-			<div class="subTotal">sub Total 24010 DH</div>
-			<div class="shoppingFree">shopping Free 100 DH</div>
-			<div class="Total">Total 24110 DH</div>
-			<button class="btn">Checkout</button>
-			<div class="payWith">
-				<p class="payWith">Pay With</p>
-				<img src="../pics/payment methods.png" class="imageforpay">
-			</div>
-			<div class="buyerprotection">
-				<p class="buyerProtection">Buyer Protection</p>
-				<input class="pt2Checkbox" type="checkbox">
-				<p class="pt2Pg">Get full refund if the item is not as described or of is not delivered</p>
-			</div>
-		</div>
-	
+  <div class="scPart1"></div>
+  <div class="scPart2"></div>
 </div>
 
 <!-- shopping cart end -->
+    <!--sliding part start-->
 
-	 <div id="QA">
-      <div id="qaHeader"><h1>Q&A</h1>
-      <p>Lorem ipsum dolor sit amet, 
-        consectetur adipiscing elit. Ut e
-        t massa mi. <br> Aliquam in hendrerit urna.</p>
+  <div id="slider">
+    <!--  first slide  -->
+    <div class="slide" id="slide01"> 
+      <div class="container">
+          <div class="part1">
+            <p class="firstPslide">Upgrade your daily experience</p>
+            <h1>Apple MacBook <br>Air</h1>
+            <p class="secondPslide">ultra portable laptop, the original comes back for an encore.</p>
+            
+            <a class="buttonA" href="#">
+              <div class="button">
+              <p>SHOP NOW</p>
+              <img src="../pics/greaterThanSign.png" alt=">">
+            </div></a>
+          </div>
+          <div class="part2">
+            <img src="../pics/img slide 1 homepage.png">
+          </div>
+      </div>
+    </div>
+   
+  
+    <!-- second slide -->
+    <div class="slide" id="slide02"> 
+      <div class="container">
+          <div class="part1">
+            <p class="firstPslide">For better gaming quality</p>
+            <h1>Acer - Predator <br>Helios Neo 16</h1>
+            <p class="secondPslide">Dive into a neon-lit world with cutting-edge specs</p>
+            
+            <a class="buttonA" href="#">
+              <div class="button">
+              <p>SHOP NOW</p>
+              <img src="https://github.com/alanWaivy/nerveGear/blob/main/pics/greaterThanSign.png?raw=true" alt=">">
+            </div></a>
+          </div>
+          <div class="part2">
+            <img src="https://github.com/alanWaivy/nerveGear/blob/main/pics/laptop%20image%20for%20second%20slide%20in%20homepage.png?raw=true">
+          </div>
+      </div>
+     </div>
+      <!-- third slide -->
+
+      <div class="slide" id="slide03"> 
+        <div class="container">
+            <div class="part1">
+              <p class="firstPslide">edit your videos with colored quality</p>
+              <h1>Razer Blade 18</h1>
+              <p class="secondPslide">ultra portable laptop, the original comes back for<br> an encore.</p>
+              
+              <a class="buttonA" href="#">
+                <div class="button">
+                <p>SHOP NOW</p>
+                <img src="https://github.com/alanWaivy/nerveGear/blob/main/pics/greaterThanSign.png?raw=true" id="gr1" alt=">">
+              </div></a>
+            </div>
+            <div class="part2">
+              <img src="https://github.com/alanWaivy/nerveGear/blob/main/pics/third%20laptop%20in%20homepage%20slides.png?raw=true">
+            </div>
+        </div>
+   </div>
+    </div> 
+
+    <!--glow effect 01 start -->
+    <div id="glowEf01"><img src="../pics/glow effect01.png" alt="glowEf01"></div>
+
+ <!--glow effect 01 end -->
+    
+     <!--sliding part end -->
+
+    <!--brands part start-->
+     <div class="brandsSec">
+      <img src="/pics/pics of the brands/Vector.png" alt="hp"  id="hp">
+      <img src="/pics/pics of the brands/simple-icons_razer.png" alt="razer">
+      <img src="/pics/pics of the brands/simple-icons_msibusiness.png" alt="">
+      <img src="/pics/pics of the brands/simple-icons_acer.png" alt="acer">
+      <img src="/pics/pics of the brands/mdi_microsoft.png" alt="microsoft">
+      <img src="/pics/pics of the brands/ic_baseline-apple.png" alt="Apple">
+     </div>
+    <!-- brands part end -->
+
+    <!--glow effect 02 start -->
+    <div id="glowEf02"><img src="../pics/glow effect 02.png" alt="glowEf02"></div>
+
+ <!--glow effect 02 end -->
+
+    <!--Best sales start -->
+    <div id="bsHeader"><h1>Best Sales</h1></div>
+    <div class="bsContainer">
+      <div class="bsPart1">
+        <h2>Unleash Superior <br> Performance</h2>
+        <p>Elevate your computing experience with our cutting-edge laptops. </p> 
+        <button type="button">All Products</button>
       </div>
 
-    <div id="Qs">
-        <div class="q">
-          <div class="head" id="q01"><img src="../pics/plus01.png" alt="+" height="30px" width="30px" class="icon" id="icon01"> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
-          </p></div>
+   
+
+      <!---->
+      <div class="bsPart2">
         
-        <div id="a01" class="body"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
-          </p>
-          
-        </div></div>
-        <div class="q"> <div class="head" id="q02"><img src="../pics/plus01.png" alt="+" height="30px" width="30px" id="icon02" class="icon"> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
-        </p></div>
+        <div class="container">
+          <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <div class="slideshow-container">
+          <div class="slide-container">
+            <div class="slide1" > 
+              <div class="cart ">
+                    <div class="bsDot"></div>
+                    <div class="bsImg">
+                      <img src="/pics/img slide 1 homepage.png" alt="img">
+                    </div>
+                    <div class="bsTitle"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+                    <div class="bsProperties">
+                      <div class="prop"><p>Gaming</p></div>
+                      <div class="prop"><p>Editing</p></div>
+                      <div class="prop"><p>Working</p></div>
+                    </div>
+                    <div class="bsButtons">
+                      <button type="button" id="btn01">Add To Cart</button>
+                      <button type="button" id="btn02" >Shop Now</button>
+                    
+                </div></div> </div>
+               
+            <div class="slide1" >  
+              <div class="cart ">
+                    <div class="bsDot"></div>
+                    <div class="bsImg" id="bsSecondImg">
+                      <img src="/pics/laptop image for second slide in homepage.png" alt="img">
+                    </div>
+                    <div class="bsTitle"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+                    <div class="bsProperties">
+                      <div class="prop"><p>Gaming</p></div>
+                      <div class="prop"><p>Editing</p></div>
+                      <div class="prop"><p>Working</p></div>
+                    </div>
+                    <div class="bsButtons">
+                      <button type="button" id="btn01">Add To Cart</button>
+                      <button type="button" id="btn02" >Shop Now</button>
+                    
+                    </div>
+            </div> </div>
+                
+            <div class="slide1" >
+              <div class="cart ">
+                    <div class="bsDot"></div>
+                    <div class="bsImg">
+                      <img src="/pics/third laptop in homepage slides.png" alt="img">
+                    </div>
+                    <div class="bsTitle"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+                    <div class="bsProperties">
+                      <div class="prop"><p>Gaming</p></div>
+                      <div class="prop"><p>Editing</p></div>
+                      <div class="prop"><p>Working</p></div>
+                    </div>
+                    <div class="bsButtons">
+                      <button type="button" id="btn01">Add To Cart</button>
+                      <button type="button" id="btn02" >Shop Now</button>
+                    
+                    </div>
+            </div></div>
+          </div>
+        </div>
+          <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        
+        </div>
+        
+        
+        
+        
+      </div>
       
-      <div id="a02" class="body"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
-        </p>
-        
-      </div></div>
-        <div class="q"> <div class="head" id="q03"><img src="../pics/plus01.png" alt="+" height="30px" width="30px" id="icon03" class="icon"> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
-        </p></div>
-      
-      <div id="a03" class="body"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
-        </p>
-        
-      </div></div>
-        <div class="q"> <div class="head" id="q04"><img src="../pics/plus01.png" alt="+" height="30px" width="30px" id="icon04" class="icon"> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
-        </p></div>
-      
-      <div id="a04" class="body"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
-        </p>
-        
-      </div></div>
+
     </div>
-      
-   </div>
-  
+
+   <!--glow effect 03 start -->
+   <div id="glowEf03"><img src="../pics/glow effect 03.png" alt="glowEf03"></div>
+
+   <!--glow effect 03 end -->
+
+
+    <!--glow effect 04 start -->
+    <div id="glowEf04"><img src="../pics/glow effect 04.png" alt="glowEf04"></div>
+
+    <!--glow effect 04 end -->
+ 
+    <div class="aboutUs">
+        <div id="asHeader"><h1>About US</h1></div>
+        <div class="asSection">
+          <div class="part1">
+            <h2>Lorem lorem <br> lorem.</h2>
+            <p>Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Ut 
+              et massa mi. Aliquam in
+               hendrerit urna. Pellentesque
+                sit amet sapien fringilla, 
+                mattis ligula consectetur,
+                 ultrices mauris.</p>
+            <button type="button">Learn More</button>
+          </div>
+          <div class="part2"></div>
+        </div>
     </div>
+
     
+<div id="QA">
+
+  <div id="qaHeader">
+      <h1>Q&A</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. <br>
+      Aliquam in hendrerit urna.</p>
+  </div>
+
+  <div id="Qs">
+
+      <div class="q" id="q1">
+          <div class="head" id="q01">
+              <img src="../pics/plus01.png" alt="+" height="30px" width="30px" class="icon" id="icon01">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.</p>
+          </div>
+    
+          <div id="a01" class="body" style="animation: 0.4s ease-in-out 0s 1 normal both running scale-up-ver-top-reverse; display: none;">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
+              </p>
+          </div>
+      </div>
+
+      <div class="q" id="q2">
+          <div class="head" id="q02">
+              <img src="../pics/plus01.png" alt="+" height="30px" width="30px" id="icon02" class="icon">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.</p>
+          </div>
+  
+          <div id="a02" class="body" style="animation: 0.4s ease-in-out 0s 1 normal both running scale-up-ver-top-reverse; display: none;">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
+              </p>
+          </div>
+      </div>
+
+      <div class="q" id="q3"> 
+          <div class="head" id="q03">
+              <img src="../pics/plus01.png" alt="+" height="30px" width="30px" id="icon03" class="icon">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.</p>
+          </div>
+  
+          <div id="a03" class="body" style="animation: 0.4s ease-in-out 0s 1 normal both running scale-up-ver-top-reverse; display: none;">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
+              </p>
+          </div>
+      </div>
+
+      <div class="q" id="q4">
+          <div class="head" id="q04">
+              <img src="../pics/plus01.png" alt="+" height="30px" width="30px" id="icon04" class="icon">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.</p>
+          </div>
+      
+          <div id="a04" class="body" style="animation: 0.4s ease-in-out 0s 1 normal both running scale-up-ver-top-reverse; display: none;">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut e t massa mi.
+              </p>
+          </div>
+      </div>
+  </div>
+</div>
+    
+   <!--glow effect 05 start -->
+   <div id="glowEf05"><img src="../pics/glow effect 05.png" alt="glowEf05"></div>
+
+   <!--glow effect 05 end -->
 </body>
+ 
 <footer>
-  <!--glow effect 05 start -->
-  <div id="glowEf05"><img src="../pics/glow effect 05.png" alt="glowEf05"></div>
+  
+    <!--glow effect 06 start -->
+ <div id="glowEf06"><img src="../pics/glow effect 06.png" alt="glowEf06"></div>
 
-  <!--glow effect 05 end -->
-   <!--glow effect 06 start -->
-<div id="glowEf06"><img src="../pics/glow effect 06.png" alt="glowEf06"></div>
-
-<!--glow effect 06 end -->
+ <!--glow effect 06 end -->
 <div id="fcontainer">
- <img src="../pics/Payment icons.png" alt="">
- <p>Copyright 2024 © NerveGear</p>
- <p>Site Built By <a href="">Us</a></p></div>
+	<img src="../pics/Payment icons.png" alt="">
+	<p>Copyright 2024 © NerveGear</p>
+	<p>Site Built By <a href="">Us</a></p></div>
+
 
 </footer>
 </html>

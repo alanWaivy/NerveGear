@@ -48,6 +48,7 @@ let slideIndex = 0;
 
         /*QA */
 
+      
         document.getElementById('q01').addEventListener('click', function() {
           var div2 = document.getElementById('a01');
           var icon = document.getElementById('icon01');
@@ -120,3 +121,4 @@ let slideIndex = 0;
         
         
         
+     
