@@ -138,8 +138,7 @@ gap:30px ;
     gap: 20px;
   
 }
-.scDelete{color: #378CE7;
-  }
+.scCheckbox.scDelete{}
 #scContainer .scPart1, #scContainer  .scPart2{
 
   width: 25%;
