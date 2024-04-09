@@ -136,10 +136,11 @@ gap:30px ;
     justify-content: center;
     width: 100%;    
     gap: 20px;
-    
-
+  
 }
-
+.scCheckboxs{width:890px;
+  height: 111px;
+}
 #scContainer .scPart1, #scContainer  .scPart2{
 
   width: 25%;
