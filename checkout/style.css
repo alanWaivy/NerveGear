@@ -152,7 +152,8 @@ gap:30px ;
   gap: 30px;
   
 }
-.scCheckboxs, .scProduct, .scProduct{background-color: grey;}
+.scCheckboxs, .scProduct, .scProduct{background-color:#D9D9D9;
+  ;}
 .scPart2{background-color: gray;}
 .scPart2 .btn {background-color: blue;
   color: white;
