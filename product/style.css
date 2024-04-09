@@ -268,10 +268,11 @@ div #bsSecondImg {
   color: #00A3FF;
   background: rgba(255, 255, 255, 0.767);
   border: none;
-  transition: background 300ms;
+  transition: background 400ms;
+
 }
 
-#btn01:hover {
+#btn01:hover , #btn02:hover {
   background: black;
   color: white;
 }
@@ -281,12 +282,11 @@ div #bsSecondImg {
   background: #00A3FF;
   border: none!important;
   border-radius: 0px 0px 25px 25px;
-  transition: opacity 300ms;
+  transition: background 400ms;
+
 }
 
-#btn02:hover {
-  opacity: 0.6;
-}
+
 
 
 
@@ -356,7 +356,7 @@ nav .logo{
 .carts{
   display: flex;
   flex-wrap: wrap;
-  transform: scale(0.75);
+  transform: scale(0.8);
   row-gap: 50px;
   align-items: center;
   justify-content: space-between;
