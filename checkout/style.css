@@ -138,9 +138,7 @@ gap:30px ;
     gap: 20px;
   
 }
-.scCheckboxs{width:890px;
-  height: 111px;
-}
+
 #scContainer .scPart1, #scContainer  .scPart2{
 
   width: 25%;
@@ -151,7 +149,7 @@ gap:30px ;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  
+  width: 310px;
 }
 .scCheckboxs, .scProduct, .scProduct{background-color:#D9D9D9;
   ;}
