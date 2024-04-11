@@ -138,13 +138,15 @@ gap:30px ;
     gap: 20px;
   
 }
-.scCheckbox.scDelete{}
+
 #scContainer .scPart1, #scContainer  .scPart2{
 
   width: 25%;
 }
 .range{display: flex;
-justify-content: center;}
+justify-content: flex-start;
+gap: 20px;
+}
 
 .scPart1{
   display: flex;
