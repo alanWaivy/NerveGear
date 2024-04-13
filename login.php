@@ -1,15 +1,15 @@
 <?php
 
-if(isset('login')){
+if(isset($_POST['login'])){
     $email = $_POST['email'];
-    $password = password_hash($_POST['password']);
+    $password = $_POST['password'];
 }
 
-if(isset('register')){
+if(isset($_POST['register'])){
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
     $email = $_POST['email'];
-    $password = password_hash($_POST['password']);
+    $password = $_POST['password'];
 }
 
 ?>
