@@ -18,6 +18,7 @@ if (isset($_GET['logout'])) {
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
       <script src="https://kit.fontawesome.com/70ff3266e1.js" crossorigin="anonymous"></script>
+      <link rel="icon" type="image/x-icon" href="../pics/logo.ico">
   
 <style>
 

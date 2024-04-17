@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LapShop</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="../pics/logo.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,8 +24,8 @@
         <span>Welcome To NerveGear</span>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam cum fuga odit, </p>
         <div>
-            <button id="Hbtn01" >All Products</button>
-			<button id="Hbtn02" >Best Sales</button>
+            <button id="Hbtn01" ><a href="../productsPage/products.php">All Products</a></button>
+			<button id="Hbtn02" ><a href="../homePage/home.php#bsHeader">Best Sales</a></button>
         </div>
     </div>
 </section>

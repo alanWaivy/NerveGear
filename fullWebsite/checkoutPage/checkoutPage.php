@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LapShop</title>
     <script src="https://kit.fontawesome.com/abfa77da96.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="../pics/logo.ico">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
