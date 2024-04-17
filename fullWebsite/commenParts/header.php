@@ -458,8 +458,8 @@ if (isset($_GET['logout'])) {
 	<ul class="menu">
     <li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'home.php') ? 'mainPage' : ''; ?>"><a href="../homePage/home.php">Home</a></li>
     <li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'products.php') ? 'mainPage' : ''; ?>"><a href="../productsPage/products.php">All Products</a></li>
-		<li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'index.php') ? 'mainPage' : ''; ?>"><a href="../about/index.html">About Us</a></li>
-		<li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'index.php') ? 'mainPage' : ''; ?>"><a href="../creators/index.html">Creators</a></li>
+		<li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'index.php') ? 'mainPage' : ''; ?>"><a href="../aboutUsPage/index.php">About Us</a></li>
+		<li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'index.php') ? 'mainPage' : ''; ?>"><a href="../creatorsPage/index.php">Creators</a></li>
 	</ul>
 
 	<div class="login" style="<?php echo $loginStyle ?>">
