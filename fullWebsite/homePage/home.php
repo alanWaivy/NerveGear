@@ -18,7 +18,8 @@
 </head>
 
 <body>
-<?php include("../commenParts/header.php");?>
+<?php include("../commenParts/header.php");
+      include('../productsPage/purchase.php');?>
 
 <!---shopping cart start -->
 <div id="scContainer">
@@ -176,8 +177,8 @@
                               <div class="prop"><p>'.$row['Specification2'].'</p></div>
                           </div>
                           <div class="bsButtons">
-                              <button type="button" id="btn01">Add To Cart</button>
-                              <button type="button" id="btn02">Shop Now</button>
+                              <button type="button" id="btn01" name="CartBtn">Add To Cart</button>
+                              <button type="button" id="btn02" name="SHopBtn">Shop Now</button>
                           </div>
                       </div>
                       </div>
