@@ -259,17 +259,21 @@ gap: 39px;
   width: 50%;
 }
 
-
-
-/**/
 #PaymentMeths{  
-display: flex;
-    gap: 14px;
-    justify-content: center;
-    margin-right: 40px;
-    align-items: center;
-    align-self: center;
+  display: flex;
+      gap: 14px;
+      justify-content: center;
+      margin-right: 40px;
+      align-items: center;
+      align-self: center;
+  
+  }
 
+
+
+.NAvailable {
+  opacity: .6!important;
+  z-index: -1!important;
 }
 
 

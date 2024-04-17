@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<?php include("../commenParts/header.php");?>
+<?php include("../commenParts/header.php");
+?>
+
 
 
 <!---shopping cart start -->
@@ -28,110 +30,82 @@
     </div>
     </div>
 
-    <?php 
+<?php 
 
-       
-        echo $ProductsName[0];
+$i = 0;
+$sql = "SELECT * FROM cart WHERE userID = '".$UserID."'";
+$IDResult = mysqli_query($db,$sql);
+while ($row = mysqli_fetch_assoc($IDResult)) {
 
-     ?>
-     
-    <div class="scProduct">
-      <input type="checkbox" name="product" id="product">
-      <div class="img1">
-        <img src="../pics/img slide 1 homepage.png" width="90px" height="70px" >
-      </div>
-      <div class="prop">
-          <div class="Text TitlePrice">
-            <p class="Title" >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <p class="Price">360<span>$</span></p>
-          </div>
-          <div class="TrashAmount">
-                <div class="trash">
-                  <i class="fa-solid fa-trash"></i>
-                </div>
-                <div class="Amount">
-                  <button type="submit" value="minusBtn"> <i class="fa-solid fa-plus"></i></button>
-                  <p>1</p>
-                  <button type="submit" value="plusBtn"><i class="fa-solid fa-minus"></i></button>
-                </div>
-          </div>
-          
-      </div>
+    $ProductsPrices[$i] = $ProductsAmount[$i]*$ProductsPrices[$i];
+    $AV = $ProductsAV[$i]? "" : "NAvailable";
 
-		</div>
+  echo '
+  
+  <div class="scProduct '.$AV.'">
+  <input type="checkbox" name="product" id="product">
+  <div class="img1">
+    <img src="data:image;base64,'.base64_encode($ProductsImg[$i]).'" width="90px" height="70px">
+  </div>
+  <div class="prop">
+      <div class="Text TitlePrice">
+        <p class="Title">'.$ProductsName[$i].'</p>
+        <p class="Price">'.$ProductsPrices[$i].'<span>DH</span></p>
+      </div>
+      <div class="TrashAmount">
+            <div class="trash">
+              <i class="fa-solid fa-trash" aria-hidden="true"></i>
+            </div>
+            <div class="Amount">
+              <button type="submit" value="minusBtn"> <i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+              <p>'.$ProductsAmount[$i].'</p>
+              <button type="submit" value="plusBtn"><i class="fa-solid fa-minus" aria-hidden="true"></i></button>
+            </div>
+      </div>
+      
+  </div>
 
-    <div class="scProduct">
-      <input type="checkbox" name="product" id="product">
-      <div class="img1">
-        <img src="../pics/img slide 1 homepage.png" width="90px" height="70px">
-      </div>
-      <div class="prop">
-          <div class="Text TitlePrice">
-            <p class="Title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <p class="Price">360<span>$</span></p>
-          </div>
-          <div class="TrashAmount">
-                <div class="trash">
-                  <i class="fa-solid fa-trash" aria-hidden="true"></i>
-                </div>
-                <div class="Amount">
-                  <button type="submit" value="minusBtn"> <i class="fa-solid fa-plus" aria-hidden="true"></i></button>
-                  <p>1</p>
-                  <button type="submit" value="plusBtn"><i class="fa-solid fa-minus" aria-hidden="true"></i></button>
-                </div>
-          </div>
-          
-      </div>
+  
+
+</div>
+  
+      ';
+
+      if($AV == "NAvailable") {
+        $ProductsPrices[$i] = 0;
+      }
+
+
+      $i++;
 
       
 
-		</div>
 
-    <div class="scProduct">
-      <input type="checkbox" name="product" id="product">
-      <div class="img1">
-        <img src="../pics/img slide 1 homepage.png" width="90px" height="70px">
-      </div>
-      <div class="prop">
-          <div class="Text TitlePrice">
-            <p class="Title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <p class="Price">360<span>$</span></p>
-          </div>
-          <div class="TrashAmount">
-                <div class="trash">
-                  <i class="fa-solid fa-trash" aria-hidden="true"></i>
-                </div>
-                <div class="Amount">
-                  <button type="submit" value="minusBtn"> <i class="fa-solid fa-plus" aria-hidden="true"></i></button>
-                  <p>1</p>
-                  <button type="submit" value="plusBtn"><i class="fa-solid fa-minus" aria-hidden="true"></i></button>
-                </div>
-          </div>
-          
-      </div>
+}
+?>
 
-      
+ 
 
-		</div>
+    
+
 
 
 		
   </div>
-  
 		<div class="scPart2">
 			<h1 class="scSummary">Summary</h1>
       <div id="Prices">
-          <div class="subTotal"><p class="firstSub">sub Total:</p> <p class="secondSub"> 24010 DH</p></div>
+          <div class="subTotal"><p class="firstSub">sub Total:</p> <p class="secondSub"><?php  echo array_sum($ProductsPrices); ?>DH</p></div>
               <div class="shippingPrice"><p class="firstSub">Shipping Price:</p> <p class="secondSub"> 100 DH</p></div>
-            <div class="totalPrice"><p class="firstSub TotalP">Total: </p> <p class="secondSub TotalP"> 24110 DH</p></div>
+            <div class="totalPrice"><p class="firstSub TotalP">Total: </p> <p class="secondSub TotalP"> <?php  echo array_sum($ProductsPrices)+100; ?> DH</p></div>
       </div>
-
-			<button class="CheckBtn">Checkout</button>
+      <form action="../checkoutPage/checkoutPage.php" method="post">
+			<button class="CheckBtn"  name="CheckBtn">Checkout</button> </form>
       <div class="ContainerF">
 			<div class="payWith">
 				<p class="payWith">Pay With</p>
 				<div id="PaymentMeths">
-          <img src="../pics/pyMethods1.png" alt=""  width="190px" height="40px"><img src="../pics/pyMethods2.png" alt="" width="50px" height="auto">
+        <img src="../pics/pyMethods1.png" alt=""  width="190px" height="40px"><img src="../pics/pyMethods2.png" alt="" width="50px" height="auto">
         </div>
 			</div>
 			<div id="buyerProtection">
@@ -145,8 +119,34 @@
 			</div>
       </div>
 		</div>
+  
+    
 	
 </div>
+
+<?php
+  
+  
+  if(isset($_POST['CheckBtn'])) {
+    if (isset($_SESSION['username'] )){ 
+      $i = 0;
+      $sql = "SELECT * FROM products WHERE ProductID = ?";
+      $stmt = mysqli_prepare($db, $sql);
+      mysqli_stmt_bind_param($stmt, "s", $ProductsID[$i]);
+      mysqli_stmt_execute($stmt);
+      $result = mysqli_stmt_get_result($stmt);
+      $PrRow = mysqli_fetch_assoc($result);
+      
+      $productImg = mysqli_real_escape_string($db, $PrRow['ProductImg']);
+      $sq2l = "INSERT INTO orders (ProductID, UserID, ProductImg, NName, Amount, Price) VALUES ('$ProductsID[$i]', '$UserID', '$productImg', '$ProductsName[$i]', '$ProductsAmount[$i]', '$ProductsPrices[$i]')";
+      mysqli_query($db, $sq2l);      
+
+        $i++;
+    }
+    }
+    
+?>
+
 
 <!-- shopping cart end -->
 

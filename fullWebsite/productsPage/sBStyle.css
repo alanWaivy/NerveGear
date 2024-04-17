@@ -1,0 +1,246 @@
+        a {
+        text-decoration: none;  
+        }
+        /* sortby & filter & searchBar style start */
+
+        div#btns {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 13px;
+        }
+
+        div#sb {
+        display: flex;
+        justify-content: flex-end;
+        width: 50%;
+        }
+
+
+
+
+
+        /* sortby & filter & searchBAr style end */
+
+        .button p {
+        color: white;
+        font-weight: 550;
+        font-size: 14px!important;
+        }
+
+        .filtering {
+            display: flex;
+            width: 100%;
+            margin-bottom: -80px;
+            align-items: flex-start;
+            gap: 0px ! Important;
+            transform: scale(0.8);
+            margin-top: 97px;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .material-symbols-outlined {
+        color: rgb(255, 255, 255);
+        }
+
+        .searchBar i {
+        transform : rotateY(-180deg);
+        color:white;
+        }
+
+        .searchBar button {
+        border :none;
+        padding :5px 20px;
+        border-radius:25px;
+        background : #00A3FF;
+        transition: transform 300ms;
+        margin-top: .3px;
+        }
+
+        .searchBar input {
+        border: none;
+        margin-left: 5px;
+        width: 79%;
+        }
+
+        .searchBar input:focus {
+        outline:none;
+        }
+
+        .searchBar {
+        height: 30px;
+        border: 1.5px #00A3FF solid;
+        width: 300px;
+        padding: 4px 0px;
+        border-radius: 25px;
+        padding-bottom: 0px !important;
+        margin-top: 20px;
+        display: flex;
+        align-content: center;
+        align-items: baseline;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        }
+
+        .searchBar input::placeholder {
+        color:grey;
+        font-size:13px;
+        font-weight:700;
+        }
+
+        .searchBar button:hover {
+        transform:scale(.9);
+        opacity:.8;
+        }
+
+        
+        .arrow-down, .arrow-top {
+            display: block;
+            width: 13px;
+            height: 13px;
+            border-top: 4px solid #fff;
+            border-left: 4px solid #fff;
+            border-radius: 2px;
+           
+        }
+        .arrow-top{
+        transform: rotate(45deg);
+        margin-top: 7px;
+        }
+
+
+        .arrow-down{
+        transform: rotate(-134deg);
+        margin-top: -7px;
+        }
+
+        .PriceSrt {
+            display: flex;
+            align-self: center;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            background: #D9D9D9;
+            height: 30px;
+            margin-top: -5px;
+            width: 80px;
+            border-radius: 5px;
+          
+        }
+
+
+            .PriceSrtBtn {
+                display: flex;
+                flex-direction: column;
+                 margin-top: -13px;
+            }
+
+
+            .PriceSrtBtn button {
+                background: none;
+                border: none;
+                transform: scale(.5);
+                margin-bottom: -10px;
+               
+            }
+
+            .PriceSrtBtn button:hover {
+                opacity: .3;
+            } 
+
+            .PriceSrtBtn button div {
+                border-color: black;
+                
+            }
+
+            .button {
+                z-index: 6;
+                position: relative!important;
+                display: flex;
+                flex-direction: row;
+                justify-content:space-between ;
+
+            }
+
+
+            /**/
+
+            .filterContainer {
+                display: flex;
+                width: 80%;
+                background-color: #D9D9D9;
+                flex-direction: column;
+                padding-bottom: 20px;
+
+            }
+
+      
+        
+            .PFBtn {
+                display: flex;
+                align-content: center;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0px 20px;
+            }
+
+
+
+            .PFProperties {
+                display: flex;
+                flex-direction: row;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap;
+                width: fit-content;
+                gap: 20px;
+            }
+
+
+            .filtering hr {
+                color: white!important;
+                background-image: white!important;
+                border-color: white!important;
+                margin-top: -8px!important;
+            }
+
+
+            .Sp {
+                display: flex;
+                justify-content: center;
+                width: auto;
+                padding-top: 10px;
+
+            }
+
+
+           .Sp button {
+            background: grey;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 6px 12px;
+
+           }
+
+
+           #sp1.clicked ,#sp2.clicked ,#sp3.clicked ,#sp4.clicked {
+            background: blueviolet;
+           }
+
+
+        .filterContainer , .PriceSrt {
+            opacity: 0;
+        }   
+        
+           
+        .filterContainer.clicked , .PriceSrt.clicked{
+
+            opacity: 1;
+        }
+        
+        
+        

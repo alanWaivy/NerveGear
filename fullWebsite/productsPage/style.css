@@ -366,7 +366,7 @@ nav .logo{
   display: flex;
   flex-wrap: wrap;
   transform: scale(0.8);
-  width: 1800px;
+  /*width: 1800px;*/
   row-gap: 50px;
   align-items: center;
   justify-content: center;
