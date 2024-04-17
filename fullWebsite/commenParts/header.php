@@ -10,6 +10,7 @@ if (isset($_GET['logout'])) {
     $userStyle = 'display:none!important;';
    $loginStyle = 'display:flex!Important;';
 }
+
 ?>
     <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">

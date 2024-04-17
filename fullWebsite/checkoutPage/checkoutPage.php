@@ -12,10 +12,8 @@
 ?>
 
 
-
 <!---shopping cart start -->
 <div id="scContainer">
-  
   <div class="scPart1">
 
     <div class="scCheckboxs">
@@ -25,8 +23,8 @@
         <input  type="checkbox">Select of items
       </div> -->
 
-        <div class="scDelete">
-        <input value="Delete select items" type="button" name="deleteBtn" >
+        <div class="scDelete"><form action="checkoutPage.php" method="post">
+        <input value="Delete select items" type="submit" name="deleteBtn" ></form>
       </div>
 
     </div>
@@ -196,15 +194,32 @@ if(isset($_POST['minusBtn'])) {
                         $sq2l = "INSERT INTO orders (ProductID, UserID, ProductImg, NName, Amount, Price) VALUES ('$ProductsID[$j]', '$UserID', '$productImg', '$ProductsName[$j]', '$ProductsAmount[$j]', '$ProductsPrices[$j]')";
                         mysqli_query($db, $sq2l);      
                         $j++; 
-                        echo '<div id="OrderAlert"><p>Order Completed!</p> </div>';
-
+                        
 
                         }
-               }
+                        mysqli_query($db, "DELETE FROM cart WHERE UserID = '" .$UserID. "' ");
+                        echo '<script>window.location.href = "../homePage/home.php";</script>';
+
+                     }
     }
     }
     
 ?>
+
+<?php  
+    if(isset($_POST['deleteBtn'])) {
+        if(isset($_SESSION['username'])) {
+            // Perform deletion in the database
+            mysqli_query($db, "DELETE FROM cart WHERE UserID = '" .$UserID. "' ");
+
+            // Redirect using JavaScript
+            echo '<script>window.location.href = "../homePage/home.php";</script>';
+            exit(); 
+        }
+    }
+?>
+
+
 
 
 <!-- shopping cart end -->
@@ -215,22 +230,3 @@ if(isset($_POST['minusBtn'])) {
 </body>
 </html>
 
-<script>
-
-document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("deleteBtn").addEventListener("click", function() {
-    // AJAX request
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "deleteBtn.php", true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        // Handle response
-        alert(xhr.responseText);
-      }
-    };
-    xhr.send();
-  });
-});
-
-</script>
