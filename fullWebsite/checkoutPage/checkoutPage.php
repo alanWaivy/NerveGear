@@ -73,7 +73,10 @@ while ($row = mysqli_fetch_assoc($IDResult)) {
 
       if($AV == "NAvailable") {
         $ProductsPrices[$i] = 0;
+        $ProductsID[$i] = null;
+
       }
+
 
 
       $i++;
@@ -130,6 +133,10 @@ while ($row = mysqli_fetch_assoc($IDResult)) {
   if(isset($_POST['CheckBtn'])) {
     if (isset($_SESSION['username'] )){ 
       $i = 0;
+      foreach ($ProductsID as $key => $value) { 
+        if ($ProductsID[$i] == null) {
+          continue;
+        } else { 
       $sql = "SELECT * FROM products WHERE ProductID = ?";
       $stmt = mysqli_prepare($db, $sql);
       mysqli_stmt_bind_param($stmt, "s", $ProductsID[$i]);
@@ -141,7 +148,8 @@ while ($row = mysqli_fetch_assoc($IDResult)) {
       $sq2l = "INSERT INTO orders (ProductID, UserID, ProductImg, NName, Amount, Price) VALUES ('$ProductsID[$i]', '$UserID', '$productImg', '$ProductsName[$i]', '$ProductsAmount[$i]', '$ProductsPrices[$i]')";
       mysqli_query($db, $sq2l);      
 
-        $i++;
+        $i++; }
+       }
     }
     }
     
