@@ -277,3 +277,80 @@ gap: 39px;
 }
 
 
+
+#OrderAlert {
+        
+  animation: alert 700ms 50ms ease-in-out;
+  z-index: 999;
+  
+  width: 153px;
+  height: 46px;
+  background-color: blueviolet;
+  color: white;
+  left: 43%;
+  top: 20%;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  border-radius: 24px;
+  transition: opacity 300ms ease-in-out;
+  box-shadow: 6px 8px 9px 10px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  opacity: 0;
+  
+
+  
+}
+
+
+@keyframes alert {
+  0%{
+          opacity: 0;
+          display: flex;
+          z-index: -1;
+  } 
+
+  50%{
+          opacity: 1;
+          display: flex;
+          z-index: 999;
+          position: fixed ;
+
+  }
+
+  100%{
+          opacity: 0;
+          display: none;
+          z-index: -1;;
+          transform: translateY(-28px);;
+  }
+  }
+
+
+  .TrashAmount .trashBtn {
+      background: none;
+      border: none;
+      
+  }
+
+  .TrashAmount button {
+    cursor: pointer;
+  }
+
+  
+  .scDelete input {
+    background: none;
+    color: blueviolet;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+
+  }
+
+  .scDelete input:hover {
+    opacity: .5;
+  }
+
+  .scDelete input:focus {
+    outline: none;    
+  }

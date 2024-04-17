@@ -21,12 +21,14 @@
     <div class="scCheckboxs">
       <h2>Shopping cart <span></span></h2>
       <div class="range">
-      <div class="scCheckbox" >
+     <!-- <div class="scCheckbox" >
         <input  type="checkbox">Select of items
-      </div>
+      </div> -->
+
         <div class="scDelete">
-        <a href="">Delete select items</a>
+        <input value="Delete select items" type="button" name="deleteBtn" >
       </div>
+
     </div>
     </div>
 
@@ -41,7 +43,7 @@ while ($row = mysqli_fetch_assoc($IDResult)) {
     $AV = $ProductsAV[$i]? "" : "NAvailable";
 
   echo '
-  
+  <form action="checkoutPage.php" method="post">
   <div class="scProduct '.$AV.'">
   <input type="checkbox" name="product" id="product">
   <div class="img1">
@@ -53,13 +55,17 @@ while ($row = mysqli_fetch_assoc($IDResult)) {
         <p class="Price">'.$ProductsPrices[$i].'<span>DH</span></p>
       </div>
       <div class="TrashAmount">
-            <div class="trash">
+            <button name="trashBtn" class="trashBtn">
+            <div class="trash" >
               <i class="fa-solid fa-trash" aria-hidden="true"></i>
             </div>
+            </button> 
             <div class="Amount">
-              <button type="submit" value="minusBtn"> <i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+           
+              <button type="submit" name="plusBtn" value="plusBtn"> <i class="fa-solid fa-plus" aria-hidden="true"></i></button>
               <p>'.$ProductsAmount[$i].'</p>
-              <button type="submit" value="plusBtn"><i class="fa-solid fa-minus" aria-hidden="true"></i></button>
+              <input type="hidden" value="'.$i.'" name="i" >
+              <button type="submit" name="minusBtn" value="minusBtn"><i class="fa-solid fa-minus" aria-hidden="true"></i></button>
             </div>
       </div>
       
@@ -67,7 +73,7 @@ while ($row = mysqli_fetch_assoc($IDResult)) {
 
   
 
-</div>
+</div></form>
   
       ';
 
@@ -76,15 +82,53 @@ while ($row = mysqli_fetch_assoc($IDResult)) {
         $ProductsID[$i] = "x";
 
       }
-
-
-
       $i++;
-
-      
-
-
 }
+?>
+
+<?php 
+
+if(isset($_POST['minusBtn'])) { 
+  if (isset($_SESSION['username'] )){ 
+
+       $i1 = $_POST['i'];
+       $ProductsAmount[$i1]--;
+
+       $sql = "UPDATE cart SET Amount ='".$ProductsAmount[$i1]."' WHERE userID = '".$UserID."' AND productID = '".$ProductsID[$i1]."' ";
+       mysqli_query($db,$sql);
+
+    }
+    }
+
+    if(isset($_POST['plusBtn'])) { 
+      if (isset($_SESSION['username'] )){ 
+           $i2 = $_POST['i'];
+           $ProductsAmount[$i2]++;
+           $sql = "UPDATE cart SET Amount ='".$ProductsAmount[$i2]."' WHERE userID = '".$UserID."' AND productID = '".$ProductsID[$i2]."' ";
+           mysqli_query($db,$sql);
+
+           
+        }
+        }
+
+        if(isset($_POST['trashBtn'])) {
+          if(isset($_SESSION['username'])) {
+
+                $i3 = $_POST['i'];
+               # error_reporting(0);
+
+                $result = $db->query("SELECT * FROM cart WHERE userID = '".$UserID."' AND productID = '".$ProductsID[$i3]."'  ");
+                
+                if ($result->num_rows > 0) {
+                  $sql = "DELETE FROM cart WHERE userID = '".$UserID."' AND productID = '".$ProductsID[$i3]."'";
+                   mysqli_query($db,$sql); 
+  
+                    } 
+                     
+          }
+        }
+
+        
 ?>
 
  
@@ -148,11 +192,13 @@ while ($row = mysqli_fetch_assoc($IDResult)) {
                         mysqli_stmt_execute($stmt);
                         $result = mysqli_stmt_get_result($stmt);
                         $PrRow = mysqli_fetch_assoc($result);
-                        
                         $productImg = mysqli_real_escape_string($db, $PrRow['ProductImg']);
                         $sq2l = "INSERT INTO orders (ProductID, UserID, ProductImg, NName, Amount, Price) VALUES ('$ProductsID[$j]', '$UserID', '$productImg', '$ProductsName[$j]', '$ProductsAmount[$j]', '$ProductsPrices[$j]')";
                         mysqli_query($db, $sq2l);      
                         $j++; 
+                        echo '<div id="OrderAlert"><p>Order Completed!</p> </div>';
+
+
                         }
                }
     }
@@ -168,3 +214,23 @@ while ($row = mysqli_fetch_assoc($IDResult)) {
 
 </body>
 </html>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("deleteBtn").addEventListener("click", function() {
+    // AJAX request
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "deleteBtn.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        // Handle response
+        alert(xhr.responseText);
+      }
+    };
+    xhr.send();
+  });
+});
+
+</script>

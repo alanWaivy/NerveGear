@@ -91,30 +91,22 @@
                 $sql4 = "UPDATE cart SET Amount = $Amount WHERE UserID = $UserID";
                 mysqli_query($db, $sql4);
              
-                
-
             } else {
                 $Amount = 1;
                 $sql5 = "INSERT INTO cart (ProductName, ProductID, UserID, Available, Amount) 
                          VALUES ('$ProductName', $ProductID, $UserID, $Available1, $Amount)";
                         mysqli_query($db, $sql5);
-                        
 
-                        
+                
             }
-     
-            
  
-}else{   
+}       else{   
         
     $alertLogin = 'alertOff';
     $alertLogout = 'alertOn';
 
 
 }
-
-
-
 
 }    
 

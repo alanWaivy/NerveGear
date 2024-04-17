@@ -577,11 +577,12 @@ $ProductsPrices = [];
 
 
   
-  </div>
+  </div> <a href="../checkoutPage/checkoutPage.php">
      <div class="checkBtn">
       <input type="button" 
              value="checkout">
      </div>
+     </a>
     </div>
     </div>
 
