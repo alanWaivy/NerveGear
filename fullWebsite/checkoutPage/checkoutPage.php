@@ -43,7 +43,6 @@ while ($row = mysqli_fetch_assoc($IDResult)) {
   echo '
   <form action="checkoutPage.php" method="post">
   <div class="scProduct '.$AV.'">
-  <input type="checkbox" name="product" id="product">
   <div class="img1">
     <img src="data:image;base64,'.base64_encode($ProductsImg[$i]).'" width="90px" height="70px">
   </div>

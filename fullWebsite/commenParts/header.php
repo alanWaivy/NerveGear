@@ -442,6 +442,38 @@ if (isset($_GET['logout'])) {
                   .user {
                       display: none;
                   }
+
+      /* profile Container */
+      #profileContainer {
+            background: #D9D9D9;
+            width: 230px !important;
+            position: absolute;
+            z-index: 999!Important;
+            opacity: 0;
+            display: none;
+            transition: all .3s ease-in-out;
+            z-index: 10;
+            top: 50px;
+            right: 73px;
+      }
+
+      .subContainer {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .subContainer a {
+          text-decoration: none;
+          padding: 20px 30px;
+          transition: background 300ms ease-in-out;
+        }
+
+        .subContainer a:hover {
+          background: blueviolet;
+          color: white;
+        }
+
 </style>
 
 
@@ -470,7 +502,7 @@ if (isset($_GET['logout'])) {
   
   <div class="user" style="<?php echo $userStyle ?>">
     <div id="profile">
-      <a href="../homePage/home.php?logout='1'" > <i class="fa-solid fa-user"></i></a>
+     <i class="fa-solid fa-user"></i>
     </div>
     <div id="cart">
       <i class="fa-solid fa-cart-shopping"></i>
@@ -577,7 +609,6 @@ $ProductsPrices = [];
 ?>
 
 
-  
   </div> <a href="../checkoutPage/checkoutPage.php">
      <div class="checkBtn">
       <input type="button" 
@@ -587,6 +618,15 @@ $ProductsPrices = [];
     </div>
     </div>
 
+
+    
+<div id="profileContainer"  >
+    <div class="subContainer">
+      <a href="../ordersPage/orders.php">Orders</a>
+      <a href="../homePage/home.php?logout='1'" >Log out</a>
+
+
+    </div></div>
 </body>
 
  
@@ -610,5 +650,25 @@ $ProductsPrices = [];
         }
     });
 });
+
+
+  const Profile = document.getElementById('profileContainer');
+  const profileIcon = document.getElementById('profile');
+  let isProfileVisible = false;
+
+  profileIcon.addEventListener('click', function() {
+        if (!isProfileVisible) {
+            Profile.style.opacity = '1';
+            Profile.style.display = 'block';
+            isProfileVisible = true;
+        } else {
+            Profile.style.opacity = '0';
+            setTimeout(() => {
+                Profile.style.display = 'none';
+            }, 300); // Delay the hiding of cartContainer after the animation completes
+            isProfileVisible = false;
+        }
+    });
+
 
 </script>

@@ -1,0 +1,62 @@
+
+.Order {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.imgProp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.imgAmount {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+.prop {
+    margin-top: 4px;
+}
+
+
+
+
+  
+.Container {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 120px;
+    flex-direction: column;
+    gap: 20px;
+    align-content: center;
+    align-items: center;
+}
+
+.OrHeader {
+    display: flex;
+    justify-content: center;
+    background: #D9D9D9;
+    width: 70%;
+}
+
+.Orders {
+    display: flex;
+    width: 65%;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.Order {
+    background: #D9D9D9;
+    width: 100%;
+
+}
