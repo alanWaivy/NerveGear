@@ -18,6 +18,10 @@
 <?php include("../commenParts/header.php") ?>
 
 <section class="hero">
+<div class="part01">
+  
+</div>
+
 <div class="part02">
   <h1>Lorem ipsum dolor sit amet</h1>
 <p>Illo, nisi architecto. Veritatis, sint maiores veniam nulla repudiandae doloribus neque reiciendis hic dolor praesentium, </p>
@@ -116,7 +120,7 @@
   <?php include("../commenParts/QA-Part.php") ?>
 
 
-  <?php include("../commenParts/QA-Part.php") ?>
+  <?php include("../commenParts/footer.php") ?>
 
     
 </body>
