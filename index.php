@@ -1,2 +1,4 @@
 <?php
-header('location: Front-end/home/index.html');
+header('location: fullWebsite/homePage/home.php');
+
+exit();

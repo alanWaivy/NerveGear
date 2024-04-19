@@ -18,8 +18,8 @@
 </head>
 
 <body>
-<?php include("Front-end/commenParts/header.php");
-      include('Front-end/productsPage/purchase.php');?>
+<?php include("../commenParts/header.php");
+      include('../productsPage/purchase.php');?>
 
 <!---shopping cart start -->
 <div id="scContainer">
@@ -234,12 +234,12 @@
     </div>
 
    
-<?php include("Front-end/commenParts/QA-Part.php") ?>
+<?php include("../commenParts/QA-Part.php") ?>
     
 
 </body>
 
 
-<?php include("Front-end/commenParts/footer.php") ?>
+<?php include("../commenParts/footer.php") ?>
 
 </html>

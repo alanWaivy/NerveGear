@@ -17,7 +17,7 @@
 
 <body>
 
-<?php include("Front-end/commenParts/header.php"); ?>
+<?php include("../commenParts/header.php"); ?>
 
 <div class="main">
 
