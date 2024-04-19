@@ -484,16 +484,16 @@ if (isset($_GET['logout'])) {
 <body>
 
 <nav>
-	<a href="../homePage/home.php" class="logo">
+	<a href="Front-end/homePage/home.php" class="logo">
 		<img src="../pics/logo.png" alt="">
 		<b>LapShop</b>
 	</a>
 
 	<ul class="menu">
-    <li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'home.php') ? 'mainPage' : ''; ?>"><a href="../homePage/home.php">Home</a></li>
-    <li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'products.php') ? 'mainPage' : ''; ?>"><a href="../productsPage/products.php">All Products</a></li>
-		<li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'about.php') ? 'mainPage' : ''; ?>"><a href="../aboutUsPage/about.php">About Us</a></li>
-		<li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'creators.php') ? 'mainPage' : ''; ?>"><a href="../creatorsPage/creators.php">Creators</a></li>
+    <li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'home.php') ? 'mainPage' : ''; ?>"><a href="Front-end/homePage/home.php">Home</a></li>
+    <li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'products.php') ? 'mainPage' : ''; ?>"><a href="Front-end/productsPage/products.php">All Products</a></li>
+		<li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'about.php') ? 'mainPage' : ''; ?>"><a href="Front-end/aboutUsPage/about.php">About Us</a></li>
+		<li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'creators.php') ? 'mainPage' : ''; ?>"><a href="Front-end/creatorsPage/creators.php">Creators</a></li>
 	</ul>
 
 	<div class="login" style="<?php echo $loginStyle ?>">
