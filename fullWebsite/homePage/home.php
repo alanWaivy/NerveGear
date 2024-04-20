@@ -36,9 +36,9 @@
     <div class="slide" id="slide01"> 
       <div class="container">
           <div class="part1">
-            <p class="firstPslide">Upgrade your daily experience</p>
+            <p class="firstPslide">Améliorez votre expérience quotidienne</p>
             <h1>Apple MacBook <br>Air</h1>
-            <p class="secondPslide">ultra portable laptop, the original comes back for an encore.</p>
+            <p class="secondPslide">ordinateur portable ultra portable, l'original revient pour un rappel.</p>
             
             <a class="buttonA" href="#">
               <div class="button">
@@ -57,9 +57,9 @@
     <div class="slide" id="slide02"> 
       <div class="container">
           <div class="part1">
-            <p class="firstPslide">For better gaming quality</p>
+            <p class="firstPslide">Pour une meilleure qualité de jeu</p>
             <h1>Acer - Predator <br>Helios Neo 16</h1>
-            <p class="secondPslide">Dive into a neon-lit world with cutting-edge specs</p>
+            <p class="secondPslide">Plongez dans un monde éclairé au néon avec des spécifications de pointe</p>
             
             <a class="buttonA" href="#">
               <div class="button">
@@ -77,9 +77,9 @@
       <div class="slide" id="slide03"> 
         <div class="container">
             <div class="part1">
-              <p class="firstPslide">edit your videos with colored quality</p>
+              <p class="firstPslide">éditez vos vidéos avec une qualité colorée</p>
               <h1>Razer Blade 18</h1>
-              <p class="secondPslide">ultra portable laptop, the original comes back for<br> an encore.</p>
+              <p class="secondPslide">ordinateur portable ultra portable, l'original revient pour un rappel.</p>
               
               <a class="buttonA" href="#">
                 <div class="button">
@@ -118,11 +118,11 @@
  <!--glow effect 02 end -->
 
     <!--Best sales start -->
-    <div id="bsHeader"><h1>Popular Product</h1></div>
+    <div id="bsHeader"><h1>Produit populaire </h1></div>
     <div class="bsContainer">
       <div class="bsPart1">
-        <h2>Unleash Superior <br> Performance</h2>
-        <p>Elevate your computing experience with our cutting-edge laptops. </p> 
+        <h2>Libérez le supérieur <br> Performance</h2>
+        <p>Améliorez votre expérience informatique avec nos ordinateurs portables de pointe. </p> 
        <div id="BsPart1Btn"> <a  href="../productsPage/products.php">All Products</a>
       </div></div>
 
