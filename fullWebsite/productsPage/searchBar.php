@@ -47,9 +47,8 @@
 						<hr>
 
 						<div class="PFProperties">
-							<input type="checkbox" name="" id="" >Under 3000DH
-							<input type="checkbox" name="" id="" >Under 3000DH
-							<input type="checkbox" name="" id="" >Under 3000DH
+							<input type="range" name="Hprice" id="" min="2000" max="50000" value="50000" step="500">
+							<input type="range" name="Lprice" id="" min="0" max="50000" value="0" step="500">
 						</div>
 					</div>
 					<div class="category">
@@ -58,11 +57,15 @@
 							<div class="arrow-down"></div>
 						</div>
 						<hr>
-						<div class="PFProperties Sp">
-							<button name="sp1" id="sp1" class="categoryBtn">Gaming</button>
-							<button name="sp2" id="sp2" class="categoryBtn">Work</button>
-							<button name="sp3" id="sp3" class="categoryBtn">School</button>
-							<button name="sp4" id="sp4" class="categoryBtn">Montage</button>
+						<div class="Sp">
+							<div>
+								<button name="sp1" id="sp1" class="categoryBtn" value="Gaming">Gaming</button>
+								<button name="sp2" id="sp2" class="categoryBtn" value="Work">Work</button>
+							</div>
+							<div>
+								<button name="sp3" id="sp3" class="categoryBtn" value="School">School</button>
+								<button name="sp4" id="sp4" class="categoryBtn" value="Montage">Montage</button>
+							</div>
 						</div>
 					</div>
 				</div>

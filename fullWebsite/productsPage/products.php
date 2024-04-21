@@ -35,7 +35,7 @@
         }
         $_SESSION['sort'] = !empty($_GET['price']) ? $_GET['price'] : $_SESSION['sort'];
         $q = !empty($_GET['q']) ? $_GET['q'] : '';
-        $price = $_SESSION['sort'];
+        $price = isset($_SESSION['sort'])?$_SESSION['sort']:'ASC';
         $sql = "SELECT * FROM products WHERE Name LIKE '%{$q}%' ORDER BY Price $price";
         $result = mysqli_query($db, $sql);
 
