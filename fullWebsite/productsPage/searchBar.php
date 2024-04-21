@@ -17,7 +17,7 @@
 				</div>
 
 				<div style="display:flex; justify-content:center;">
-				<div class="PriceSrt clicked" width="109px">
+				<div class="PriceSrt " width="109px">
 						<p style="
 									margin-bottom: 0px;
 								">Price</p>
