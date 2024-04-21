@@ -218,6 +218,7 @@ div #bsSecondImg {
   height: 250px;
   width: 300px;
   margin: 10px 20px;
+  border-radius: 25px;
 }
 
 .bsImg {
@@ -507,3 +508,20 @@ div#sb {
   width: 863px;
   box-sizing: border-box;
 }
+
+
+button#ImgBtn {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+
+.cart form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+

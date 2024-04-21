@@ -48,7 +48,7 @@
                 while ($row = mysqli_fetch_assoc($result)) {
                     $backgroundColor = $row['Available'] ? '#00ff15' : '#878787';
                     echo '<div class="cart ">
-                        <form method="post" action="products.php" >
+                       
                             <div class="bsDot" style="background-color: ' . $backgroundColor . ';"></div>
                            <form method="get" action="../product/index.php"><button type="submit" name="ImgBtn" id="ImgBtn"> <div class="bsImg">
                                 <img src="data:image;base64,' . base64_encode($row['ProductImg']) . '" alt="' . $row['ProductID'] . '">
@@ -61,7 +61,7 @@
                             <div class="bsProperties">
                                 <div class="prop"><p>' . $row['Specification'] . '</p></div>
                             
-                            </div>
+                            </div> <form method="post" action="products.php" >
                                 <div class="bsButtons">
                                 <input type="hidden" name="ProductID" value="' . $row['ProductID'] . '">
                                 <input type="hidden" name="Available" value="' . $row['Available'] . '">
