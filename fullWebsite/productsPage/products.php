@@ -240,6 +240,13 @@
     }
 
 
+
+    .Price p {
+    font-size: 27px;
+    }
+    .Price {
+    margin-top: 40px;}
+
 </style>
 
 

@@ -152,11 +152,14 @@
                               <img src="data:image;base64,'.base64_encode($row['ProductImg']).'" alt="' . $row['Name'] . '">
                           </div>
                           <div class="bsTitle"><p>' . $row['Name'] . '</p></div>
+                          <div class="Price" style="text-align:center; "> <p>'.$row['Price'].' DH </p> </div>
+
                           <div class="bsProperties">
+
                               <div class="prop"><p>'.$row['Specification'].'</p></div>
-                              <div class="prop"><p>'.$row['Specification1'].'</p></div>
-                              <div class="prop"><p>'.$row['Specification2'].'</p></div>
+                              
                           </div>
+
                           <div class="bsButtons">
                               <button type="button" id="btn01">Add To Cart</button>
                               <button type="button" id="btn02">Shop Now</button>
@@ -171,11 +174,13 @@
                               <img src="data:image;base64,'.base64_encode($row['ProductImg']).'" alt="' . $row['Name'] . '">
                           </div>
                           <div class="bsTitle"><p>' . $row['Name'] . '</p></div>
+                          <div class="Price" style="text-align:center; "> <p>'.$row['Price'].' DH </p> </div>
+
                           <div class="bsProperties">
                               <div class="prop"><p>'.$row['Specification'].'</p></div>
-                              <div class="prop"><p>'.$row['Specification1'].'</p></div>
-                              <div class="prop"><p>'.$row['Specification2'].'</p></div>
                           </div>
+
+
                           <div class="bsButtons">
                               <button type="button" id="btn01" name="CartBtn">Add To Cart</button>
                               <button type="button" id="btn02" name="SHopBtn">Shop Now</button>
@@ -227,6 +232,7 @@
           <div class="part2"></div>
         </div>
     </div>
+
 
    
 <?php include("../commenParts/QA-Part.php") ?>
