@@ -17,9 +17,13 @@
 				</div>
 
 				<div style="display:flex; justify-content:center;">
-					<div class="PriceSrt" width="109px">
-						<p>Price</p>
-						<div class="PriceSrtBtn">
+				<div class="PriceSrt clicked" width="109px">
+						<p style="
+									margin-bottom: 0px;
+								">Price</p>
+														<div class="PriceSrtBtn" style="
+									margin-top: 2px;
+								">
 							<select name="" id="" style="display: none;">
 								<option value="">hello</option>
 							</select>
@@ -27,7 +31,7 @@
 								<div class="arrow-top FilteringBtn"></div>
 							</button>
 							<button name="price" value="DESC">
-								<div class="arrow-down FilteringBtn"></div></i>
+								<div class="arrow-down FilteringBtn"></div>
 							</button>
 						</div>
 					</div>
@@ -46,7 +50,6 @@
 						<div class="priceFilter">
 							<div class="PFBtn">
 								<p>Price</p>
-								<div class="arrow-down"></div>
 							</div>
 							<hr>
 
@@ -67,7 +70,6 @@
 						<div class="category">
 							<div class="PFBtn">
 								<p>Specification</p>
-								<div class="arrow-down"></div>
 							</div>
 							<hr>
 							<div class="Sp">
