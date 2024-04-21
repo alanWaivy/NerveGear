@@ -258,13 +258,10 @@ div #bsSecondImg {
 .bsButtons {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
 }
 
 
-.bsButtons {
-  margin-top: 50px;
-}
+
 
 #btn01 , #btn02 {
   padding: 10px 12px;

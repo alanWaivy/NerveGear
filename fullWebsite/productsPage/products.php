@@ -48,12 +48,13 @@
                 <div class="bsImg">
                     <img src="data:image;base64,'.base64_encode($row['ProductImg']).'" alt="' . $row['ProductID'] . '">
                 </div>
-                <div class="bsTitle"><p>' . $row['Name'] . '</p></div>
+                <div class="bsTitle"><p>' . $row['Name'] . '</p></div> 
+                               <div class="Price" style="text-align:center; "> <p>'.$row['Price'].' DH </p> </div>
+
                 <div class="bsProperties">
                     <div class="prop"><p>'.$row['Specification'].'</p></div>
                  
                 </div>
-                <div class="Price" style="text-align:center; "> <p>'.$row['Price'].' DH </p> </div>
                     <div class="bsButtons">
                     <input type="hidden" name="ProductID" value="' . $row['ProductID'] . '">
                     <input type="hidden" name="Available" value="' . $row['Available'] . '">
@@ -244,8 +245,7 @@
     .Price p {
     font-size: 27px;
     }
-    .Price {
-    margin-top: 40px;}
+   
 
 </style>
 
