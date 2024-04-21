@@ -17,7 +17,7 @@
 			</div>
 
 			<div style="display:flex; justify-content:center;">
-				<div class="PriceSrt"> 
+				<div class="PriceSrt" width="109px" > 
 					<p>Price</p>
 					<div class="PriceSrtBtn">
 						<select name="" id="" style="display: none;" >
@@ -37,7 +37,7 @@
 				<div class="arrow-down"></div>
 			</div>
 
-			<div  style="display: flex;justify-content: center;">
+			<div  style="display: flex;justify-content: center;  margin-top :-10px;">
 				<div class="filterContainer">
 					<div class="priceFilter">
 						<div class="PFBtn">
