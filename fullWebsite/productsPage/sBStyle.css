@@ -1,293 +1,268 @@
-        a {
-        text-decoration: none;  
-        }
-        /* sortby & filter & searchBar style start */
+a {
+  text-decoration: none;
+}
+/* sortby & filter & searchBar style start */
 
-        div#btns {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        gap: 13px;
-        }
+div#btns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 13px;
+}
 
-        div#sb {
-        display: flex;
-        justify-content: flex-end;
-        width: 50%;
-        }
+div#sb {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+}
 
+/* sortby & filter & searchBAr style end */
 
+.button p {
+  color: white;
+  font-weight: 550;
+  font-size: 14px !important;
+}
 
+.filtering {
+  display: flex;
+  width: 100%;
+  margin-bottom: -80px;
+  align-items: flex-start;
+  gap: 0px !important;
+  transform: scale(0.8);
+  margin-top: 97px;
+  justify-content: center;
+  align-content: center;
+}
 
+.material-symbols-outlined {
+  color: rgb(255, 255, 255);
+}
 
-        /* sortby & filter & searchBAr style end */
+.searchBar i {
+  transform: rotateY(-180deg);
+  color: white;
+}
 
-        .button p {
-        color: white;
-        font-weight: 550;
-        font-size: 14px!important;
-        }
+.searchBar button {
+  border: none;
+  padding: 5px 20px;
+  border-radius: 25px;
+  background: #00a3ff;
+  transition: transform 300ms;
+  margin-top: 0.3px;
+}
 
-        .filtering {
-            display: flex;
-            width: 100%;
-            margin-bottom: -80px;
-            align-items: flex-start;
-            gap: 0px ! Important;
-            transform: scale(0.8);
-            margin-top: 97px;
-            justify-content: center;
-            align-content: center;
-        }
+.searchBar input {
+  border: none;
+  margin-left: 5px;
+  width: 79%;
+}
 
-        .material-symbols-outlined {
-        color: rgb(255, 255, 255);
-        }
+.searchBar input:focus {
+  outline: none;
+}
 
-        .searchBar i {
-        transform : rotateY(-180deg);
-        color:white;
-        }
+.searchBar {
+  height: 30px;
+  border: 1.5px #00a3ff solid;
+  width: 300px;
+  padding: 4px 0px;
+  border-radius: 25px;
+  padding-bottom: 0px !important;
+  margin-top: 20px;
+  display: flex;
+  align-content: center;
+  align-items: baseline;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
 
-        .searchBar button {
-        border :none;
-        padding :5px 20px;
-        border-radius:25px;
-        background : #00A3FF;
-        transition: transform 300ms;
-        margin-top: .3px;
-        }
+.searchBar input::placeholder {
+  color: grey;
+  font-size: 13px;
+  font-weight: 700;
+}
 
-        .searchBar input {
-        border: none;
-        margin-left: 5px;
-        width: 79%;
-        }
+.searchBar button:hover {
+  transform: scale(0.9);
+  opacity: 0.8;
+}
 
-        .searchBar input:focus {
-        outline:none;
-        }
+.arrow-down,
+.arrow-top {
+  display: block;
+  width: 13px;
+  height: 13px;
+  border-top: 4px solid #fff;
+  border-left: 4px solid #fff;
+  border-radius: 2px;
+}
+.arrow-top {
+  transform: rotate(45deg);
+  margin-top: 7px;
+}
 
-        .searchBar {
-        height: 30px;
-        border: 1.5px #00A3FF solid;
-        width: 300px;
-        padding: 4px 0px;
-        border-radius: 25px;
-        padding-bottom: 0px !important;
-        margin-top: 20px;
-        display: flex;
-        align-content: center;
-        align-items: baseline;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        }
+.arrow-down {
+  transform: rotate(-134deg);
+  margin-top: -7px;
+}
 
-        .searchBar input::placeholder {
-        color:grey;
-        font-size:13px;
-        font-weight:700;
-        }
+.PriceSrt {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background: #d9d9d9;
+  height: 30px;
+  margin-top: -5px;
+  width: 80px;
+  border-radius: 5px;
+}
 
-        .searchBar button:hover {
-        transform:scale(.9);
-        opacity:.8;
-        }
+.PriceSrtBtn {
+  display: flex;
+  flex-direction: column;
+  margin-top: -13px;
+}
 
-        
-        .arrow-down, .arrow-top {
-            display: block;
-            width: 13px;
-            height: 13px;
-            border-top: 4px solid #fff;
-            border-left: 4px solid #fff;
-            border-radius: 2px;
-           
-        }
-        .arrow-top{
-        transform: rotate(45deg);
-        margin-top: 7px;
-        }
+.PriceSrtBtn button {
+  background: none;
+  border: none;
+  transform: scale(0.5);
+  margin-bottom: -10px;
+}
 
+.PriceSrtBtn button:hover {
+  opacity: 0.3;
+}
 
-        .arrow-down{
-        transform: rotate(-134deg);
-        margin-top: -7px;
-        }
+.PriceSrtBtn button div {
+  border-color: black;
+}
 
-        .PriceSrt {
-            display: flex;
-            align-self: center;
-            align-items: center;
-            align-content: center;
-            justify-content: center;
-            background: #D9D9D9;
-            height: 30px;
-            margin-top: -5px;
-            width: 80px;
-            border-radius: 5px;
-          
-        }
+.button {
+  z-index: 6;
+  position: relative !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
+/**/
 
-            .PriceSrtBtn {
-                display: flex;
-                flex-direction: column;
-                 margin-top: -13px;
-            }
+.filterContainer {
+  display: flex;
+  width: 100%;
+  background-color: #d9d9d9;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
 
+.PFBtn {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
 
-            .PriceSrtBtn button {
-                background: none;
-                border: none;
-                transform: scale(.5);
-                margin-bottom: -10px;
-               
-            }
+.PFProperties {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 250px;
+  gap: 0px;
+}
 
-            .PriceSrtBtn button:hover {
-                opacity: .3;
-            } 
+.filtering hr {
+  color: white !important;
+  background-image: white !important;
+  border-color: white !important;
+  margin-top: -8px !important;
+}
 
-            .PriceSrtBtn button div {
-                border-color: black;
-                
-            }
+.Sp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  gap: 30px;
+}
 
-            .button {
-                z-index: 6;
-                position: relative!important;
-                display: flex;
-                flex-direction: row;
-                justify-content:space-between ;
+.Sp div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
 
-            }
+.Sp div button {
+  background: grey;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  width: 100px;
+  padding: 6px 12px;
+}
 
+#sp1.clicked,
+#sp2.clicked,
+#sp3.clicked,
+#sp4.clicked {
+  background: blueviolet;
+}
 
-            /**/
+.filterContainer,
+.PriceSrt {
+  opacity: 0;
+}
 
-            .filterContainer {
-                display: flex;
-                width: 100%;
-                background-color: #D9D9D9;
-                flex-direction: column;
-                padding-bottom: 20px;
+.filterContainer.clicked,
+.PriceSrt.clicked {
+  opacity: 1;
+}
 
-            }
+.inputprice {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  align-content: center;
+  flex-wrap: nowrap;
+  width: 70%;
+  gap: 20px;
+}
 
-      
-        
-            .PFBtn {
-                display: flex;
-                align-content: center;
-                justify-content: space-between;
-                align-items: center;
-                padding: 0px 20px;
-            }
+#MinBtn,
+#MaxBtn {
+  outline: 1px solid #00a3ff;
+  border: none;
+  border-radius: 20px;
+  background: white;
+  width: 100px;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
 
+#MinMaxBtn {
+  border: none;
+  width: 100px;
+  background: #00a3ff;
+  height: 25px;
+  border-radius: 20px;
+  color: white;
+  transition: transform 200ms ease-in-out;
+  margin: 16px 0;
+}
 
-
-            .PFProperties {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                flex-wrap: nowrap;
-                width: 250px;
-                gap: 0px;
-            }
-
-
-            .filtering hr {
-                color: white!important;
-                background-image: white!important;
-                border-color: white!important;
-                margin-top: -8px!important;
-            }
-
-
-            .Sp {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                flex-wrap: wrap;
-                padding-top: 10px;
-                gap: 30px;
-
-            }
-
-            .Sp div{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 30px;
-            }
-
-
-           .Sp div button {
-            background: grey;
-            color: white;
-            border: none;
-            border-radius: 20px;
-            width: 100px;
-            padding: 6px 12px;
-
-           }
-
-
-           #sp1.clicked ,#sp2.clicked ,#sp3.clicked ,#sp4.clicked {
-            background: blueviolet;
-           }
-
-
-        .filterContainer , .PriceSrt {
-            opacity: 0;
-        }   
-        
-           
-        .filterContainer.clicked , .PriceSrt.clicked{
-
-            opacity: 1;
-        }
-        
-
-        .inputprice {
-            display: flex;
-            align-items: center;
-            justify-content: end;
-            align-content: center;
-            flex-wrap: nowrap;
-            width: 70%;
-            gap: 20px;
-        }
-
-
-        #MinBtn,#MaxBtn {
-            outline: 1px solid #00A3FF;
-            border: none;
-            border-radius: 20px;
-            background:white;
-            width: 100px;
-            text-align: center;
-            font-size: large;
-            font-weight: bold;
-        }
-
-        #MinMaxBtn  {
-            border: none;
-            width: 100px;
-            background: #00A3FF;
-            height: 25px;
-            border-radius: 20px;
-            color: white;
-            transition: transform 200ms ease-in-out;
-            margin: 16px 0;
-        }
-
-        #MinMaxBtn:hover {
-            opacity: .8;
-            transform: scale(.9);
-        }
-        
-        
+#MinMaxBtn:hover {
+  opacity: 0.8;
+  transform: scale(0.9);
+}
