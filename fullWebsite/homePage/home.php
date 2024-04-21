@@ -166,32 +166,9 @@
                           </div>
                       </div>
                       </div>
-
-                      <div class="slide1">
-                      <div class="cart ">
-                          <div class="bsDot" style="background-color: ' . $backgroundColor . ';"></div>
-                          <div class="bsImg">
-                              <img src="data:image;base64,'.base64_encode($row['ProductImg']).'" alt="' . $row['Name'] . '">
-                          </div>
-                          <div class="bsTitle"><p>' . $row['Name'] . '</p></div>
-                          <div class="Price" style="text-align:center; "> <p>'.$row['Price'].' DH </p> </div>
-
-                          <div class="bsProperties">
-                              <div class="prop"><p>'.$row['Specification'].'</p></div>
-                          </div>
-
-
-                          <div class="bsButtons">
-                              <button type="button" id="btn01" name="CartBtn">Add To Cart</button>
-                              <button type="button" id="btn02" name="SHopBtn">Shop Now</button>
-                          </div>
-                      </div>
-                      </div>
                   ';
           }
           ?>
-
-
          
           </div>
         
