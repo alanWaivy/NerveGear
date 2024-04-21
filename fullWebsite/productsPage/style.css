@@ -517,7 +517,7 @@ button#ImgBtn {
 }
 
 
-.cart form {
+.cart #form1 {
   display: flex;
   flex-direction: column;
   align-content: center;

@@ -50,7 +50,7 @@
                     echo '<div class="cart ">
                        
                             <div class="bsDot" style="background-color: ' . $backgroundColor . ';"></div>
-                           <form method="get" action="../product/index.php"><button type="submit" name="ImgBtn" id="ImgBtn"> <div class="bsImg">
+                           <form id="form1" method="get" action="../product/index.php"><button type="submit" name="ImgBtn" id="ImgBtn"> <div class="bsImg">
                                 <img src="data:image;base64,' . base64_encode($row['ProductImg']) . '" alt="' . $row['ProductID'] . '">
                             </div> </button>
                                 <input type="hidden"  value="'.$row['ProductID'].' ">
@@ -61,15 +61,15 @@
                             <div class="bsProperties">
                                 <div class="prop"><p>' . $row['Specification'] . '</p></div>
                             
-                            </div> <form method="post" action="products.php" >
-                                <div class="bsButtons">
+                            </div> 
+                                <div class="bsButtons"><form method="post" action="products.php" >
                                 <input type="hidden" name="ProductID" value="' . $row['ProductID'] . '">
                                 <input type="hidden" name="Available" value="' . $row['Available'] . '">
                                 <input type="hidden" name="ProductN" value="' . $row['Name'] . '">
                                 <button type="submit" id="btn01" name="CartBtn">Add To Cart</button>
-                                <button type="submit" id="btn02" name="ShopBtn">Shop Now</button>
+                                <button type="submit" id="btn02" name="ShopBtn">Shop Now</button> </form>
                             </div>
-                        </form>
+                       
                     </div>';
                 }
             }
