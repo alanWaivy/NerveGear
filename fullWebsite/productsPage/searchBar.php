@@ -20,8 +20,11 @@
 				<div class="PriceSrt"> 
 					<p>Price</p>
 					<div class="PriceSrtBtn">
-						<button name="price" value="ASC"><div class="arrow-top FilteringBtn"></div></button>
-						<button name="price" value="DESC"><div class="arrow-down FilteringBtn"></div></i></button>
+						<select name="" id="" style="display: none;" >
+							<option value="">hello</option>
+						</select>
+						<button name="price" value="ASC"  ><div class="arrow-top FilteringBtn"></div></button>
+						<button name="price" value="DESC" ><div class="arrow-down FilteringBtn"></div></i></button>
 					</div>
 				</div>
 			</div>
@@ -70,7 +73,7 @@
 	<div id="sb">
 
 		<div class="searchBar">
-			<input type="search" id="site-search" name="q"  placeholder="Search... " />
+			<input type="search" id="site-search" name="q"  placeholder="Search... " value="<?php echo !empty($_GET['q'])?$_GET['q']:''; ?>"/>
 			<button><i class="fa-solid fa-magnifying-glass"></i></button>
 			</div></div>
 		</div>
