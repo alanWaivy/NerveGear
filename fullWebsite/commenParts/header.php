@@ -726,12 +726,19 @@ $ProductsPrices = [];
 }
 
 .responsiveBtns {
-    display: none;
+    display: flex;
 }
 
 
+@media (min-width:0px) and (max-width:668px) {
+nav  {
+  gap: 270px!important;
+}
+  
+}
 
-@media screen and (min-width:0px) and (max-width:840px) {
+
+@media  (min-width:0px) and (max-width:840px) {
 
   /*responsive css */
 
@@ -744,8 +751,8 @@ $ProductsPrices = [];
         position:static;
         display: block!important;
         right: 30px;
-        top: 0;
-        bottom: 0;
+        top: 0px;
+        bottom: 0px;
     }
     
     .navTrigger i {
@@ -763,12 +770,12 @@ $ProductsPrices = [];
         justify-content: center;
         flex-direction: column-reverse;
         position: absolute;
-        top: 60;
+        top: 60px;
         background: #D9D9D9;
-        gap: 0 !important;
+        gap: 0px !important;
         display: none!important;
-        right: 20;
-        padding: 40;
+        right: 20px;
+        padding: 40px;
     }
 
 
@@ -783,7 +790,7 @@ $ProductsPrices = [];
         flex: 1;
         justify-content: center;
         gap: 30px;
-        padding: 0;
+        padding: 0px;
         flex-direction: column;
     }
 
