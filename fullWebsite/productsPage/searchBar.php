@@ -47,8 +47,8 @@
 						<hr>
 
 						<div class="PFProperties">
-							<input type="range" name="Hprice" id="" min="2000" max="50000" value="50000" step="500">
-							<input type="range" name="Lprice" id="" min="0" max="50000" value="0" step="500">
+							<input type="range" name="Mprice" id="" min="2000" max="50000" value="50000" step="500">
+							<input type="range" name="Nprice" id="" min="0" max="50000" value="0" step="500">
 						</div>
 					</div>
 					<div class="category">

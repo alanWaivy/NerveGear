@@ -35,8 +35,10 @@
         }
         $_SESSION['sort'] = !empty($_GET['price']) ? $_GET['price'] : $_SESSION['sort'];
         $q = !empty($_GET['q']) ? $_GET['q'] : '';
+        $max = !empty($_GET['Mprice']) ? $_GET['Mprice'] : '50000';
+        $min = !empty($_GET['Nprice']) ? $_GET['Nprice'] : '0';
         $price = isset($_SESSION['sort'])?$_SESSION['sort']:'ASC';
-        $sql = "SELECT * FROM products WHERE Name LIKE '%{$q}%' ORDER BY Price $price";
+        $sql = "SELECT * FROM products WHERE Name LIKE '%{$q}%' AND Price BETWEEN $min AND $max ORDER BY Price $price";
         $result = mysqli_query($db, $sql);
 
         while ($row = mysqli_fetch_assoc($result)) {
