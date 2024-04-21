@@ -119,8 +119,10 @@ div#sb {
   background: #d9d9d9;
   height: 30px;
   margin-top: -5px;
-  width: 80px;
-  border-radius: 5px;
+  width: 100px;
+  height: 50px;
+  border-radius: 15px;
+  border: 1px solid black;
 }
 
 .PriceSrtBtn {
@@ -160,6 +162,8 @@ div#sb {
   background-color: #d9d9d9;
   flex-direction: column;
   padding-bottom: 20px;
+  border: 1px solid black;
+  border-radius: 15px;
 }
 
 .PFBtn {
@@ -191,6 +195,7 @@ div#sb {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   padding-top: 10px;
   gap: 30px;

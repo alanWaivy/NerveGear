@@ -38,8 +38,13 @@
             $max = !empty($_GET['Mprice']) ? $_GET['Mprice'] : '50000';
             $min = !empty($_GET['Nprice']) ? $_GET['Nprice'] : '0';
             $price = isset($_SESSION['sort']) ? $_SESSION['sort'] : 'ASC';
-            $sql = "SELECT * FROM products WHERE Name LIKE '%{$q}%' AND Price BETWEEN $min AND $max ORDER BY Price $price";
+            $cat = !empty($_GET['cat']) ? "AND Specification = '{$_GET['cat']}'" : '';
+            $sql = "SELECT * FROM products WHERE Name LIKE '%{$q}%' AND Price BETWEEN $min AND $max $cat ORDER BY Price $price";
             $result = mysqli_query($db, $sql);
+
+            if(mysqli_num_rows($result)==0){
+                echo "No Results" ;
+            }
 
             while ($row = mysqli_fetch_assoc($result)) {
                 $backgroundColor = $row['Available'] ? '#00ff15' : '#878787';

@@ -71,14 +71,15 @@
 							</div>
 							<hr>
 							<div class="Sp">
-								<div>
-									<button name="sp1" id="sp1" class="categoryBtn" value="Gaming">Gaming</button>
-									<button name="sp2" id="sp2" class="categoryBtn" value="Work">Work</button>
-								</div>
-								<div>
-									<button name="sp3" id="sp3" class="categoryBtn" value="School">School</button>
-									<button name="sp4" id="sp4" class="categoryBtn" value="Montage">Montage</button>
-								</div>
+							<div>
+								<button name="cat" class="categoryBtn <?php echo isset($_GET['cat']) && $_GET['cat'] == 'Gaming' ? 'clicked' : ''; ?>" value="Gaming">Gaming</button>
+								<button name="cat" class="categoryBtn <?php echo $_GET['cat']== "Work" ? 'clicked' :''; ?>" value="Work">Work</button>
+							</div>
+							<div>
+								<button name="cat" class="categoryBtn <?php echo $_GET['cat']== "School" ? 'clicked' :''; ?>" value="School">School</button>
+								<button name="cat" class="categoryBtn <?php echo $_GET['cat']== "Montage" ? 'clicked' :''; ?>" value="Montage">Montage</button>
+							</div>
+							<form action="" method="GET"><input type="submit" value="Reset" id="MinMaxBtn" style="margin: 0;"></form>
 							</div>
 						</div>
 					</div>
@@ -104,21 +105,5 @@
 
 	document.getElementById("FilterBtn").addEventListener("click", function() {
 		document.querySelector(".filterContainer").classList.toggle("clicked");
-	});
-
-	document.getElementById("sp1").addEventListener("click", function() {
-		this.classList.toggle("clicked");
-	});
-
-	document.getElementById("sp2").addEventListener("click", function() {
-		this.classList.toggle("clicked");
-	});
-
-	document.getElementById("sp3").addEventListener("click", function() {
-		this.classList.toggle("clicked");
-	});
-
-	document.getElementById("sp4").addEventListener("click", function() {
-		this.classList.toggle("clicked");
 	});
 </script>
