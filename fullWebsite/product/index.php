@@ -13,8 +13,6 @@
   <script src="index.js" defer></script>
 </head>
 <body>
-    
-
 <?php include("../commenParts/header.php") ?>
 
 <section class="hero">
