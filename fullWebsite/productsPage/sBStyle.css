@@ -217,10 +217,7 @@ div#sb {
   padding: 6px 12px;
 }
 
-#sp1.clicked,
-#sp2.clicked,
-#sp3.clicked,
-#sp4.clicked {
+.clicked{
   background: blueviolet;
 }
 
