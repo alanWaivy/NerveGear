@@ -17,7 +17,7 @@
 			</div>
 
 			<div style="display:flex; justify-content:center;">
-				<div class="PriceSrt"> 
+				<div class="PriceSrt" width="109px" > 
 					<p>Price</p>
 					<div class="PriceSrtBtn">
 						<select name="" id="" style="display: none;" >
@@ -37,7 +37,7 @@
 				<div class="arrow-down"></div>
 			</div>
 
-			<div  style="display: flex;justify-content: center;">
+			<div  style="display: flex;justify-content: center;  margin-top :-10px;">
 				<div class="filterContainer">
 					<div class="priceFilter">
 						<div class="PFBtn">
@@ -47,8 +47,19 @@
 						<hr>
 
 						<div class="PFProperties">
-							<input type="range" name="Mprice" id="" min="2000" max="50000" value="50000" step="500">
-							<input type="range" name="Nprice" id="" min="0" max="50000" value="0" step="500">
+								<div class="inputMin">
+									<p>Min :</p>
+									<input type="number" name="MinBtn" id="MinBtn" >
+								</div>
+
+								<div class="inputMax">
+									<p>Max :</p>
+									<input type="number" name="MaxBtn" id="MaxBtn">
+								</div>
+								<div class="MinMaxBtn">
+									<button type="submit" name="MinMaxBtn" >Submit</button>
+								</div>
+							
 						</div>
 					</div>
 					<div class="category">
