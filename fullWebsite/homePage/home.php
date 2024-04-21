@@ -138,7 +138,7 @@
 
         <?php
           $db = mysqli_connect('localhost', 'root', '', 'lapshop');
-          $sql = "SELECT * FROM products WHERE popularProduct = 1 ";
+          $sql = "SELECT * FROM products WHERE popularProduct = 1  LIMIT 3";
           $result = mysqli_query($db, $sql);
           while ($row = mysqli_fetch_assoc($result)) {
               // Determine background color based on availability

@@ -85,7 +85,7 @@
 
   <?php
           $db = mysqli_connect('localhost', 'root', '', 'lapshop');
-          $sql = "SELECT * FROM products WHERE popularProduct = 1 LIMIT 4";
+          $sql = "SELECT * FROM products WHERE Available = 1 LIMIT 4";
           $result = mysqli_query($db, $sql);
           while ($row = mysqli_fetch_assoc($result)) {
               // Determine background color based on availability
@@ -114,29 +114,7 @@
                       </div>
                       </div>
 
-
-
-                      <div class="slide2">
-                      <div class="cart ">
-                          <div class="bsDot" style="background-color: ' . $backgroundColor . ';"></div>
-                          <div class="bsImg">
-                              <img src="data:image;base64,'.base64_encode($row['ProductImg']).'" alt="' . $row['Name'] . '">
-                          </div>
-                          <div class="bsTitle"><p>' . $row['Name'] . '</p></div>
-                          <div class="Price" style="text-align:center; "> <p>'.$row['Price'].' DH </p> </div>
-
-                          <div class="bsProperties">
-
-                              <div class="prop"><p>'.$row['Specification'].'</p></div>
-                              
-                          </div>
-
-                          <div class="bsButtons">
-                              <button type="button" id="btn01">Add To Cart</button>
-                              <button type="button" id="btn02">Shop Now</button>
-                          </div>
-                      </div>
-                      </div>
+                      
                      
                   ';
           }

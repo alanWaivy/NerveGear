@@ -54,7 +54,7 @@ body{
 }
 
 .bsImg img {
-  height: auto;
+  height: 204px!important;
   width: 300px;
   margin: 10px 20px;
 }
@@ -391,6 +391,7 @@ body{
     display: flex;
     transform: scale(.7);
     gap: 20px;
+    justify-content: center;
 }  
 
 .mHeaders {
