@@ -33,11 +33,11 @@
             if (!$db) {
                 die("Connection failed: " . mysqli_connect_error());
             }
-            $_SESSION['sort'] = !empty($_GET['price']) ? $_GET['price'] : $_SESSION['sort'];
+            $_SESSION['price'] = !empty($_GET['price']) ? $_GET['price'] : (isset($_SESSION['price']) ? $_SESSION['price'] :'ASC') ;
             $q = !empty($_GET['q']) ? $_GET['q'] : '';
             $max = !empty($_GET['Mprice']) ? $_GET['Mprice'] : '50000';
             $min = !empty($_GET['Nprice']) ? $_GET['Nprice'] : '0';
-            $price = isset($_SESSION['sort']) ? $_SESSION['sort'] : 'ASC';
+            $price = isset($_SESSION['price']) ? $_SESSION['price'] : 'ASC';
             $cat = !empty($_GET['cat']) ? "AND Specification = '{$_GET['cat']}'" : '';
             $sql = "SELECT * FROM products WHERE Name LIKE '%{$q}%' AND Price BETWEEN $min AND $max $cat ORDER BY Price $price";
             $result = mysqli_query($db, $sql);
