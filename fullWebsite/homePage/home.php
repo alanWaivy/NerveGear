@@ -216,17 +216,12 @@
     <!--glow effect 04 end -->
  
     <div class="aboutUs">
-        <div id="asHeader"><h1>About US</h1></div>
+        <div id="asHeader"><h1>à propos de nous</h1></div>
         <div class="asSection">
           <div class="part1">
-            <h2>Lorem lorem <br> lorem.</h2>
-            <p>Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Ut 
-              et massa mi. Aliquam in
-               hendrerit urna. Pellentesque
-                sit amet sapien fringilla, 
-                mattis ligula consectetur,
-                 ultrices mauris.</p>
+            <h2>Service de Livraison Rapide et Fiable</h2>
+            <p>Chez Lapshop, nous nous engageons à vous fournir un service de livraison rapide et fiable pour vos achats. Notre équipe dévouée garantit que votre commande vous parvienne en toute sécurité et dans les plus brefs délais, où que vous soyez.
+</p>
             <button type="button">Learn More</button>
           </div>
           <div class="part2"></div>

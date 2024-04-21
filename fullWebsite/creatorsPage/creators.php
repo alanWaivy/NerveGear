@@ -12,7 +12,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="index.js" defer></script>
 </head>
 
 <body>
@@ -21,8 +20,8 @@
 
 <section class="hero">
     <div>
-        <span>Welcome To NerveGear</span>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam cum fuga odit, </p>
+        <span>Bienvenue chez LapShop</span>
+        <p>Faites-nous confiance pour vous offrir l'excellence technologique à chaque achat.  </p>
         <div>
             <button id="Hbtn01" ><a href="../productsPage/products.php">All Products</a></button>
 			<button id="Hbtn02" ><a href="../homePage/home.php#bsHeader">Best Sales</a></button>
@@ -43,8 +42,8 @@
 
 
 	<div class="us">
-		<h1>lorem ipsum</h1>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora iure autem doloribus! Repellendus eligendi asperiores sapiente facilis deserunt, sit ab, molestiae obcaecati consequuntur, quasi odio earum accusamus blanditiis in! Asperiores?</p>
+		<h1>Notre Engagement : Votre Partenaire de Confiance dans la Technologie</h1>
+		<p>Chez Lapshop, nous privilégions la transparence et l'intégrité, garantissant des informations précises sur nos produits et pratiques. Nous nous engageons également envers la responsabilité sociale et environnementale, tout en cultivant des relations durables fondées sur la confiance et le respect mutuel.</p>
 	</div>
 
 <section class="we">
