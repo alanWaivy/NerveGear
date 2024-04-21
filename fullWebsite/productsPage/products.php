@@ -50,9 +50,11 @@
                     echo '<div class="cart ">
                         <form method="post" action="products.php" >
                             <div class="bsDot" style="background-color: ' . $backgroundColor . ';"></div>
-                            <div class="bsImg">
+                           <form method="get" action="../product/index.php"><button type="submit" name="ImgBtn" id="ImgBtn"> <div class="bsImg">
                                 <img src="data:image;base64,' . base64_encode($row['ProductImg']) . '" alt="' . $row['ProductID'] . '">
-                            </div>
+                            </div> </button>
+                                <input type="hidden"  value="'.$row['ProductID'].' ">
+                            </form>
                             <div class="bsTitle"><p>' . $row['Name'] . '</p></div> 
                                         <div class="Price" style="text-align:center; "> <p>' . $row['Price'] . ' DH </p> </div>
     
