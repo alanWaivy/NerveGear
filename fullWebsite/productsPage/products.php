@@ -66,8 +66,8 @@
                                 <input type="hidden" name="ProductID" value="' . $row['ProductID'] . '">
                                 <input type="hidden" name="Available" value="' . $row['Available'] . '">
                                 <input type="hidden" name="ProductN" value="' . $row['Name'] . '">
-                                    <button type="submit" id="btn01" name="CartBtn" >Add To Cart</button>
-                                    <button type="submit" id="btn02" name="ShopBtn">Shop Now</button>
+                                <button type="submit" id="btn01" name="CartBtn">Add To Cart</button>
+                                <button type="submit" id="btn02" name="ShopBtn">Shop Now</button>
                             </div>
                         </form>
                     </div>';
