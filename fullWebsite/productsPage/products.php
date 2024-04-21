@@ -17,46 +17,46 @@
 
 <body>
 
-<?php include("../commenParts/header.php"); ?>
+    <?php include("../commenParts/header.php"); ?>
 
-<div class="main">
+    <div class="main">
 
-    <?php include("searchBar.php"); ?>
+        <?php include("searchBar.php"); ?>
 
-    <!-- carts -->
-    <div class="carts">
-        <?php
-        $alertLogin = "";
-        $alertLogout = "";
-        $db = mysqli_connect('localhost', 'root', '', 'lapshop');
+        <!-- carts -->
+        <div class="carts">
+            <?php
+            $alertLogin = "";
+            $alertLogout = "";
+            $db = mysqli_connect('localhost', 'root', '', 'lapshop');
 
-        if (!$db) {
-            die("Connection failed: " . mysqli_connect_error());
-        }
-        $_SESSION['sort'] = !empty($_GET['price']) ? $_GET['price'] : $_SESSION['sort'];
-        $q = !empty($_GET['q']) ? $_GET['q'] : '';
-        $max = !empty($_GET['Mprice']) ? $_GET['Mprice'] : '50000';
-        $min = !empty($_GET['Nprice']) ? $_GET['Nprice'] : '0';
-        $price = isset($_SESSION['sort'])?$_SESSION['sort']:'ASC';
-        $sql = "SELECT * FROM products WHERE Name LIKE '%{$q}%' AND Price BETWEEN $min AND $max ORDER BY Price $price";
-        $result = mysqli_query($db, $sql);
+            if (!$db) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+            $_SESSION['sort'] = !empty($_GET['price']) ? $_GET['price'] : $_SESSION['sort'];
+            $q = !empty($_GET['q']) ? $_GET['q'] : '';
+            $max = !empty($_GET['Mprice']) ? $_GET['Mprice'] : '50000';
+            $min = !empty($_GET['Nprice']) ? $_GET['Nprice'] : '0';
+            $price = isset($_SESSION['sort']) ? $_SESSION['sort'] : 'ASC';
+            $sql = "SELECT * FROM products WHERE Name LIKE '%{$q}%' AND Price BETWEEN $min AND $max ORDER BY Price $price";
+            $result = mysqli_query($db, $sql);
 
-        while ($row = mysqli_fetch_assoc($result)) {
-             $backgroundColor = $row['Available'] ? '#00ff15' : '#878787';
-    echo '
+            while ($row = mysqli_fetch_assoc($result)) {
+                $backgroundColor = $row['Available'] ? '#00ff15' : '#878787';
+                echo '
     
             <div class="cart ">
                 
                 <form method="post" action="products.php" >
                  <div class="bsDot" style="background-color: ' . $backgroundColor . ';"></div>
                 <div class="bsImg">
-                    <img src="data:image;base64,'.base64_encode($row['ProductImg']).'" alt="' . $row['ProductID'] . '">
+                    <img src="data:image;base64,' . base64_encode($row['ProductImg']) . '" alt="' . $row['ProductID'] . '">
                 </div>
                 <div class="bsTitle"><p>' . $row['Name'] . '</p></div> 
-                               <div class="Price" style="text-align:center; "> <p>'.$row['Price'].' DH </p> </div>
+                               <div class="Price" style="text-align:center; "> <p>' . $row['Price'] . ' DH </p> </div>
 
                 <div class="bsProperties">
-                    <div class="prop"><p>'.$row['Specification'].'</p></div>
+                    <div class="prop"><p>' . $row['Specification'] . '</p></div>
                  
                 </div>
                     <div class="bsButtons">
@@ -69,188 +69,181 @@
                 </form>
             </div>
         ';
-    
-    
-}
+            }
 
-    if(isset($_POST['CartBtn'])) {
-        if (isset($_SESSION['username'] )){ 
-            
-            $alertLogin = 'alertOn';
-            $alertLogout = 'alertOff';
+            if (isset($_POST['CartBtn'])) {
+                if (isset($_SESSION['username'])) {
 
-            
-            $ProductID = (int) $_POST['ProductID'];
-            $ProductName = $_POST['ProductN'];
-            $Available1 = $_POST['Available'];
-            
-            $sql = "SELECT UserID FROM users WHERE Email = '" . $_SESSION['email'] . "'";
-            $Result = mysqli_query($db, $sql);
+                    $alertLogin = 'alertOn';
+                    $alertLogout = 'alertOff';
 
-            $row = mysqli_fetch_assoc($Result);
-            
-            $UserID= (int) $row['UserID'];
-            $Result = mysqli_query($db, "SELECT Amount FROM cart WHERE UserID = '". $UserID."' AND ProductID = '".$ProductID."' ");
 
-            if ($Result && mysqli_num_rows($Result) > 0) {
-                $row = mysqli_fetch_assoc($Result);
-                $Amount = $row['Amount'] + 1;
-                $sql4 = "UPDATE cart SET Amount = $Amount WHERE UserID = $UserID";
-                mysqli_query($db, $sql4);
-             
-            } else {
-                $Amount = 1;
-                $sql5 = "INSERT INTO cart (ProductName, ProductID, UserID, Available, Amount) 
+                    $ProductID = (int) $_POST['ProductID'];
+                    $ProductName = $_POST['ProductN'];
+                    $Available1 = $_POST['Available'];
+
+                    $sql = "SELECT UserID FROM users WHERE Email = '" . $_SESSION['email'] . "'";
+                    $Result = mysqli_query($db, $sql);
+
+                    $row = mysqli_fetch_assoc($Result);
+
+                    $UserID = (int) $row['UserID'];
+                    $Result = mysqli_query($db, "SELECT Amount FROM cart WHERE UserID = '" . $UserID . "' AND ProductID = '" . $ProductID . "' ");
+
+                    if ($Result && mysqli_num_rows($Result) > 0) {
+                        $row = mysqli_fetch_assoc($Result);
+                        $Amount = $row['Amount'] + 1;
+                        $sql4 = "UPDATE cart SET Amount = $Amount WHERE UserID = $UserID";
+                        mysqli_query($db, $sql4);
+                    } else {
+                        $Amount = 1;
+                        $sql5 = "INSERT INTO cart (ProductName, ProductID, UserID, Available, Amount) 
                          VALUES ('$ProductName', $ProductID, $UserID, $Available1, $Amount)";
                         mysqli_query($db, $sql5);
 
 
-            echo '<script>window.location.href = "../productsPage/products.php";</script>';
+                        echo '<script>window.location.href = "../productsPage/products.php";</script>';
+                    }
+                } else {
 
-                
-
-                
+                    $alertLogin = 'alertOff';
+                    $alertLogout = 'alertOn';
+                }
             }
- 
-}       else{   
-        
-    $alertLogin = 'alertOff';
-    $alertLogout = 'alertOn';
-}}    
 
-    if(isset($_POST['ShopBtn'])) {
-        if (isset($_SESSION['username'] )){ 
-            
-            $alertLogin = 'alertOn';
-            $alertLogout = 'alertOff';
+            if (isset($_POST['ShopBtn'])) {
+                if (isset($_SESSION['username'])) {
 
-            
-            $ProductID = (int) $_POST['ProductID'];
-            $ProductName = $_POST['ProductN'];
-            $Available1 = $_POST['Available'];
-            
-            $sql = "SELECT UserID FROM users WHERE Email = '" . $_SESSION['email'] . "'";
-            $Result = mysqli_query($db, $sql);
+                    $alertLogin = 'alertOn';
+                    $alertLogout = 'alertOff';
 
-            $row = mysqli_fetch_assoc($Result);
-            
-            $UserID= (int) $row['UserID'];
-            $Result = mysqli_query($db, "SELECT Amount FROM cart WHERE UserID = '". $UserID."' AND ProductID = '".$ProductID."' ");
 
-            if ($Result && mysqli_num_rows($Result) > 0) {
-                $row = mysqli_fetch_assoc($Result);
-                $Amount = $row['Amount'] + 1;
-                $sql4 = "UPDATE cart SET Amount = $Amount WHERE UserID = $UserID";
-                mysqli_query($db, $sql4);
-             
-            } else {
-                $Amount = 1;
-                $sql5 = "INSERT INTO cart (ProductName, ProductID, UserID, Available, Amount) 
+                    $ProductID = (int) $_POST['ProductID'];
+                    $ProductName = $_POST['ProductN'];
+                    $Available1 = $_POST['Available'];
+
+                    $sql = "SELECT UserID FROM users WHERE Email = '" . $_SESSION['email'] . "'";
+                    $Result = mysqli_query($db, $sql);
+
+                    $row = mysqli_fetch_assoc($Result);
+
+                    $UserID = (int) $row['UserID'];
+                    $Result = mysqli_query($db, "SELECT Amount FROM cart WHERE UserID = '" . $UserID . "' AND ProductID = '" . $ProductID . "' ");
+
+                    if ($Result && mysqli_num_rows($Result) > 0) {
+                        $row = mysqli_fetch_assoc($Result);
+                        $Amount = $row['Amount'] + 1;
+                        $sql4 = "UPDATE cart SET Amount = $Amount WHERE UserID = $UserID";
+                        mysqli_query($db, $sql4);
+                    } else {
+                        $Amount = 1;
+                        $sql5 = "INSERT INTO cart (ProductName, ProductID, UserID, Available, Amount) 
                          VALUES ('$ProductName', $ProductID, $UserID, $Available1, $Amount)";
                         mysqli_query($db, $sql5);
+                    }
 
-                
+                    echo '<script>window.location.href = "../checkoutPage/checkoutPage.php";</script>';
+                } else {
+
+                    $alertLogin = 'alertOff';
+                    $alertLogout = 'alertOn';
+                }
             }
 
-            echo '<script>window.location.href = "../checkoutPage/checkoutPage.php";</script>';
- 
-}       else{   
-        
-    $alertLogin = 'alertOff';
-    $alertLogout = 'alertOn';
-}}    
 
 
 
 
 
-        
-        ?>
+            ?>
+        </div>
     </div>
-</div>
 
-<div class="alertDiv <?php echo $alertLogout; ?>"><h1>Login First!!</h1></div>
-<div class="alertDiv <?php echo $alertLogin; ?>"><h1>Complete!!</h1></div>
+    <div class="alertDiv <?php echo $alertLogout; ?>">
+        <h1>Login First!!</h1>
+    </div>
+    <div class="alertDiv <?php echo $alertLogin; ?>">
+        <h1>Complete!!</h1>
+    </div>
 
-<?php include("../commenParts/footer.php"); ?>
+    <?php include("../commenParts/footer.php"); ?>
 
 
 
 </body>
+
 </html>
 
- 
-<style>
 
-    .alertOn{
-        
+<style>
+    .alertOn {
+
         animation: alert 700ms 50ms ease-in-out;
         z-index: 999;
-        opacity: 0  ;
+        opacity: 0;
 
 
 
-        
+
     }
-    .alertOff{
-         display: none!important;
-        
+
+    .alertOff {
+        display: none !important;
+
     }
- 
-    .alertDiv{
-    width: 153px;
-    height: 46px;
-    background-color: blueviolet;
-    color: white;
-    left: 43%;
-    top: 20%;
-    opacity: 0;
-    align-items: center;
-    align-content: center;
-    flex-direction: row;
-    border-radius: 24px;
-    transition: opacity 300ms ease-in-out;
-    box-shadow: 6px 8px 9px 10px rgba(0, 0, 0, 0.1);
-    justify-content: center;
-    z-index: -1;
 
-}
+    .alertDiv {
+        width: 153px;
+        height: 46px;
+        background-color: blueviolet;
+        color: white;
+        left: 43%;
+        top: 20%;
+        opacity: 0;
+        align-items: center;
+        align-content: center;
+        flex-direction: row;
+        border-radius: 24px;
+        transition: opacity 300ms ease-in-out;
+        box-shadow: 6px 8px 9px 10px rgba(0, 0, 0, 0.1);
+        justify-content: center;
+        z-index: -1;
 
-.alertDiv h1 {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
+    }
+
+    .alertDiv h1 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
 
     @keyframes alert {
-    0%{
+        0% {
             opacity: 0;
             display: flex;
             z-index: -1;
-    } 
+        }
 
-    50%{
+        50% {
             opacity: 1;
             display: flex;
             z-index: 999;
-            position: fixed ;
+            position: fixed;
 
-    }
+        }
 
-    100%{
+        100% {
             opacity: 0;
             display: none;
-            z-index: -1;;
-            transform: translateY(-28px);;
-    }
+            z-index: -1;
+            ;
+            transform: translateY(-28px);
+            ;
+        }
     }
 
 
 
     .Price p {
-    font-size: 27px;
+        font-size: 27px;
     }
-   
-
 </style>
-
-
