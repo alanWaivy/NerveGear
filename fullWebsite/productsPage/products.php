@@ -33,8 +33,10 @@
         if (!$db) {
             die("Connection failed: " . mysqli_connect_error());
         }
-        $price = isset($_GET['price']) ? $_GET['price'] : 'ASC';
-        $sql = "SELECT * FROM products ORDER BY Price $price";
+        $_SESSION['sort'] = !empty($_GET['price']) ? $_GET['price'] : $_SESSION['sort'];
+        $q = !empty($_GET['q']) ? $_GET['q'] : '';
+        $price = isset($_SESSION['sort'])?$_SESSION['sort']:'ASC';
+        $sql = "SELECT * FROM products WHERE Name LIKE '%{$q}%' ORDER BY Price $price";
         $result = mysqli_query($db, $sql);
 
         while ($row = mysqli_fetch_assoc($result)) {
