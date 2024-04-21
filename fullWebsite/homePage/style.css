@@ -416,9 +416,11 @@ margin-right: -10px;
 
 
 .bsImg img {
-  height: 250px;
+
+  height: 190px!important;
   width: 300px;
   margin: 10px 20px;
+  border-radius: 25px;
 }
 
 .bsTitle p {

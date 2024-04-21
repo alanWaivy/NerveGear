@@ -120,9 +120,10 @@ div#sb {
   height: 30px;
   margin-top: -24px;
   width: 100px;
+  color: blueviolet;
   height: 50px;
   border-radius: 10px;
-  border: 1px solid black;
+  border: 1px solid blueviolet;
 }
 
 .PriceSrtBtn {
@@ -143,7 +144,7 @@ div#sb {
 }
 
 .PriceSrtBtn button div {
-  border-color: black;
+  border-color: blueviolet;
 }
 
 .button {
@@ -162,7 +163,7 @@ div#sb {
   background-color: #d9d9d9;
   flex-direction: row;
   padding-bottom: 20px;
-  border: 1px solid black;
+  border: 1px solid blueviolet;
   border-radius: 15px;
 }
 
@@ -228,6 +229,7 @@ div#sb {
 .filterContainer,
 .PriceSrt {
   opacity: 0;
+  
 }
 
 .filterContainer.clicked,

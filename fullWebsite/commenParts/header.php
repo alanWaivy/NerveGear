@@ -800,7 +800,7 @@ nav  {
         justify-content: center;
         padding: 5px 20px;
         margin-bottom: -65px;
-        z-index: 6;
+        z-index: 130;
         position: relative;
         justify-content: space-between;
         gap: 440px;

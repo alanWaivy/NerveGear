@@ -373,8 +373,7 @@ nav .logo{
   align-items: center;
   justify-content: center;
   gap: 30px;
-  margin-top: -130px;
-  
+  margin-top: -330px;  
 }
 /*searchBar style start */
 
@@ -525,3 +524,9 @@ button#ImgBtn {
   align-items: center;
 }
 
+
+
+
+div#filter {
+  width: 500px;
+}
