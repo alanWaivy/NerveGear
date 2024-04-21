@@ -47,19 +47,17 @@
 						<hr>
 
 						<div class="PFProperties">
-								<div class="inputMin">
-									<p>Min :</p>
-									<input type="number" name="MinBtn" id="MinBtn" >
-								</div>
+							<div class="inputprice">
+								<p>Max :</p>
+								<input type="number" name="Mprice" id="MaxBtn" value="<?php echo !empty($_GET['Mprice']) ? $_GET['Mprice'] : ''; ?>">
+							</div>
 
-								<div class="inputMax">
-									<p>Max :</p>
-									<input type="number" name="MaxBtn" id="MaxBtn">
-								</div>
-								<div class="MinMaxBtn">
-									<button type="submit" name="MinMaxBtn" >Submit</button>
-								</div>
-							
+							<div class="inputprice">
+								<p>Min  :</p>
+								<input type="number" name="Nprice" id="MinBtn" value="<?php echo !empty($_GET['Nprice']) ? $_GET['Nprice'] : '' ; ?>">
+							</div>
+
+							<button id="MinMaxBtn">Set</button>
 						</div>
 					</div>
 					<div class="category">

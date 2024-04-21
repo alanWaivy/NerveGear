@@ -195,7 +195,7 @@
                 align-items: center;
                 flex-wrap: nowrap;
                 width: 250px;
-                gap: 20px;
+                gap: 0px;
             }
 
 
@@ -252,40 +252,40 @@
         }
         
 
-        .inputMin,.inputMax {
+        .inputprice {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: end;
             align-content: center;
             flex-wrap: nowrap;
+            width: 70%;
             gap: 20px;
         }
-        
 
-        .MinMaxBtn {
-            margin-top: -20px;
-        }
 
-        input#MinBtn,input#MaxBtn {
+        #MinBtn,#MaxBtn {
+            outline: 1px solid #00A3FF;
             border: none;
             border-radius: 20px;
             background:white;
-            margin:0!important;
-            padding: 0!important;
-
+            width: 100px;
+            text-align: center;
+            font-size: large;
+            font-weight: bold;
         }
 
-        .MinMaxBtn button {
+        #MinMaxBtn  {
             border: none;
-            width: 200px;
+            width: 100px;
             background: #00A3FF;
             height: 25px;
             border-radius: 20px;
             color: white;
             transition: transform 200ms ease-in-out;
+            margin: 16px 0;
         }
 
-        .MinMaxBtn button:hover {
+        #MinMaxBtn:hover {
             opacity: .8;
             transform: scale(.9);
         }
