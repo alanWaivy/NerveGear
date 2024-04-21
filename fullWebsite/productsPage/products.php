@@ -43,37 +43,33 @@
             $result = mysqli_query($db, $sql);
 
             if(mysqli_num_rows($result)==0){
-                echo "No Results" ;
-            }
-
-            while ($row = mysqli_fetch_assoc($result)) {
-                $backgroundColor = $row['Available'] ? '#00ff15' : '#878787';
-                echo '
+                echo "<div style='height:30vh';>No Results</div>" ;
+            }else{
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $backgroundColor = $row['Available'] ? '#00ff15' : '#878787';
+                    echo '<div class="cart ">
+                        <form method="post" action="products.php" >
+                            <div class="bsDot" style="background-color: ' . $backgroundColor . ';"></div>
+                            <div class="bsImg">
+                                <img src="data:image;base64,' . base64_encode($row['ProductImg']) . '" alt="' . $row['ProductID'] . '">
+                            </div>
+                            <div class="bsTitle"><p>' . $row['Name'] . '</p></div> 
+                                        <div class="Price" style="text-align:center; "> <p>' . $row['Price'] . ' DH </p> </div>
     
-            <div class="cart ">
-                
-                <form method="post" action="products.php" >
-                 <div class="bsDot" style="background-color: ' . $backgroundColor . ';"></div>
-                <div class="bsImg">
-                    <img src="data:image;base64,' . base64_encode($row['ProductImg']) . '" alt="' . $row['ProductID'] . '">
-                </div>
-                <div class="bsTitle"><p>' . $row['Name'] . '</p></div> 
-                               <div class="Price" style="text-align:center; "> <p>' . $row['Price'] . ' DH </p> </div>
-
-                <div class="bsProperties">
-                    <div class="prop"><p>' . $row['Specification'] . '</p></div>
-                 
-                </div>
-                    <div class="bsButtons">
-                    <input type="hidden" name="ProductID" value="' . $row['ProductID'] . '">
-                    <input type="hidden" name="Available" value="' . $row['Available'] . '">
-                    <input type="hidden" name="ProductN" value="' . $row['Name'] . '">
-                        <button type="submit" id="btn01" name="CartBtn" >Add To Cart</button>
-                        <button type="submit" id="btn02" name="ShopBtn">Shop Now</button>
-                    </div>
-                </form>
-            </div>
-        ';
+                            <div class="bsProperties">
+                                <div class="prop"><p>' . $row['Specification'] . '</p></div>
+                            
+                            </div>
+                                <div class="bsButtons">
+                                <input type="hidden" name="ProductID" value="' . $row['ProductID'] . '">
+                                <input type="hidden" name="Available" value="' . $row['Available'] . '">
+                                <input type="hidden" name="ProductN" value="' . $row['Name'] . '">
+                                    <button type="submit" id="btn01" name="CartBtn" >Add To Cart</button>
+                                    <button type="submit" id="btn02" name="ShopBtn">Shop Now</button>
+                            </div>
+                        </form>
+                    </div>';
+                }
             }
 
             if (isset($_POST['CartBtn'])) {

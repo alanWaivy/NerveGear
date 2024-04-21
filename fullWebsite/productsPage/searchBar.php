@@ -72,12 +72,12 @@
 							<hr>
 							<div class="Sp">
 							<div>
-								<button name="cat" class="categoryBtn <?php echo isset($_GET['cat']) && $_GET['cat'] == 'Gaming' ? 'clicked' :''; ?>" value="Gaming">Gaming</button>
-								<button name="cat" class="categoryBtn clicked" value="Work">Work</button>
+								<button name="cat" class="categoryBtn <?php echo isset($_GET['cat']) && $_GET['cat'] == 'Gaming' ? 'click' :''; ?>" value="Gaming">Gaming</button>
+								<button name="cat" class="categoryBtn <?php echo isset($_GET['cat']) && $_GET['cat'] == "Work"   ? 'click' :''; ?>" value="Work">Work</button>
 							</div>
 							<div>
-								<button name="cat" class="categoryBtn <?php echo isset($_GET['cat']) && $_GET['cat'] == "School" ? 'clicked' :''; ?>" value="School">School</button>
-								<button name="cat" class="categoryBtn <?php echo isset($_GET['cat']) && $_GET['cat'] == "Montage"? 'clicked' :''; ?>" value="Montage">Montage</button>
+								<button name="cat" class="categoryBtn <?php echo isset($_GET['cat']) && $_GET['cat'] == "School" ? 'click' :''; ?>" value="School">School</button>
+								<button name="cat" class="categoryBtn <?php echo isset($_GET['cat']) && $_GET['cat'] == "Montage"? 'click' :''; ?>" value="Montage">Montage</button>
 							</div>
 							<form action="" method="GET"><input type="submit" value="Reset" id="MinMaxBtn" style="margin: 0;"></form>
 							</div>

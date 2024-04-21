@@ -217,8 +217,11 @@ div#sb {
   padding: 6px 12px;
 }
 
-.clicked{
-  background: blueviolet;
+
+
+.click{
+  background: blueviolet !important;
+  
 }
 
 .filterContainer,
