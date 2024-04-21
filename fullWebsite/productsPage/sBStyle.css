@@ -251,5 +251,43 @@
             opacity: 1;
         }
         
+
+        .inputMin,.inputMax {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: nowrap;
+            gap: 20px;
+        }
+        
+
+        .MinMaxBtn {
+            margin-top: -20px;
+        }
+
+        input#MinBtn,input#MaxBtn {
+            border: none;
+            border-radius: 20px;
+            background:white;
+            margin:0!important;
+            padding: 0!important;
+
+        }
+
+        .MinMaxBtn button {
+            border: none;
+            width: 200px;
+            background: #00A3FF;
+            height: 25px;
+            border-radius: 20px;
+            color: white;
+            transition: transform 200ms ease-in-out;
+        }
+
+        .MinMaxBtn button:hover {
+            opacity: .8;
+            transform: scale(.9);
+        }
         
         

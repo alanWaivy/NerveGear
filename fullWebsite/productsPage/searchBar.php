@@ -47,8 +47,19 @@
 						<hr>
 
 						<div class="PFProperties">
-							<input type="range" name="Hprice" id="" min="2000" max="50000" value="50000" step="500">
-							<input type="range" name="Lprice" id="" min="0" max="50000" value="0" step="500">
+								<div class="inputMin">
+									<p>Min :</p>
+									<input type="number" name="MinBtn" id="MinBtn" >
+								</div>
+
+								<div class="inputMax">
+									<p>Max :</p>
+									<input type="number" name="MaxBtn" id="MaxBtn">
+								</div>
+								<div class="MinMaxBtn">
+									<button type="submit" name="MinMaxBtn" >Submit</button>
+								</div>
+							
 						</div>
 					</div>
 					<div class="category">
