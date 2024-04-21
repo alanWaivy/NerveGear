@@ -11,6 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   <script src="index.js" defer></script>
+  <link rel="icon" type="image/x-icon" href="../pics/logo.ico">
+
 </head>
 <body>
 <?php include("../commenParts/header.php") ?>
@@ -83,7 +85,7 @@
 
   <?php
           $db = mysqli_connect('localhost', 'root', '', 'lapshop');
-          $sql = "SELECT * FROM products WHERE popularProduct = 1 LIMIT 5";
+          $sql = "SELECT * FROM products WHERE popularProduct = 1 LIMIT 4";
           $result = mysqli_query($db, $sql);
           while ($row = mysqli_fetch_assoc($result)) {
               // Determine background color based on availability
