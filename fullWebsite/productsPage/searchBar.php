@@ -45,7 +45,7 @@
 					<div class="arrow-down"></div>
 				</div>
 
-				<div style="display: flex;justify-content: center;  margin-top :-10px;">
+				<div style="display: flex;justify-content: center;  margin-top :-19px;">
 					<div class="filterContainer">
 						<div class="priceFilter">
 							<div class="PFBtn">
