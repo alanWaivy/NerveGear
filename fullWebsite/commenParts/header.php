@@ -19,7 +19,8 @@ if (isset($_GET['logout'])) {
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
       <script src="https://kit.fontawesome.com/70ff3266e1.js" crossorigin="anonymous"></script>
       <link rel="icon" type="image/x-icon" href="../pics/logo.ico">
-  
+      <link rel="stylesheet" href="style2.css">
+      <script src="index.js" defer></script>
 <style>
 
      
@@ -80,6 +81,7 @@ if (isset($_GET['logout'])) {
       margin-bottom: -65px; /* Adjust for overlapping content */
       z-index: 6;
       position: relative;
+      justify-content: space-between;
       }
 
       /* Login button styles */
@@ -217,6 +219,15 @@ if (isset($_GET['logout'])) {
       width: 98px; /* Adjust width */
       height: 5px;
       }
+
+      
+        .responsiveBtns {
+            display: flex;
+            gap: 330px;
+            justify-content: center;
+        }
+        
+
 
       /* NAV STYLE END */
 
@@ -489,6 +500,8 @@ if (isset($_GET['logout'])) {
 		<b>LapShop</b>
 	</a>
 
+<div class="responsiveBtns" id="mainListDiv">
+  
 	<ul class="menu">
     <li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'home.php') ? 'mainPage' : ''; ?>"><a href="../homePage/home.php">Home</a></li>
     <li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'products.php') ? 'mainPage' : ''; ?>"><a href="../productsPage/products.php">All Products</a></li>
@@ -496,6 +509,8 @@ if (isset($_GET['logout'])) {
 		<li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'creators.php') ? 'mainPage' : ''; ?>"><a href="../creatorsPage/creators.php">Creators</a></li>
 	</ul>
 
+  
+ 
 	<div class="login" style="<?php echo $loginStyle ?>">
 		<a href="../loginRegPage/login.php" id="login">Login</a>
 		<a href="../loginRegPage/register.php" id="signup">Register</a>
@@ -509,7 +524,20 @@ if (isset($_GET['logout'])) {
       <i class="fa-solid fa-cart-shopping"></i>
     </div>
       
+    </div>
+
   
+  
+  </div>
+
+  
+
+    <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+    </span>
+
 </nav>
 
 
