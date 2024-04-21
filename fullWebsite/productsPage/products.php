@@ -33,8 +33,8 @@
         if (!$db) {
             die("Connection failed: " . mysqli_connect_error());
         }
-
-        $sql = "SELECT * FROM products";
+        $price = isset($_GET['price']) ? $_GET['price'] : 'ASC';
+        $sql = "SELECT * FROM products ORDER BY Price $price";
         $result = mysqli_query($db, $sql);
 
         while ($row = mysqli_fetch_assoc($result)) {
