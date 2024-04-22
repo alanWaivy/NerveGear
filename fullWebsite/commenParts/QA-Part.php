@@ -157,9 +157,7 @@
                   gap: 25px;
               }
 
-              div#q3 {
-                  height: 244px!important;
-              }
+           
               
             }
 
@@ -283,7 +281,7 @@
 			div2.style.display = 'block';
 			div2.style.animation = 'scale-up-ver-top 0.4s linear';
 			icon.style.transform = 'rotate(45deg)';
-			q.style.height = '194px';
+			q.style.height = '245px';
 		} else {
 			q.style.height = '52px';
 			div2.style.animation = 'scale-up-ver-top-reverse 0.4s linear';
