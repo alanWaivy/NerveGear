@@ -191,9 +191,15 @@
                       <div class="slide2">
                       <div class="cart ">
                           <div class="bsDot" style="background-color: ' . $backgroundColor . ';"></div>
-                          <div class="bsImg">
-                              <img src="data:image;base64,' . base64_encode($row['ProductImg']) . '" alt="' . $row['Name'] . '">
-                          </div>
+                          <form id="form1" method="GET" action="../product/index.php">
+                                <input type="hidden" name="productID" value="'.$row['ProductID'].'">
+                                <button type="submit" name="ImgBtn" id="ImgBtn"> 
+                                    <div class="bsImg">
+                                        <img src="data:image;base64,' . base64_encode($row['ProductImg']) . '" alt="' . $row['ProductID'] . '">
+                                    </div> 
+                                </button>
+                            </form>
+                            
                           <div class="bsTitle"><p>' . $row['Name'] . '</p></div>
                           <div class="Price" style="text-align:center; "> <p>' . $row['Price'] . ' DH </p> </div>
 

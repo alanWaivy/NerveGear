@@ -174,11 +174,7 @@ body {
     align-items: center;
 }
 
-.slide1 img {
-    height: auto;
-    width: 300px;
-    margin: 10px 20px;
-}
+
 
 .part02 {
     display: flex;
@@ -380,4 +376,11 @@ section.g {
     color: #00a3ff !important;
     text-decoration: none;
     margin-left: 424px;
+}
+
+
+.slide1 img {
+    height: 200px;
+    width: 265px;
+    margin: 10px 32px;
 }
