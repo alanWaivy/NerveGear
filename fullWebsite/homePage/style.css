@@ -1118,13 +1118,13 @@ div#glowEf05 {
     overflow: hidden;
 }
 
-#slide02 img {
+#slide02 .part2 img {
   width: 550px !important;
   margin-left: 50px;
   margin-top: -30px !important;
 }
 
-#slide01 img {
+#slide01 .part2 img {
   width: 350px!important;
 }
 
