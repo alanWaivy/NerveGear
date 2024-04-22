@@ -1,6 +1,6 @@
 /*slide start*/
 var currentSlide = 0;
-var slides1 = document.querySelectorAll(".slide");
+var slides = document.querySelectorAll(".slide");
 
 slides.forEach(function(elm,i){
   console.log(i);
