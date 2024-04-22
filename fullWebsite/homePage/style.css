@@ -1004,3 +1004,90 @@ div#glowEf05 {
     padding-bottom: 10px;
 
 }
+
+
+/* media style start*/
+
+@media  (max-width:850px ) {
+
+  .container {
+    display: flex;
+    justify-content: center;
+    height: 32em;
+    flex-direction: column;
+    gap: 0px !important;
+}
+
+  .part1 {
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 195px;
+    MARGIN-LEFT: 10PX;
+}
+
+.part1 h1 {
+  font-size: 50px;
+}
+.part2 {
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  margin-top: -50px;
+} 
+#slide03 .part2 img {
+  width: 400px;
+  margin-bottom: 250px;
+  margin-left: 100px;
+}
+
+
+.bsContainer {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  justify-content: center;
+  z-index: 14;
+  position: relative;
+  flex-direction: column;
+}
+.bsPart2 .container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  height: 681px;
+}
+
+
+.bsPart2 {
+  display: flex;
+  gap: 0px;
+  width: 100%;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.bsPart2 .container {
+  display: flex;
+  gap: 20px;
+  height: 681px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.asSection .part1 h2 {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 0px;
+}
+
+
+}
