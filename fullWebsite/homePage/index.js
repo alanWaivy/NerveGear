@@ -4,7 +4,7 @@ var slides = document.querySelectorAll(".slide");
 
 slides.forEach(function(elm,i){
   console.log(i);
-  elm.style.transform = `translateX(${i * 00}%)`;
+  elm.style.transform = `translateX(${i * 100}%)`;
 });
 
 setInterval(function(){
@@ -20,7 +20,7 @@ function nextSlide(){
   
  slides.forEach(function(elm,i){
    console.log(currentSlide, i);
-  elm.style.transform = `translateX(${00 * (i-currentSlide)}%)`;
+  elm.style.transform = `translateX(${100 * (i-currentSlide)}%)`;
 }); 
 }
 /*slide end*/
