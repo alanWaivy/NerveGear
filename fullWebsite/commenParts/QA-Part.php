@@ -116,6 +116,53 @@
             }
             /* QA style end*/
 
+
+            @media (max-width:850px) {
+              .head {
+                  display: flex;
+                  gap: 5px;
+                  /* margin-top: 20px; */
+                  align-items: center;
+                  justify-content: flex-start;
+                  background: #00A3FF;
+                  width: 489px!important;
+                  padding: 0px 5px;
+                  padding-left: 0px;
+                  border-radius: 25px;
+                  z-index: 2;
+                  position: relative;
+                  cursor: default;
+                  cursor: pointer;
+              }
+
+              .body {
+                  background: #D9D9D9;
+                  width: 400px;
+                  border-radius: 20px;
+                  margin-left: 2.5em;
+                  margin-top: -30px;
+                  z-index: 1;
+                  position: relative;
+              }
+
+              .body p {
+                  width: 342px;
+                  padding: 30px;
+                  color: #00A3FF;
+              }
+
+              #Qs {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 25px;
+              }
+
+              div#q3 {
+                  height: 244px!important;
+              }
+              
+            }
+
 </style>
 
 </head>
