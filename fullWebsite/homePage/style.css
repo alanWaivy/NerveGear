@@ -1131,3 +1131,10 @@ div#glowEf05 {
 }
 
   }
+
+
+  button#ImgBtn {
+    border: none;
+    background: none;
+    cursor: pointer;
+}

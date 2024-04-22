@@ -384,3 +384,11 @@ section.g {
     width: 265px;
     margin: 10px 32px;
 }
+
+
+
+button#ImgBtn {
+    border: none;
+    background: none;
+    cursor: pointer;
+}

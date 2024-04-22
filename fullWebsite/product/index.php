@@ -76,7 +76,6 @@
         $alertLogin = 'alertOn';
         $alertLogout = 'alertOff';
 
-
         $ProductID = (int) $_POST['ProductID'];
         $ProductName = $_POST['ProductN'];
         $Available1 = $_POST['Available'];
@@ -199,7 +198,7 @@
                                     </div> 
                                 </button>
                             </form>
-                            
+
                           <div class="bsTitle"><p>' . $row['Name'] . '</p></div>
                           <div class="Price" style="text-align:center; "> <p>' . $row['Price'] . ' DH </p> </div>
 
