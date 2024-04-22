@@ -486,6 +486,7 @@ footer {
     #Hbtn01 a , #Hbtn02 a {
         color: white!important;
     }
+    /* media style start */
     @media screen and (max-width:850px) {
         .hero div:nth-child(1) {
             width: 73%;
