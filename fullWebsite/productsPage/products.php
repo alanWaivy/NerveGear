@@ -7,9 +7,12 @@
     <title>LapShop</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="icon" type="image/x-icon" href="../pics/logo.ico">
 
     <link rel="stylesheet" href="https://kit.fontawesome.com/abfa77da96.js" crossorigin="anonymous">
@@ -17,11 +20,11 @@
 
 <body>
 
-    <?php include("../commenParts/header.php"); ?>
+    <?php include ("../commenParts/header.php"); ?>
 
     <div class="main">
 
-        <?php include("searchBar.php"); ?>
+        <?php include ("searchBar.php"); ?>
 
         <!-- carts -->
         <div class="carts">
@@ -33,7 +36,7 @@
             if (!$db) {
                 die("Connection failed: " . mysqli_connect_error());
             }
-            $_SESSION['price'] = !empty($_GET['price']) ? $_GET['price'] : (isset($_SESSION['price']) ? $_SESSION['price'] :'ASC') ;
+            $_SESSION['price'] = !empty($_GET['price']) ? $_GET['price'] : (isset($_SESSION['price']) ? $_SESSION['price'] : 'ASC');
             $q = !empty($_GET['q']) ? $_GET['q'] : '';
             $max = !empty($_GET['Mprice']) ? $_GET['Mprice'] : '50000';
             $min = !empty($_GET['Nprice']) ? $_GET['Nprice'] : '0';
@@ -42,33 +45,40 @@
             $sql = "SELECT * FROM products WHERE Name LIKE '%{$q}%' AND Price BETWEEN $min AND $max $cat ORDER BY Price $price";
             $result = mysqli_query($db, $sql);
 
-            if(mysqli_num_rows($result)==0){
-                echo "<div style='height:30vh';>No Results</div>" ;
-            }else{
+            if (mysqli_num_rows($result) == 0) {
+                echo "<div style='height:30vh';>No Results</div>";
+            } else {
                 while ($row = mysqli_fetch_assoc($result)) {
                     $backgroundColor = $row['Available'] ? '#00ff15' : '#878787';
                     echo '<div class="cart ">
                        
                             <div class="bsDot" style="background-color: ' . $backgroundColor . ';"></div>
-                           <form id="form1" method="get" action="../product/index.php"><button type="submit" name="ImgBtn" id="ImgBtn"> <div class="bsImg">
-                                <img src="data:image;base64,' . base64_encode($row['ProductImg']) . '" alt="' . $row['ProductID'] . '">
-                            </div> </button>
-                                <input type="hidden"  value="'.$row['ProductID'].' ">
+                            
+                            <form id="form1" method="GET" action="../product/index.php">
+                                <input type="hidden" name="productID" value="'.$row['ProductID'].'">
+                                <button type="submit" name="ImgBtn" id="ImgBtn"> 
+                                    <div class="bsImg">
+                                        <img src="data:image;base64,' . base64_encode($row['ProductImg']) . '" alt="' . $row['ProductID'] . '">
+                                    </div> 
+                                </button>
                             </form>
+
                             <div class="bsTitle"><p>' . $row['Name'] . '</p></div> 
                                         <div class="Price" style="text-align:center; "> <p>' . $row['Price'] . ' DH </p> </div>
     
                             <div class="bsProperties">
                                 <div class="prop"><p>' . $row['Specification'] . '</p></div>
                             
-                            </div> <form method="post" action="products.php" >
+                            </div> 
+                            <form method="post" action="products.php" >
                                 <div class="bsButtons">
-                                <input type="hidden" name="ProductID" value="' . $row['ProductID'] . '">
-                                <input type="hidden" name="Available" value="' . $row['Available'] . '">
-                                <input type="hidden" name="ProductN" value="' . $row['Name'] . '">
-                                <button type="submit" id="btn01" name="CartBtn">Add To Cart</button>
-                                <button type="submit" id="btn02" name="ShopBtn">Shop Now</button>
-                            </div> </form>
+                                    <input type="hidden" name="ProductID" value="' . $row['ProductID'] . '">
+                                    <input type="hidden" name="Available" value="' . $row['Available'] . '">
+                                    <input type="hidden" name="ProductN" value="' . $row['Name'] . '">
+                                    <button type="submit" id="btn01" name="CartBtn">Add To Cart</button>
+                                    <button type="submit" id="btn02" name="ShopBtn">Shop Now</button>
+                                </div> 
+                            </form>
                        
                     </div>';
                 }
@@ -169,7 +179,7 @@
         <h1>Complete!!</h1>
     </div>
 
-    <?php include("../commenParts/footer.php"); ?>
+    <?php include ("../commenParts/footer.php"); ?>
 
 
 
@@ -180,14 +190,9 @@
 
 <style>
     .alertOn {
-
         animation: alert 700ms 50ms ease-in-out;
         z-index: 999;
         opacity: 0;
-
-
-
-
     }
 
     .alertOff {

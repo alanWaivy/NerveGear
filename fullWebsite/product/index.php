@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,96 +15,191 @@
   <link rel="icon" type="image/x-icon" href="../pics/logo.ico">
 
 </head>
+
 <body>
-<?php include("../commenParts/header.php") ?>
+  <?php
+  include("../commenParts/header.php");
 
-<section class="hero">
+  $db = mysqli_connect('localhost', 'root', '', 'lapshop');
+  if (!$db) {
+    die("Connection failed: " . mysqli_connect_error());
+  }
 
-<div class="part01">
-    
-<div class="container">
+  $ID = $_GET["productID"];
+  $sql = "SELECT * FROM products WHERE ProductID = $ID LIMIT 1";
+  $result = mysqli_query($db, $sql);
+  $product = mysqli_fetch_assoc($result);
+
+  if (isset($_POST['CartBtn'])) {
+    if (isset($_SESSION['username'])) {
+
+      $alertLogin = 'alertOn';
+      $alertLogout = 'alertOff';
+
+
+      $ProductID = (int) $_POST['ProductID'];
+      $ProductName = $_POST['ProductN'];
+      $Available1 = $_POST['Available'];
+
+      $sql = "SELECT UserID FROM users WHERE Email = '" . $_SESSION['email'] . "'";
+      $Result = mysqli_query($db, $sql);
+
+      $row = mysqli_fetch_assoc($Result);
+
+      $UserID = (int) $row['UserID'];
+      $Result = mysqli_query($db, "SELECT Amount FROM cart WHERE UserID = '" . $UserID . "' AND ProductID = '" . $ProductID . "' ");
+
+      if ($Result && mysqli_num_rows($Result) > 0) {
+        $row = mysqli_fetch_assoc($Result);
+        $Amount = $row['Amount'] + 1;
+        $sql4 = "UPDATE cart SET Amount = $Amount WHERE UserID = $UserID";
+        mysqli_query($db, $sql4);
+      } else {
+        $Amount = 1;
+        $sql5 = "INSERT INTO cart (ProductName, ProductID, UserID, Available, Amount) 
+           VALUES ('$ProductName', $ProductID, $UserID, $Available1, $Amount)";
+        mysqli_query($db, $sql5);
+
+
+        echo '<script>window.location.href = "../productsPage/products.php";</script>';
+      }
+    } else {
+
+      $alertLogin = 'alertOff';
+      $alertLogout = 'alertOn';
+    }
+  }
+
+  if (isset($_POST['ShopBtn'])) {
+    if (isset($_SESSION['username'])) {
+
+        $alertLogin = 'alertOn';
+        $alertLogout = 'alertOff';
+
+
+        $ProductID = (int) $_POST['ProductID'];
+        $ProductName = $_POST['ProductN'];
+        $Available1 = $_POST['Available'];
+
+        $sql = "SELECT UserID FROM users WHERE Email = '" . $_SESSION['email'] . "'";
+        $Result = mysqli_query($db, $sql);
+
+        $row = mysqli_fetch_assoc($Result);
+
+        $UserID = (int) $row['UserID'];
+        $Result = mysqli_query($db, "SELECT Amount FROM cart WHERE UserID = '" . $UserID . "' AND ProductID = '" . $ProductID . "' ");
+
+        if ($Result && mysqli_num_rows($Result) > 0) {
+            $row = mysqli_fetch_assoc($Result);
+            $Amount = $row['Amount'] + 1;
+            $sql4 = "UPDATE cart SET Amount = $Amount WHERE UserID = $UserID";
+            mysqli_query($db, $sql4);
+        } else {
+            $Amount = 1;
+            $sql5 = "INSERT INTO cart (ProductName, ProductID, UserID, Available, Amount) 
+             VALUES ('$ProductName', $ProductID, $UserID, $Available1, $Amount)";
+            mysqli_query($db, $sql5);
+        }
+
+        echo '<script>window.location.href = "../checkoutPage/checkoutPage.php";</script>';
+    } else {
+
+        $alertLogin = 'alertOff';
+        $alertLogout = 'alertOn';
+    }
+}
+
+  ?>
+
+  <section class="hero">
+
+    <div class="part01">
+
+      <div class="container">
         <div class="slideshow-container">
-        <div class="slide-container">
+          <div class="slide-container">
 
 
-        <div class="slide1" >
-          <img src="../pics/img slide 1 homepage.png" alt="">
-        </div>
-        <div class="slide1" >
-          <img src="../pics/img slide 1 homepage.png" alt="">
-        </div>
-        <div class="slide1">
-          <img src="../pics/img slide 1 homepage.png" alt="">
-        </div>
+            <div class="slide1">
+              <img src="data:image;base64,<?php echo base64_encode($product['ProductImg']) ?>">
+            </div>
+            <div class="slide1">
+              <img src="data:image;base64,<?php echo base64_encode($product['ProductImg1']) ?>">
+            </div>
+            <div class="slide1">
+              <img src="data:image;base64,<?php echo base64_encode($product['ProductImg2']) ?>">
+            </div>
 
 
-        </div>
           </div>
+        </div>
 
-          <div class="arrows">
+        <div class="arrows">
           <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="next" onclick="moveSlide(1)">&#10095;</button>
-          </div>
+          <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
       </div>
 
-</div>
+    </div>
 
-<form method="get" action="index.php">
-<div class="part02">
-  <h1>Lorem ipsum dolor sit amet</h1>
-<p>Illo, nisi architecto. Veritatis, sint maiores veniam nulla repudiandae doloribus neque reiciendis hic dolor praesentium, </p>
-<div class="part02Btns">
-<button class="button1" name="CartBtn" style="background: black; color: white;">Add To cart</button>
-<button class="button1" name="ShopBtn" style="background: #378ce7; color: white;">Shop Now</button></div> 
-</div>
-</form>
+    <form method="GET" action="index.php">
+      <div class="part02">
+        <h1><?php echo $product['Name'] ?></h1>
+        <p><?php echo $product['Description'] ?></p>
+        <h2><?php echo $product['Price'] ?> DH</h2>
+        <div class="part02Btns">
+          <button class="button1" name="CartBtn" style="background: black; color: white;">Add To cart</button>
+          <button class="button1" name="ShopBtn" style="background: #378ce7; color: white;">Shop Now</button>
+        </div>
+      </div>
+    </form>
 
-</section>
-<section class="g">
-<div class="guarantee">
-  <img src="../pics/Gimg.png" width="300px" height="auto" alt="">
-  <div class="Gtxt">
-    <h2>Achetez en toute confiance !</h2>
-    <p>Nous voulons que vous soyez entièrement satisfait de votre achat sur Wish. Renvoyez tous les produits dans les 30 jours suivant la livraison s’ils ne vous satisfont pas.</p>
-  </div>
-</div>
-</section>
+  </section>
+  <section class="g">
+    <div class="guarantee">
+      <img src="../pics/Gimg.png" width="300px" height="auto" alt="">
+      <div class="Gtxt">
+        <h2>Achetez en toute confiance !</h2>
+        <p>Nous voulons que vous soyez entièrement satisfait de votre achat sur Wish. Renvoyez tous les produits dans les 30 jours suivant la livraison s’ils ne vous satisfont pas.</p>
+      </div>
+    </div>
+  </section>
 
 
-<section class="moreP">
-  <div class="mHeaders">
-    
+  <section class="moreP">
+    <div class="mHeaders">
+
       <p>Produits connexes</p>
-    
-    
-    <a href="../productsPage/products.php">
-      <p>plus</p>
-    </a>
 
-  </div>
-  <div class="mProducts">
 
-  <?php
-          $db = mysqli_connect('localhost', 'root', '', 'lapshop');
-          $sql = "SELECT * FROM products WHERE Available = 1 LIMIT 4";
-          $result = mysqli_query($db, $sql);
-          while ($row = mysqli_fetch_assoc($result)) {
-              // Determine background color based on availability
-              $backgroundColor = $row['Available'] ? '#00ff15' : '#878787';
-              
-              echo '
+      <a href="../productsPage/products.php">
+        <p>plus</p>
+      </a>
+
+    </div>
+    <div class="mProducts">
+
+      <?php
+      $db = mysqli_connect('localhost', 'root', '', 'lapshop');
+      $sql = "SELECT * FROM products WHERE Available = 1 LIMIT 4";
+      $result = mysqli_query($db, $sql);
+      while ($row = mysqli_fetch_assoc($result)) {
+        // Determine background color based on availability
+        $backgroundColor = $row['Available'] ? '#00ff15' : '#878787';
+
+        echo '
                       <div class="slide2">
                       <div class="cart ">
                           <div class="bsDot" style="background-color: ' . $backgroundColor . ';"></div>
                           <div class="bsImg">
-                              <img src="data:image;base64,'.base64_encode($row['ProductImg']).'" alt="' . $row['Name'] . '">
+                              <img src="data:image;base64,' . base64_encode($row['ProductImg']) . '" alt="' . $row['Name'] . '">
                           </div>
                           <div class="bsTitle"><p>' . $row['Name'] . '</p></div>
-                          <div class="Price" style="text-align:center; "> <p>'.$row['Price'].' DH </p> </div>
+                          <div class="Price" style="text-align:center; "> <p>' . $row['Price'] . ' DH </p> </div>
 
                           <div class="bsProperties">
 
-                              <div class="prop"><p>'.$row['Specification'].'</p></div>
+                              <div class="prop"><p>' . $row['Specification'] . '</p></div>
                               
                           </div>
 
@@ -117,17 +213,17 @@
                       
                      
                   ';
-          }
-          ?>
+      }
+      ?>
 
 
-         
-         
-
-  </div>
 
 
-</section>
+
+    </div>
+
+
+  </section>
 
 
   <?php include("../commenParts/QA-Part.php") ?>
@@ -135,127 +231,123 @@
 
   <?php include("../commenParts/footer.php") ?>
 
-    
+
 </body>
+
 </html>
 
 
 
 <script>
+  let slideIndex = 0;
 
-      let slideIndex = 0;
-              
-                function showSlides() {
-                  const slides1 = document.querySelectorAll('.slide1');
-                  if (slideIndex >= slides1.length) {
-                    slideIndex = 0;
-                  } else if (slideIndex < 0) {
-                    slideIndex = slides.length - 1;
-                  }
-                  const offset = -slideIndex * 105;
-                  document.querySelector('.slide-container').style.transform = `translateX(${offset}%)`;
-                }
-              
-                function moveSlide(n) {
-                  slideIndex += n;
-                  showSlides();
-                }
-              
-                showSlides();
+  function showSlides() {
+    const slides1 = document.querySelectorAll('.slide1');
+    if (slideIndex >= slides1.length) {
+      slideIndex = 0;
+    } else if (slideIndex < 0) {
+      slideIndex = slides.length - 1;
+    }
+    const offset = -slideIndex * 105;
+    document.querySelector('.slide-container').style.transform = `translateX(${offset}%)`;
+  }
 
+  function moveSlide(n) {
+    slideIndex += n;
+    showSlides();
+  }
 
-      
+  showSlides();
 </script>
 
-<?php 
-
-                  
-            if (isset($_POST['CartBtn'])) {
-              if (isset($_SESSION['username'])) {
-
-                  $alertLogin = 'alertOn';
-                  $alertLogout = 'alertOff';
+<?php
 
 
-                  $ProductID = (int) $_POST['ProductID'];
-                  $ProductName = $_POST['ProductN'];
-                  $Available1 = $_POST['Available'];
+if (isset($_POST['CartBtn'])) {
+  if (isset($_SESSION['username'])) {
 
-                  $sql = "SELECT UserID FROM users WHERE Email = '" . $_SESSION['email'] . "'";
-                  $Result = mysqli_query($db, $sql);
+    $alertLogin = 'alertOn';
+    $alertLogout = 'alertOff';
 
-                  $row = mysqli_fetch_assoc($Result);
 
-                  $UserID = (int) $row['UserID'];
-                  $Result = mysqli_query($db, "SELECT Amount FROM cart WHERE UserID = '" . $UserID . "' AND ProductID = '" . $ProductID . "' ");
+    $ProductID = (int) $_POST['ProductID'];
+    $ProductName = $_POST['ProductN'];
+    $Available1 = $_POST['Available'];
 
-                  if ($Result && mysqli_num_rows($Result) > 0) {
-                      $row = mysqli_fetch_assoc($Result);
-                      $Amount = $row['Amount'] + 1;
-                      $sql4 = "UPDATE cart SET Amount = $Amount WHERE UserID = $UserID";
-                      mysqli_query($db, $sql4);
-                  } else {
-                      $Amount = 1;
-                      $sql5 = "INSERT INTO cart (ProductName, ProductID, UserID, Available, Amount) 
+    $sql = "SELECT UserID FROM users WHERE Email = '" . $_SESSION['email'] . "'";
+    $Result = mysqli_query($db, $sql);
+
+    $row = mysqli_fetch_assoc($Result);
+
+    $UserID = (int) $row['UserID'];
+    $Result = mysqli_query($db, "SELECT Amount FROM cart WHERE UserID = '" . $UserID . "' AND ProductID = '" . $ProductID . "' ");
+
+    if ($Result && mysqli_num_rows($Result) > 0) {
+      $row = mysqli_fetch_assoc($Result);
+      $Amount = $row['Amount'] + 1;
+      $sql4 = "UPDATE cart SET Amount = $Amount WHERE UserID = $UserID";
+      mysqli_query($db, $sql4);
+    } else {
+      $Amount = 1;
+      $sql5 = "INSERT INTO cart (ProductName, ProductID, UserID, Available, Amount) 
                        VALUES ('$ProductName', $ProductID, $UserID, $Available1, $Amount)";
-                      mysqli_query($db, $sql5);
+      mysqli_query($db, $sql5);
 
 
-                      echo '<script>window.location.href = "../productsPage/products.php";</script>';
-                  }
-              } else {
+      echo '<script>window.location.href = "../productsPage/products.php";</script>';
+    }
+  } else {
 
-                  $alertLogin = 'alertOff';
-                  $alertLogout = 'alertOn';
-              }
-          }
+    $alertLogin = 'alertOff';
+    $alertLogout = 'alertOn';
+  }
+}
 
-          if (isset($_POST['ShopBtn'])) {
-              if (isset($_SESSION['username'])) {
+if (isset($_POST['ShopBtn'])) {
+  if (isset($_SESSION['username'])) {
 
-                  $alertLogin = 'alertOn';
-                  $alertLogout = 'alertOff';
+    $alertLogin = 'alertOn';
+    $alertLogout = 'alertOff';
 
 
-                  $ProductID = (int) $_POST['ProductID'];
-                  $ProductName = $_POST['ProductN'];
-                  $Available1 = $_POST['Available'];
+    $ProductID = (int) $_POST['ProductID'];
+    $ProductName = $_POST['ProductN'];
+    $Available1 = $_POST['Available'];
 
-                  $sql = "SELECT UserID FROM users WHERE Email = '" . $_SESSION['email'] . "'";
-                  $Result = mysqli_query($db, $sql);
+    $sql = "SELECT UserID FROM users WHERE Email = '" . $_SESSION['email'] . "'";
+    $Result = mysqli_query($db, $sql);
 
-                  $row = mysqli_fetch_assoc($Result);
+    $row = mysqli_fetch_assoc($Result);
 
-                  $UserID = (int) $row['UserID'];
-                  $Result = mysqli_query($db, "SELECT Amount FROM cart WHERE UserID = '" . $UserID . "' AND ProductID = '" . $ProductID . "' ");
+    $UserID = (int) $row['UserID'];
+    $Result = mysqli_query($db, "SELECT Amount FROM cart WHERE UserID = '" . $UserID . "' AND ProductID = '" . $ProductID . "' ");
 
-                  if ($Result && mysqli_num_rows($Result) > 0) {
-                      $row = mysqli_fetch_assoc($Result);
-                      $Amount = $row['Amount'] + 1;
-                      $sql4 = "UPDATE cart SET Amount = $Amount WHERE UserID = $UserID";
-                      mysqli_query($db, $sql4);
-                  } else {
-                      $Amount = 1;
-                      $sql5 = "INSERT INTO cart (ProductName, ProductID, UserID, Available, Amount) 
+    if ($Result && mysqli_num_rows($Result) > 0) {
+      $row = mysqli_fetch_assoc($Result);
+      $Amount = $row['Amount'] + 1;
+      $sql4 = "UPDATE cart SET Amount = $Amount WHERE UserID = $UserID";
+      mysqli_query($db, $sql4);
+    } else {
+      $Amount = 1;
+      $sql5 = "INSERT INTO cart (ProductName, ProductID, UserID, Available, Amount) 
                        VALUES ('$ProductName', $ProductID, $UserID, $Available1, $Amount)";
-                      mysqli_query($db, $sql5);
-                  }
+      mysqli_query($db, $sql5);
+    }
 
-                  echo '<script>window.location.href = "../checkoutPage/checkoutPage.php";</script>';
-              } else {
+    echo '<script>window.location.href = "../checkoutPage/checkoutPage.php";</script>';
+  } else {
 
-                  $alertLogin = 'alertOff';
-                  $alertLogout = 'alertOn';
-              }
-          }
-
-
+    $alertLogin = 'alertOff';
+    $alertLogout = 'alertOn';
+  }
+}
 
 
 
 
-        
+
+
+
 
 
 ?>
-
