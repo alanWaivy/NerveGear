@@ -374,20 +374,63 @@ gap: 39px;
       align-items: center;
       align-content: center;
   }
+  p.Title {
+    font-size: 10px;
+}
+.prop p.Price {
+  margin-top: 0px;
+  margin-bottom: 0px !important;
+  font-size: 23px;
+  color: blueviolet;
+  font-size: 14px;
+}
+.scProduct {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  width: 280px;
+  margin-left: -15px;
+}
+
+.scCheckboxs {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  width: 240px;
+  margin-left: -15px;
+}
 
 
-  .scCheckboxs {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 10px;
-    width: 230px;
-    margin-left: -15px;
+.TrashAmount {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 52px;
+  width: 100%;
+  align-items: center;
+  align-content: center;
+}
+
+.Amount button {
+  background: white;
+  border: grey 1px solid;
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+}
+
+i.fa-solid.fa-plus,i.fa-solid.fa-minus {
+  margin-left: -2px;
+}
+
+
 }
 
     
-  }
+  
