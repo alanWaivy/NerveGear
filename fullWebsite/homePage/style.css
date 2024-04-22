@@ -1040,7 +1040,7 @@ div#glowEf05 {
   margin-top: -50px;
 } 
 #slide03 .part2 img ,#slide01 .part2 img ,#slide02 .part2 img {
-  width: 400px;
+  width: 400px!important;
   margin-bottom: 250px;
   margin-left: 100px;
 }
@@ -1089,5 +1089,19 @@ div#glowEf05 {
   margin-top: 0px;
 }
 
+  #slide03 .part2 img, #slide01 .part2 img, #slide02 .part2 img {
+      width: 400px !important;
+      margin-bottom: 250px;
+      margin-left: 200px;
 
 }
+@media (max-width: 850px) {
+  .part1 {
+      flex-direction: column;
+      align-items: flex-start;
+      align-content: center;
+      justify-content: center;
+      display: flex;
+      margin-top: 300PX;
+      MARGIN-LEFT: 10PX;
+  }
