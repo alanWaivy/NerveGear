@@ -488,17 +488,23 @@ footer {
     }
     /* media style start */
     @media screen and (max-width:850px) {
-        .hero div:nth-child(1) {
-            width: 73%;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
+        
+.hero div:nth-child(1) {
+    width: 73%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
         .us p {
             width: 75%;
             FONT-SIZE: 19PX;
         }
-
+        .hero span {
+            font-size: 3rem;
+            font-weight: bolder;
+            text-align: center;
+        }
 
     }
     
