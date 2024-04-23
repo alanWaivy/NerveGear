@@ -84,8 +84,16 @@
             $ProductsPrices[$i] = 0;
             $ProductsID[$i] = "x";
           }
+
+          
+
           $i++;
+
+          
+
         }
+
+
         ?>
 
        <?php
