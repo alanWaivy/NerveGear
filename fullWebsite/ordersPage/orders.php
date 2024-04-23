@@ -53,6 +53,9 @@
       </div> ';
 
              }
+
+                         error_reporting(0);
+
 ?>
 
        

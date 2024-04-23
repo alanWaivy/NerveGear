@@ -103,6 +103,7 @@
 <script>
 	document.getElementById("SortBtn").addEventListener("click", function() {
 		document.querySelector(".PriceSrt").classList.toggle("clicked");
+		
 	});
 
 	document.getElementById("FilterBtn").addEventListener("click", function() {

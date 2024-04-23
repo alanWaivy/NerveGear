@@ -231,13 +231,20 @@ div#sb {
 .PriceSrt {
   opacity: 0!important;
   display: none!important;
+  animation : scale-up-ver-top 0.4s linear;
+
 }
 
 .filterContainer.clicked,
 .PriceSrt.clicked {
   opacity: 1!important;
   display: flex!important;
+  animation : scale-up-ver-top-reverse 0.4s linear;
+
 }
+
+
+
 
 .inputprice {
   display: flex;
