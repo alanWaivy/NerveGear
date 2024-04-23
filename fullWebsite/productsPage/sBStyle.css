@@ -156,6 +156,8 @@ div#sb {
   justify-content: space-between;
 }
 
+
+
 /**/
 
 .filterContainer {
@@ -227,10 +229,15 @@ div#sb {
   
 }
 
-.filterContainer,
-.PriceSrt {
+.filterContainer {
   opacity: 0!important;
   display: none!important;
+  animation : scale-up-ver-top 0.4s linear;
+
+}
+
+#SubSortBtn {
+  opacity: 0;
   animation : scale-up-ver-top 0.4s linear;
 
 }
@@ -243,7 +250,36 @@ div#sb {
 
 }
 
+.SubSortBtnC {
+  opacity: 1!important;
+  animation : scale-up-ver-top-reverse 0.4s linear;
 
+}
+
+
+@keyframes scale-up-ver-top-reverse {
+  0% {
+    transform: scaleY(0.4);
+    transform-origin: 100% 0%;
+  }
+
+  100% {
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
+  }
+}
+
+@keyframes scale-up-ver-top {
+  0% {
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
+  }
+
+  100% {
+    transform: scaleY(0);
+    transform-origin: 0% 0%;
+  }
+}
 
 
 .inputprice {
@@ -282,4 +318,85 @@ div#sb {
 #MinMaxBtn:hover {
   opacity: 0.8;
   transform: scale(0.9);
+}
+
+
+
+/*media style start */
+
+@media (max-width:850px) {
+
+
+  .filtering {
+    display: flex;
+    width: 100%;
+    margin-bottom: -80px;
+    align-items: center;
+    gap: 0px !important;
+    transform: scale(0.8);
+    margin-top: 97px;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column-reverse;
+  }
+  
+  div#sb {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+  }
+  
+  .searchBar button {
+    border: none;
+    padding: 5px 31px!important;
+    border-radius: 25px;
+    background: #00a3ff;
+    transition: transform 300ms;
+    margin-top: 0.3px;
+  
+  
+  }
+  
+  .searchBar {
+    height: 30px;
+    border: 1.5px #00a3ff solid;
+    width: 411px;
+    padding: 4px 0px;
+    border-radius: 25px;
+    padding-bottom: 0px !important;
+    margin-top: 20px;
+    display: flex;
+    align-content: center;
+    align-items: baseline;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  
+ 
+  
+
+div#btns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 13px;
+  transform: scale(.9);
+}
+
+.bsDot {
+  height: 35px;
+  width: 35px;
+  background-color: #00ff15;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.bsDot {
+  margin-left: 88% !important;
+  margin-top: -7px;
+}
 }

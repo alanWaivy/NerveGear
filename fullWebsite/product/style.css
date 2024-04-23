@@ -392,3 +392,38 @@ button#ImgBtn {
     background: none;
     cursor: pointer;
 }
+
+
+@media (max-width:850px) {
+
+    .hero {
+        height: 650px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        background-color: #f6d2c3;
+        flex-direction: column!important;
+    }
+
+    .part01 {
+        margin-top: 50px!important;
+    }
+
+    .guarantee {
+        width: 44%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        gap: 30px;
+        margin-top: 492px !important;
+    }
+
+    .Gtxt h2 {
+        width: 230px !important;
+    }
+
+
+    
+}

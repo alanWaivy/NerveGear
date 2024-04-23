@@ -254,4 +254,8 @@
     .Price p {
         font-size: 27px;
     }
+
+
+
+    
 </style>

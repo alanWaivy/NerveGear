@@ -592,9 +592,13 @@ $ProductsPrices = [];
               <div class="img-prop">
               
                   <input type="hidden" name="ProductID value = "'.$ProductID.'">
+
+                  
+                 
+            
                   <div class="orderImg">
                     <img src="data:image;base64,'.base64_encode($PrRow['ProductImg']).'" alt="' . $ProductID . '">
-                    </div>
+                    </div>  
                   <div class="orderProp">
                     <p class="orderTitle">
                       '.$ProductName.'
@@ -975,6 +979,71 @@ nav  {
     100% {
         transform: translateY(-9px) rotate(135deg);
     }
+
+    }
+
+
+    @media (max-width:850px) {
+
+        #cartContainer {
+      background: #D9D9D9;
+      width: 300px !important;
+      position: absolute;
+      z-index: 999!Important;
+      top: 216px!important;
+      right: 6px!important;
+      transform: scale(.5)!important;
+      border: 1px black solid!important;
+      opacity: 0;
+      display: none;
+      transition: all .3s ease-in-out;
+      z-index: 10;
+      /* flex-direction: row !important; */
+  }
+
+  .subContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between!important;
+    border: 1px solid!important;
+    top: 291px!important;
+    position: absolute!important;
+    background: #D9D9D9;
 }
 
+
+
+#cartContainer {
+      background: #D9D9D9;
+      width: 300px !important;
+      position: absolute;
+      z-index: 999!Important;
+      top: 216px!important;
+      right: 6px!important;
+      transform: scale(.5)!important;
+      border: 1px black solid!important;
+      opacity: 0;
+      display: none;
+      transition: all .3s ease-in-out;
+      z-index: 10;
+      /* flex-direction: row !important; */
+  }
+
+  .subContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between!important;
+    border: 1px solid!important;
+    top: 291px!important;
+    position: absolute!important;
+    background: #D9D9D9;
+}
+
+
+        
+    }
+
+    #DropBtn {
+        display: none!important;
+    }
 </style>

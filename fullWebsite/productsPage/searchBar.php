@@ -16,7 +16,7 @@
 					<div class="arrow-down"></div>
 				</div>
 
-				<div  id="" style="display:flex; justify-content:center;">
+				<div  id="SubSortBtn" style="display:flex; justify-content:center;">
 				<div class="PriceSrt " width="109px">
 						<p style="
 									margin-bottom: 0px;
@@ -102,7 +102,7 @@
 
 <script>
 	document.getElementById("SortBtn").addEventListener("click", function() {
-		document.querySelector(".PriceSrt").classList.toggle("clicked");
+		document.querySelector("#SubSortBtn").classList.toggle("SubSortBtnC");
 		
 	});
 
