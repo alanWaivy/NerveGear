@@ -103,9 +103,12 @@
 
             $i1 = $_POST['i'];
             $ProductsAmount[$i1]--;
-
-            $sql = "UPDATE cart SET Amount ='" . $ProductsAmount[$i1] . "' WHERE userID = '" . $UserID . "' AND productID = '" . $ProductsID[$i1] . "' ";
+            if($ProductsAmount[$i1]<1){
+              $ProductsAmount[$i1]=1;
+            }
+            $sql = "UPDATE cart SET Amount = $ProductsAmount[$i1] WHERE userID = $UserID AND productID =  $ProductsID[$i1] ";
             mysqli_query($db, $sql);
+            echo "<script> window.location.href = 'checkoutPage.php' </script>";
           }
         }
 
@@ -113,8 +116,9 @@
           if (isset($_SESSION['username'])) {
             $i2 = $_POST['i'];
             $ProductsAmount[$i2]++;
-            $sql = "UPDATE cart SET Amount ='" . $ProductsAmount[$i2] . "' WHERE userID = '" . $UserID . "' AND productID = '" . $ProductsID[$i2] . "' ";
+            $sql = "UPDATE cart SET Amount = $ProductsAmount[$i2] WHERE userID = $UserID AND productID = $ProductsID[$i2] ";
             mysqli_query($db, $sql);
+            echo "<script> window.location.href = 'checkoutPage.php' </script>";
           }
         }
 
@@ -124,11 +128,12 @@
             $i3 = $_POST['i'];
             # error_reporting(0);
 
-            $result = $db->query("SELECT * FROM cart WHERE userID = '" . $UserID . "' AND productID = '" . $ProductsID[$i3] . "'  ");
+            $result =mysqli_query($db,"SELECT * FROM cart WHERE userID = $UserID AND productID = $ProductsID[$i3] LIMIT 1") ;
 
-            if ($result->num_rows > 0) {
+            if (mysqli_num_rows($result) > 0) {
               $sql = "DELETE FROM cart WHERE userID = $UserID AND productID = $ProductsID[$i3]";
               mysqli_query($db, $sql);
+              echo "<script> window.location.href = 'checkoutPage.php' </script>";
             }
           }
         }
