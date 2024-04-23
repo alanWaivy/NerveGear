@@ -374,7 +374,7 @@ nav .logo{
   align-items: center;
   justify-content: center;
   gap: 30px;
-  margin-top: -150px;  
+  /* margin-top: -150px;   */
 }
 /*searchBar style start */
 

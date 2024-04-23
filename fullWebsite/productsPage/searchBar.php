@@ -13,7 +13,7 @@
 			<div id="sortOfContainer">
 				<div class="button" id="SortBtn">
 					<p>Sort By</p>
-					<div class="arrow-down"></div>
+					<div class="arrow-down"></div>	`
 				</div>
 
 				<div  id="SubSortBtn" style="display:flex; justify-content:center;">
