@@ -30,7 +30,8 @@
 	$sql = "SELECT * FROM products WHERE ProductID = $ID LIMIT 1";
 	$result = mysqli_query($db, $sql);
 	$product = mysqli_fetch_assoc($result);
-
+	$Name = $product['Name'];
+	$Av = $product['Available'];
 	?>
 
 	<section class="hero">
@@ -69,6 +70,11 @@
 				<h1><?php echo $product['Name'] ?></h1>
 				<p><?php echo $product['Description'] ?></p>
 				<h2><?php echo $product['Price'] ?> DH</h2>
+				<input type="hidden" name="ProductID" value="<?php echo $ID ?>">
+				<input type="hidden" name="ProductN" value="<?php echo $Name ?>">
+				<input type="hidden" name="Available" value="<?php echo $Av ?>">
+
+
 				<div class="part02Btns">
 					<button class="button1" name="CartBtn" style="background: black; color: white;">Add To cart</button>
 					<button class="button1" name="ShopBtn" style="background: #378ce7; color: white;">Shop Now</button>
