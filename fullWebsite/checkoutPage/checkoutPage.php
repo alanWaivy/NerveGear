@@ -119,7 +119,7 @@
             $result = $db->query("SELECT * FROM cart WHERE userID = '" . $UserID . "' AND productID = '" . $ProductsID[$i3] . "'  ");
 
             if ($result->num_rows > 0) {
-              $sql = "DELETE FROM cart WHERE userID = '" . $UserID . "' AND productID = '" . $ProductsID[$i3] . "'";
+              $sql = "DELETE FROM cart WHERE userID = $UserID AND productID = $ProductsID[$i3]";
               mysqli_query($db, $sql);
             }
           }
