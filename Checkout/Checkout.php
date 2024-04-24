@@ -227,8 +227,8 @@
         mysqli_query($db, "DELETE FROM cart WHERE UserID = $UserID ");
 
 
-        echo '<script>window.location.href = "../Home/Home.php";</script>';
-        exit();
+        // echo '<script>window.location.href = "../Home/Home.php";</script>';
+        // exit();
       }
     }
     ?>
