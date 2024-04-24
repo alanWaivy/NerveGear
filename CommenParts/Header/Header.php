@@ -66,6 +66,8 @@ if (isset($_GET['logout'])) {
                 $userID = $_SESSION['UserID'];
                 $stmt = mysqli_query($db, "SELECT * FROM cart WHERE UserID = $userID");
                 echo mysqli_num_rows($stmt);
+              }else{
+                echo 0;
               }
               ?>
             </p>
