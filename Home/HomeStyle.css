@@ -1170,6 +1170,7 @@ div#glowEf05 {
   left: 43%;
   top: 17%;
   align-items: center;
+  opacity: 0;
   align-content: center;
   flex-direction: row;
   border-radius: 24px;

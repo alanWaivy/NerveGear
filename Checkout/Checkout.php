@@ -224,7 +224,7 @@
     if (isset($_POST['deleteBtn'])) {
       if (isset($_SESSION['username'])) {
         mysqli_query($db, "DELETE FROM cart WHERE UserID = $UserID ");
-        echo '<script>window.location.href = "../Home/Home.php";</script>';
+        echo '<script defer>window.location.href = "../Home/Home.php";</script>';
         exit();
       }
     }
