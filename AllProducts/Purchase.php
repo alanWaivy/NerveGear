@@ -67,7 +67,7 @@ if (isset($_POST['ShopBtn'])) {
             mysqli_query($db, $sql5);
         }
 
-        echo '<script>window.location.href = "../checkoutPage/checkoutPage.php";</script>';
+        echo '<script>window.location.href = "../Checkout/Checkout.php";</script>';
     } else {
 
         $alertLogin = 'alertOff';

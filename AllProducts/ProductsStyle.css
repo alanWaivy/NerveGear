@@ -572,7 +572,7 @@ div#filter {
 }
 
     .alertOn {
-        animation: alert 700ms 50ms ease-in-out;
+        animation: alert 1200ms 50ms ease-in-out;
         z-index: 99!important;
         opacity: 1;
     }
