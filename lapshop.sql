@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 24, 2024 at 11:01 PM
+-- Generation Time: Apr 24, 2024 at 11:26 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -41,16 +41,13 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`id`, `ProductName`, `ProductID`, `UserID`, `Available`, `Amount`) VALUES
-(1, 'Intel Celeron Quad-Core Processors', 16, 1, 1, 2),
-(2, 'Acer Aspire 3 A315-24P-R7VH Slim Laptop', 2, 1, 1, 2),
-(3, 'SGIN Laptop 15.6 inch', 15, 1, 1, 2),
 (4, 'Intel Celeron Quad-Core Processors', 16, 13, 1, 28),
 (5, 'Acer Aspire 3 A315-24P-R7VH Slim Laptop', 2, 13, 1, 28),
 (6, 'Lenovo IdeaPad 1 Student Laptop', 3, 13, 0, 28),
 (7, 'HP Newest 14', 13, 13, 1, 28),
 (8, 'Apple 2024 MacBook Air 13-inch Laptop', 7, 13, 1, 28),
-(9, 'Apple 2024 MacBook Air 13-inch Laptop', 7, 1, 1, 2),
-(10, 'Acer - Predator Helios NEO 16', 8, 1, 1, 2);
+(18, 'Intel Celeron Quad-Core Processors', 16, 1, 1, 1),
+(19, 'Acer Aspire 3 A315-24P-R7VH Slim Laptop', 2, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -199,7 +196,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -218,23 +215,6 @@ ALTER TABLE `products`
 --
 ALTER TABLE `users`
   MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `cart`
---
-ALTER TABLE `cart`
-  ADD CONSTRAINT `ProductR` FOREIGN KEY (`ProductID`) REFERENCES `products` (`ProductID`),
-  ADD CONSTRAINT `UserR` FOREIGN KEY (`UserID`) REFERENCES `users` (`UserID`);
-
---
--- Constraints for table `orders`
---
-ALTER TABLE `orders`
-  ADD CONSTRAINT `OrdersCart` FOREIGN KEY (`UserID`) REFERENCES `cart` (`UserID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
