@@ -124,7 +124,7 @@
                         mysqli_query($db, $sql5);
 
 
-                        echo '<script>window.location.href = "../Products/Products.php";</script>';
+                        echo '<script>window.location.href = "../AllProducts/Products.php";</script>';
                     }
                 } else {
 

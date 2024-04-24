@@ -17,7 +17,7 @@
     <div class="container">
 
         <div class="formContainer">
-            <form action="Register.php" method="post">
+            <form action="../Register/Register.php" method="post">
                 
                 <h2>Sign Up</h2>
                 <p>Don't Miss Out! Sign Up Now</p>
@@ -61,7 +61,7 @@
                 </div>
         
                 <input type="submit" value="Submit" name="RegBtn" id="submit">
-                <p>Already have an account? <a href="../Login/Login.php">Sign In</a></p>
+                <p>Already have an account? <a href="../Register/Register.php">Sign In</a></p>
             </form>
         </div>
             

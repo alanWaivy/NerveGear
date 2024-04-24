@@ -54,11 +54,14 @@
             <h1>Apple MacBook <br>Air</h1>
             <p class="secondPslide">ordinateur portable ultra portable, l'original revient pour un rappel.</p>
             
-            <a class="buttonA" href="#">
+            
+            <form id="form1" method="GET" action="../Product/Product.php">
+            <input type="hidden" name="productID" value="7">
+              <button type="submit" class="ShopBtn">
               <div class="button">
               <p>SHOP NOW</p>
               <img src="../pics/greaterThanSign.png" alt=">">
-            </div></a>
+            </div></button></form>
           </div>
           <div class="part2">
             <img src="../pics/img slide 1 homepage.png">
@@ -75,11 +78,14 @@
             <h1>Acer - Predator <br>Helios Neo 16</h1>
             <p class="secondPslide">Plongez dans un monde éclairé au néon avec des spécifications de pointe</p>
             
-            <a class="buttonA" href="#">
+            
+            <form id="form1" method="GET" action="../Product/Product.php">
+            <input type="hidden" name="productID" value="9">
+              <button type="submit" class="ShopBtn">
               <div class="button">
               <p>SHOP NOW</p>
               <img src="../pics/greaterThanSign.png" alt=">">
-            </div></a>
+            </div></button></form>
           </div>
           <div class="part2">
             <img src="../pics/laptop image for second slide in homepage.png">
@@ -95,11 +101,14 @@
               <h1>Razer Blade 18</h1>
               <p class="secondPslide">ordinateur portable ultra portable, l'original revient pour un rappel.</p>
               
-              <a class="buttonA" href="#">
-                <div class="button">
-                <p>SHOP NOW</p>
-                <img src="../pics/greaterThanSign.png" id="gr1" alt=">">
-              </div></a>
+              
+            <form id="form1" method="GET" action="../Product/Product.php">
+            <input type="hidden" name="productID" value="9">
+              <button type="submit" class="ShopBtn">
+              <div class="button">
+              <p>SHOP NOW</p>
+              <img src="../pics/greaterThanSign.png" alt=">">
+            </div></button></form>
             </div>
             <div class="part2">
               <img src="../pics/third laptop in homepage slides.png">
@@ -180,10 +189,15 @@
                               
                           </div>
 
+                          <form method="post" action="Home.php" >
                           <div class="bsButtons">
-                              <button type="button" id="btn01">Add To Cart</button>
-                              <button type="button" id="btn02">Shop Now</button>
-                          </div>
+                              <input type="hidden" name="ProductID" value="' . $row['ProductID'] . '">
+                              <input type="hidden" name="Available" value="' . $row['Available'] . '">
+                              <input type="hidden" name="ProductN" value="' . $row['Name'] . '">
+                              <button type="submit" id="btn01" name="CartBtn">Add To Cart</button>
+                              <button type="submit" id="btn02" name="ShopBtn">Shop Now</button>
+                          </div> 
+                      </form>
                       </div>
                       </div>
                   ';
@@ -234,10 +248,103 @@
    
 <?php include("../CommenParts/QA/QA.php") ?>
     
-
+<div class="alertDiv <?php echo $alertLogout; ?>">
+        <h1>Login First!!</h1>
+    </div>
+    <div class="alertDiv <?php echo $alertLogin; ?>">
+        <h1>Complete!!</h1>
+    </div>
 </body>
 
 
 <?php include("../CommenParts/Footer/Footer.php") ?>
 
+
+
 </html>
+
+
+<?php 
+
+
+    if (isset($_POST['CartBtn'])) {
+      if (isset($_SESSION['username'])) {
+
+          $alertLogin = 'alertOn';
+          $alertLogout = 'alertOff';
+
+
+          $ProductID = (int) $_POST['ProductID'];
+          $ProductName = $_POST['ProductN'];
+          $Available1 = $_POST['Available'];
+
+          $sql = "SELECT UserID FROM users WHERE Email = '" . $_SESSION['email'] . "'";
+          $Result = mysqli_query($db, $sql);
+
+          $row = mysqli_fetch_assoc($Result);
+
+          $UserID = (int) $row['UserID'];
+          $Result = mysqli_query($db, "SELECT Amount FROM cart WHERE UserID = '" . $UserID . "' AND ProductID = '" . $ProductID . "' ");
+
+          if ($Result && mysqli_num_rows($Result) > 0) {
+              $row = mysqli_fetch_assoc($Result);
+              $Amount = $row['Amount'] + 1;
+              $sql4 = "UPDATE cart SET Amount = $Amount WHERE UserID = $UserID";
+              mysqli_query($db, $sql4);
+          } else {
+              $Amount = 1;
+              $sql5 = "INSERT INTO cart (ProductName, ProductID, UserID, Available, Amount) 
+              VALUES ('$ProductName', $ProductID, $UserID, $Available1, $Amount)";
+              mysqli_query($db, $sql5);
+
+
+              echo '<script>window.location.href = "../Home/Home.php";</script>';
+          }
+      } else {
+
+          $alertLogin = 'alertOff';
+          $alertLogout = 'alertOn';
+      }
+    }
+
+    if (isset($_POST['ShopBtn'])) {
+      if (isset($_SESSION['username'])) {
+
+          $alertLogin = 'alertOn';
+          $alertLogout = 'alertOff';
+
+
+          $ProductID = (int) $_POST['ProductID'];
+          $ProductName = $_POST['ProductN'];
+          $Available1 = $_POST['Available'];
+
+          $sql = "SELECT UserID FROM users WHERE Email = '" . $_SESSION['email'] . "'";
+          $Result = mysqli_query($db, $sql);
+
+          $row = mysqli_fetch_assoc($Result);
+
+          $UserID = (int) $row['UserID'];
+          $Result = mysqli_query($db, "SELECT Amount FROM cart WHERE UserID = '" . $UserID . "' AND ProductID = '" . $ProductID . "' ");
+
+          if ($Result && mysqli_num_rows($Result) > 0) {
+              $row = mysqli_fetch_assoc($Result);
+              $Amount = $row['Amount'] + 1;
+              $sql4 = "UPDATE cart SET Amount = $Amount WHERE UserID = $UserID";
+              mysqli_query($db, $sql4);
+          } else {
+              $Amount = 1;
+              $sql5 = "INSERT INTO cart (ProductName, ProductID, UserID, Available, Amount) 
+              VALUES ('$ProductName', $ProductID, $UserID, $Available1, $Amount)";
+              mysqli_query($db, $sql5);
+          }
+
+          echo '<script>window.location.href = "../Checkout/Checkout.php";</script>';
+      } else {
+
+          $alertLogin = 'alertOff';
+          $alertLogout = 'alertOn';
+      }
+    }
+
+
+?>

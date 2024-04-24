@@ -31,6 +31,13 @@ text-decoration: none;
 }
 
 
+.ShopBtn {
+
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
 /*NAV STYLE START */
 
 /* Navigation styles */
@@ -290,11 +297,11 @@ background: linear-gradient(27deg, rgba(255,255,255,1) 0%, rgba(120,76,178,1) 10
  
   
 }
-.buttonA img {
+.button img {
   transition: margin-left 300ms;
 }
 
-.buttonA:hover img {
+.button:hover img {
  margin-left:5px
 }
 
@@ -1138,3 +1145,68 @@ div#glowEf05 {
     background: none;
     cursor: pointer;
 }
+
+
+
+/**/
+
+
+.alertOn {
+  animation: alert 2000ms 10ms ease-in-out;
+  z-index: 99!important;
+  opacity: 1;
+}
+
+.alertOff {
+  display: none !important;
+
+}
+
+.alertDiv {
+  width: 153px;
+  height: 46px;
+  background-color: blueviolet;
+  color: white;
+  left: 43%;
+  top: 17%;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  border-radius: 24px;
+  transition: opacity 300ms ease-in-out;
+  box-shadow: 6px 8px 9px 10px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  z-index: 1;
+
+}
+
+.alertDiv h1 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+@keyframes alert {
+  0% {
+      opacity: 0;
+      display: flex;
+      z-index: -1;
+  }
+
+  50% {
+      opacity: 1;
+      display: flex;
+      z-index: 999;
+      position: fixed;
+
+  }
+
+  100% {
+      opacity: 0;
+      display: none;
+      z-index: -1;
+      ;
+      transform: translateY(-28px);
+      ;
+  }
+}
+

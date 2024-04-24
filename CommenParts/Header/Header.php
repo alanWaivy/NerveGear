@@ -40,17 +40,17 @@ if (isset($_GET['logout'])) {
 <div class="responsiveBtns" id="mainListDiv">
   
 	<ul class="menu">
-    <li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'home.php') ? 'mainPage' : ''; ?>"><a href="../../Home/Home.php">Home</a></li>
-    <li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'products.php') ? 'mainPage' : ''; ?>"><a href="../../AllProducts/Products.php">All Products</a></li>
-		<li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'about.php') ? 'mainPage' : ''; ?>"><a href="../../AboutUs/AboutUs.php">About Us</a></li>
-		<li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'creators.php') ? 'mainPage' : ''; ?>"><a href="../../Creators/Creators.php">Creators</a></li>
+    <li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'home.php') ? 'mainPage' : ''; ?>"><a href="../Home/Home.php">Home</a></li>
+    <li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'products.php') ? 'mainPage' : ''; ?>"><a href="../AllProducts/Products.php">All Products</a></li>
+		<li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'about.php') ? 'mainPage' : ''; ?>"><a href="../AboutUs/AboutUs.php">About Us</a></li>
+		<li id="<?php echo (basename($_SERVER['REQUEST_URI']) == 'creators.php') ? 'mainPage' : ''; ?>"><a href="../Creators/Creators.php">Creators</a></li>
 	</ul>
 
   
  
 	<div class="login" style="<?php echo $loginStyle ?>">
-		<a href="../../LoginRegister/Login/Login.php" id="login">Login</a>
-		<a href="../../LoginRegister/Register/Register.php" id="signup">Register</a>
+		<a href="../LoginRegister/Login/Login.php" id="login">Login</a>
+		<a href="../LoginRegister/Register/Register.php" id="signup">Register</a>
 	</div>
   
   <div class="user" style="<?php echo $userStyle ?>">
@@ -131,7 +131,7 @@ if (isset($_GET['logout'])) {
       echo '
       
           <!---------------->
-          <form action="../homePage/home.php" method="POST" >
+          <form action="../Home/Home.php" method="POST" >
               <div class="order">
               <div class="img-prop">
               
@@ -185,7 +185,7 @@ if (isset($_GET['logout'])) {
 ?>
 
 
-  </div> <a href="../../Checkout/Checkout.php">
+  </div> <a href="../Checkout/Checkout.php">
      <div class="checkBtn">
       <input type="button" 
              value="checkout">
@@ -198,8 +198,8 @@ if (isset($_GET['logout'])) {
     
 <div id="profileContainer"  >
     <div class="subContainer">
-      <a href="../../Orders/Orders.php">Orders</a>
-      <a href="../../Home/Home.php?logout='1'" >Log out</a>
+      <a href="../Orders/Orders.php">Orders</a>
+      <a href="../Home/Home.php?logout='1'" >Log out</a>
 
 
     </div></div>

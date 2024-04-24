@@ -130,7 +130,7 @@
                       <div class="slide2">
                       <div class="cart ">
                           <div class="bsDot" style="background-color: ' . $backgroundColor . ';"></div>
-                          <form id="form1" method="GET" action="../product/index.php">
+                          <form id="form1" method="GET" action="../Product/Product.php">
                                 <input type="hidden" name="productID" value="' . $row['ProductID'] . '">
                                 <button type="submit" name="ImgBtn" id="ImgBtn"> 
                                     <div class="bsImg">

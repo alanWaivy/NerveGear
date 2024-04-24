@@ -59,7 +59,7 @@
       
       
     
-      header("Location: ../../Home/Home.png");
+      header("Location: ../../Home/Home.php");
       
       
      

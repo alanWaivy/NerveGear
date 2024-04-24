@@ -30,7 +30,7 @@
         </div>
 
         <div class="formContainer">
-            <form action="Login.php" method="post">
+            <form action="../Login/Login.php" method="post">
                
 
                 <h2>Login</h2>
@@ -75,7 +75,7 @@
                 </div>
         
                 <input type="submit" value="Submit" name="loginBtn" id="submit">
-                <p>You don't have an account? <a href="../loginRegPage/register.php">Sign up</a></p>
+                <p>You don't have an account? <a href="../Register/Register.php">Sign up</a></p>
             </form>
         </div>
     </div>
