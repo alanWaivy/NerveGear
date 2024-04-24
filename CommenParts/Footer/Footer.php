@@ -9,7 +9,7 @@
 
 		<img src="../pics/Payment icons.png" alt="">
 		<p>Copyright 2024 © Lapshop</p>
-		<p>Site Built By <a href="../../Creators/Creators.php">Us</a></p>
+		<p>Site Built By <a href="../Creators/Creators.php">Us</a></p>
 
 	</div>
 
