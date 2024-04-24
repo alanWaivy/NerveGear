@@ -27,7 +27,7 @@ div#sb {
 .filtering {
   display: flex;
   width: 100%;
-  margin-bottom: 0px!important;
+  margin-bottom: -26px!important;
   align-items: flex-start;
   gap: 0px !important;
   transform: scale(0.8);

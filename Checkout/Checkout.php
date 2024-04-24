@@ -35,7 +35,7 @@
          <h2>Shopping cart <span></span></h2>
          <div class="range">
            <div class="scDelete">
-             <form action="" method="post">
+             <form action="../Checkout/Checkout.php" method="post">
                <input value="Delete select items" type="submit" name="deleteBtn">
              </form>
            </div>
@@ -54,7 +54,7 @@
           $AV = $ProductsAV[$i] ? "" : "NAvailable";
 
           echo '
-  <form action="checkoutPage.php" method="post">
+  <form action="../Checkout/Checkout.php" method="post">
   <div class="scProduct ' . $AV . '">
   <div class="img1">
     <img src="data:image;base64,' . base64_encode($ProductsImg[$i]) . '" width="90px" height="70px">
@@ -161,7 +161,7 @@
            <p class="secondSub TotalP"> <?php echo array_sum($ProductsPrices) + 100; ?> DH</p>
          </div>
        </div>
-       <form action="../Checkout/Checkout.php" method="GET">
+       <form action="../Checkout/Checkout.php" method="POST">
          <button class="CheckBtn" name="CheckBtn">Checkout</button>
        </form>
        <div class="ContainerF">
