@@ -16,8 +16,7 @@
 
    <link rel="stylesheet" href="../CommenParts/Footer/FooterStyle.css">
 
-   <script src="../CommenParts/QA/QaScript.js" defer></script>
-   <link rel="stylesheet" href="../CommenParts/QA/QaStyle.css">
+ 
 
 
 
@@ -214,7 +213,7 @@
             $j++;
           }
           mysqli_query($db, "DELETE FROM cart WHERE UserID = '" . $UserID . "' ");
-          echo '<script>window.location.href = "../Home/Home.png";</script>';
+          echo '<script>window.location.href = "../Home/Home.php";</script>';
         }
       }
     }
@@ -238,7 +237,6 @@
 
    <!-- shopping cart end -->
 
-   <?php include("../CommenParts/QA/QA.php"); ?>
    <?php include("../CommenParts/Footer/Footer.php"); ?>
 
  </body>
