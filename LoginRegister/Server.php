@@ -95,9 +95,11 @@
               $row = mysqli_fetch_assoc($results1);
               $lastName = $row['lastName'];
               $firstName = $row['firstName'];
+              $userID = $row['UserID'];
               $_SESSION['success'] = "You are now logged in";
               $_SESSION['username'] = $firstName . " " . $lastName;
               $_SESSION['email'] = $email;
+              $_SESSION['userID'] = $userID;
               header("Location: ../../Home/Home.php");
 
               
