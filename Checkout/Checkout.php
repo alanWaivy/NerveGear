@@ -36,7 +36,7 @@
          <h2>Shopping cart <span></span></h2>
          <div class="range">
            <div class="scDelete">
-             <form action="checkoutPage.php" method="post">
+             <form action="../Checkout/Checkout.php" method="post">
                <input value="Delete select items" type="submit" name="deleteBtn">
              </form>
            </div>
@@ -165,7 +165,7 @@
            <p class="secondSub TotalP"> <?php echo array_sum($ProductsPrices) + 100; ?> DH</p>
          </div>
        </div>
-       <form action="../Checkout/Checkout.php" method="post">
+       <form action="../Checkout/Checkout.php" method="GET">
          <button class="CheckBtn" name="CheckBtn">Checkout</button>
        </form>
        <div class="ContainerF">
@@ -227,10 +227,9 @@
    <?php
     if (isset($_POST['deleteBtn'])) {
       if (isset($_SESSION['username'])) {
-        // Perform deletion in the database
         mysqli_query($db, "DELETE FROM cart WHERE UserID = '" . $UserID . "' ");
 
-        // Redirect using JavaScript
+        
         echo '<script>window.location.href = "../Home/Home.php";</script>';
         exit();
       }

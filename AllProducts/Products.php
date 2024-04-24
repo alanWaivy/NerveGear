@@ -79,7 +79,7 @@
                                 <div class="prop"><p>' . $row['Specification'] . '</p></div>
                             
                             </div> 
-                            <form method="post" action="products.php" >
+                            <form method="post" action="../AllProducts/Products.php" >
                                 <div class="bsButtons">
                                     <input type="hidden" name="ProductID" value="' . $row['ProductID'] . '">
                                     <input type="hidden" name="Available" value="' . $row['Available'] . '">
@@ -164,7 +164,7 @@
                         mysqli_query($db, $sql5);
                     }
 
-                    echo '<script>window.location.href = "../Checkout/Checkout.php";</script>';
+                    echo "<script>window.location.href = '../Checkout/Checkout.php';</script>";
                 } else {
 
                     $alertLogin = 'alertOff';

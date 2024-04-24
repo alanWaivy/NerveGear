@@ -189,7 +189,7 @@
                               
                           </div>
 
-                          <form method="post" action="Home.php" >
+                          <form action="../Checkout/Checkout.php" method="GET">
                           <div class="bsButtons">
                               <input type="hidden" name="ProductID" value="' . $row['ProductID'] . '">
                               <input type="hidden" name="Available" value="' . $row['Available'] . '">
