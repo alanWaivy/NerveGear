@@ -112,7 +112,7 @@
             }
             $sql = "UPDATE cart SET Amount = $ProductsAmount[$i1] WHERE userID = $UserID AND productID =  $ProductsID[$i1] ";
             mysqli_query($db, $sql);
-            echo "<script> window.location.href = 'checkoutPage.php' </script>";
+            echo "<script> window.location.href = '../Checkout/Checkout.php' </script>";
           }
         }
 
@@ -122,7 +122,7 @@
             $ProductsAmount[$i2]++;
             $sql = "UPDATE cart SET Amount = $ProductsAmount[$i2] WHERE userID = $UserID AND productID = $ProductsID[$i2] ";
             mysqli_query($db, $sql);
-            echo "<script> window.location.href = 'checkoutPage.php' </script>";
+            echo "<script> window.location.href = '../Checkout/Checkout.php' </script>";
           }
         }
 
@@ -137,7 +137,7 @@
             if (mysqli_num_rows($result) > 0) {
               $sql = "DELETE FROM cart WHERE userID = $UserID AND productID = $ProductsID[$i3]";
               mysqli_query($db, $sql);
-              echo "<script> window.location.href = 'checkoutPage.php' </script>";
+              echo "<script> window.location.href = '../Checkout/Checkout.php' </script>";
             }
           }
         }
