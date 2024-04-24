@@ -32,15 +32,15 @@
 <?php include("../CommenParts/Header/Header.php");?>
 
 <section class="hero">
-    <div>
-        <span>Bienvenue chez LapShop</span>
-        <p>Faites-nous confiance pour vous offrir l'excellence technologique à chaque achat.  </p>
         <div>
+            <span>Bienvenue chez LapShop</span>
+            <p>Faites-nous confiance pour vous offrir l'excellence technologique à chaque achat. </p>
+            <div id="heroBtn">
             <button id="Hbtn01" ><a href="../AllProducts/Products.php">All Products</a></button>
-			<button id="Hbtn02" ><a href="../Home/Home.php#bsHeader">Best Sales</a></button>
+		      	<button id="Hbtn02" ><a href="../Home/Home.php#bsHeader">Best Sales</a></button>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!--brands part start-->
 <div class="brandsSec">

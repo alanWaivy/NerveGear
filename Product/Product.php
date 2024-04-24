@@ -30,12 +30,10 @@
 <body>
 	<?php
 	include("../CommenParts/Header/Header.php");
-
 	$db = mysqli_connect('localhost', 'root', '', 'lapshop');
 	if (!$db) {
 		die("Connection failed: " . mysqli_connect_error());
 	}
-
 	$_SESSION['productID'] = !empty($_GET["productID"])?$_GET["productID"]:$_SESSION['productID'] ;
 	$ID = $_SESSION['productID'];
 	$sql = "SELECT * FROM products WHERE ProductID = $ID LIMIT 1";
@@ -44,7 +42,6 @@
 	$Name = $product['Name'];
 	$Av = $product['Available'];
 	?>
-
 	<section class="hero">
 
 		<div class="part01">
@@ -148,10 +145,15 @@
                               
                           </div>
 
+						  <form action="../Checkout/Checkout.php" method="GET">
                           <div class="bsButtons">
-                              <button type="button" id="btn01">Add To Cart</button>
-                              <button type="button" id="btn02">Shop Now</button>
-                          </div>
+                              <input type="hidden" name="ProductID" value="' . $row['ProductID'] . '">
+                              <input type="hidden" name="Available" value="' . $row['Available'] . '">
+                              <input type="hidden" name="ProductN" value="' . $row['Name'] . '">
+                              <button type="submit" id="btn01" name="CartBtn">Add To Cart</button>
+                              <button type="submit" id="btn02" name="ShopBtn">Shop Now</button>
+                          </div> 
+                      </form>
                       </div>
                       </div>
 
