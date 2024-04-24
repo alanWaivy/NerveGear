@@ -509,3 +509,10 @@ footer {
     }
     
 
+
+    div#WeContainer {
+        display: flex;
+        width: 100%;
+        justify-content: center;    
+        gap: 20px;
+    }

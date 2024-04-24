@@ -49,7 +49,7 @@
 <section class="we">
 
 
-
+<div id="WeContainer">
     <div class="y">
         <div class="f">
             <img src="../pics/happyFace.png" class="pic">
@@ -100,6 +100,7 @@
             <div class="pill">JAVASCRIPT</div>
         </div>
     </div>
+</div>
 
     <div class="b">
         <div class="f">

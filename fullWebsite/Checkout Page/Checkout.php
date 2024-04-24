@@ -8,12 +8,13 @@
    <script src="https://kit.fontawesome.com/abfa77da96.js" crossorigin="anonymous"></script>
    <link rel="icon" type="image/x-icon" href="../pics/logo.ico">
 
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="CheckoutStyle.css">
+
  </head>
 
  <body>
-   <?php include("../commenParts/header.php");
-    ?>
+
+   <?php include("../commenParts/header.php");?>
 
 
    <!---shopping cart start -->
@@ -23,10 +24,6 @@
        <div class="scCheckboxs">
          <h2>Shopping cart <span></span></h2>
          <div class="range">
-           <!-- <div class="scCheckbox" >
-        <input  type="checkbox">Select of items
-      </div> -->
-
            <div class="scDelete">
              <form action="checkoutPage.php" method="post">
                <input value="Delete select items" type="submit" name="deleteBtn">
@@ -138,12 +135,6 @@
           }
         }
         ?>
-
-
-
-
-
-
 
 
      </div>
