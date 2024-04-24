@@ -14,11 +14,20 @@
     <script src="https://kit.fontawesome.com/70ff3266e1.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="../pics/logo.ico">
 
+    
+    <link rel="stylesheet" href="../CommenParts/Header/HeaderStyle.css">
+    <script src="../CommenParts/Header/HeaderScript.js" defer></script>
+    
+    <link rel="stylesheet" href="../CommenParts/Footer/FooterStyle.css">
+
+    <script src="../CommenParts/QA/QaScript.js" defer></script>
+    <link rel="stylesheet" href="../CommenParts/QA/QaStyle.css">
+
 </head>
 
 <body>
 
-<?php include('../commenParts/header.php'); ?>
+<?php include('../CommenParts/Header/Header.php'); ?>
 
 <div class="Container">
     <div class="OrHeader"> <h1>Orders</h1> </div>
@@ -71,4 +80,8 @@
 
 
 </body>
+
+<?php   include("../CommenParts/QA/QA.php");
+include("../CommenParts/Footer/Footer.php");
+?>
 </html>

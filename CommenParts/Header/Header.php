@@ -32,7 +32,7 @@ if (isset($_GET['logout'])) {
 <body>
 
 <nav>
-	<a href="../../Home/Home.php" class="logo">
+	<a href="../Home/Home.php" class="logo">
 		<img src="../Pics/logo.png" alt="">
 		<b>LapShop</b>
 	</a>

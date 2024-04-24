@@ -59,7 +59,7 @@
       
       
     
-      header("Location: ../homePage/home.php");
+      header("Location: ../../Home/Home.png");
       
       
      
@@ -98,7 +98,7 @@
               $_SESSION['success'] = "You are now logged in";
               $_SESSION['username'] = $firstName . " " . $lastName;
               $_SESSION['email'] = $email;
-              header("Location: ../homePage/home.php");
+              header("Location: ../../Home/Home.php");
 
               
               

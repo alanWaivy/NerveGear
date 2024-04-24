@@ -1,4 +1,4 @@
-<?php include('server.php') ?>
+<?php include('../Server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +17,7 @@
     <div class="container">
 
         <div class="formContainer">
-            <form action="register.php" method="post">
+            <form action="Register.php" method="post">
                 
                 <h2>Sign Up</h2>
                 <p>Don't Miss Out! Sign Up Now</p>
@@ -29,7 +29,7 @@
                 <input type="password"  name="password_1" placeholder="Password"          required>
                 <input type="password"  name="password_2"    placeholder="Confirm Password"  required>
 
-                <?php include('errors.php');?>
+                <?php include('../Errors.php');?>
 
                 <style>
                         /*error style start*/
@@ -61,7 +61,7 @@
                 </div>
         
                 <input type="submit" value="Submit" name="RegBtn" id="submit">
-                <p>Already have an account? <a href="../loginRegPage/login.php">Sign In</a></p>
+                <p>Already have an account? <a href="../Login/Login.php">Sign In</a></p>
             </form>
         </div>
             

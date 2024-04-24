@@ -1,4 +1,4 @@
-<?php include('server.php') ?>
+<?php include('../Server.php') ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,8 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="../pics/logo.ico">
+    <link rel="stylesheet" href="../Login/LoginStyle.css">
 
-    <link rel="stylesheet" href="LoginStyle.css">
+
+
+
+
 </head>
 <body id="loginPage">
     <div class="container">
@@ -26,14 +30,14 @@
         </div>
 
         <div class="formContainer">
-            <form action="login.php" method="post">
+            <form action="Login.php" method="post">
                
 
                 <h2>Login</h2>
                 <p>login to your account</p>
                 <input type="email"     name="email"    placeholder="Email Address"     required>
                 <input type="password"  name="password" placeholder="Password"          required>
-                <?php include('errors.php');?>
+                <?php include('../Errors.php');?>
 
                 <style>
                         /*error style start*/

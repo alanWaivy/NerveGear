@@ -13,11 +13,23 @@
 	<script src="ProductScript.js" defer></script>
 	<link rel="icon" type="image/x-icon" href="../pics/logo.ico">
 
+
+	
+    <link rel="stylesheet" href="../CommenParts/Header/HeaderStyle.css">
+    <script src="../CommenParts/Header/HeaderScript.js" defer></script>
+    
+    <link rel="stylesheet" href="../CommenParts/Footer/FooterStyle.css">
+
+    <script src="../CommenParts/QA/QaScript.js" defer></script>
+    <link rel="stylesheet" href="../CommenParts/QA/QaStyle.css">
+
+    
+
 </head>
 
 <body>
 	<?php
-	include("../commenParts/header.php");
+	include("../CommenParts/Header/Header.php");
 
 	$db = mysqli_connect('localhost', 'root', '', 'lapshop');
 	if (!$db) {
@@ -64,7 +76,7 @@
 
 		</div>
 
-		<form method="POST" action="index.php">
+		<form method="POST" action="Product.php">
 			<div class="part02">
 				<h1><?php echo $product['Name'] ?></h1>
 				<p><?php echo $product['Description'] ?></p>
@@ -99,7 +111,7 @@
 			<p>Produits connexes</p>
 
 
-			<a href="../productsPage/products.php">
+			<a href="../AllProducts/Products.php">
 				<p>plus</p>
 			</a>
 
@@ -159,10 +171,10 @@
 	</section>
 
 
-	<?php include("../commenParts/QA-Part.php") ?>
+	<?php include("../CommenParts/QA/QA.php") ?>
 
 
-	<?php include("../commenParts/footer.php") ?>
+	<?php include("../CommenParts/Footer/Footer.php") ?>
 
 
 </body>
@@ -206,7 +218,7 @@ if (isset($_POST['CartBtn'])) {
 			mysqli_query($db, $sql5);
 
 
-			echo '<script>window.location.href = "../productsPage/products.php";</script>';
+			echo '<script>window.location.href = "../AllProducts/Products.php";</script>';
 		}
 	} else {
 
@@ -246,7 +258,7 @@ if (isset($_POST['ShopBtn'])) {
 			mysqli_query($db, $sql5);
 		}
 
-		echo '<script>window.location.href = "../checkoutPage/checkoutPage.php";</script>';
+		echo '<script>window.location.href = "../Checkout/Checkout.php";</script>';
 	} else {
 
 		$alertLogin = 'alertOff';
