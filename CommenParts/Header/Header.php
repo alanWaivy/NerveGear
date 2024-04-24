@@ -1,4 +1,5 @@
 <?php
+$db = mysqli_connect('localhost', 'root', '', 'lapshop');
 session_start();
 if (isset($_SESSION['username'])) {
   $userStyle = 'display:flex!important;';
