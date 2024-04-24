@@ -10,22 +10,22 @@
 
    <link rel="stylesheet" href="CheckoutStyle.css">
 
-   
+
    <link rel="stylesheet" href="../CommenParts/Header/HeaderStyle.css">
-    <script src="../CommenParts/Header/HeaderScript.js" defer></script>
-    
-    <link rel="stylesheet" href="../CommenParts/Footer/FooterStyle.css">
+   <script src="../CommenParts/Header/HeaderScript.js" defer></script>
 
-    <script src="../CommenParts/QA/QaScript.js" defer></script>
-    <link rel="stylesheet" href="../CommenParts/QA/QaStyle.css">
+   <link rel="stylesheet" href="../CommenParts/Footer/FooterStyle.css">
 
-    
+   <script src="../CommenParts/QA/QaScript.js" defer></script>
+   <link rel="stylesheet" href="../CommenParts/QA/QaStyle.css">
+
+
 
  </head>
 
  <body>
 
-   <?php include("../CommenParts/Header/Header.php");?>
+   <?php include("../CommenParts/Header/Header.php"); ?>
 
 
    <!---shopping cart start -->
@@ -36,7 +36,7 @@
          <h2>Shopping cart <span></span></h2>
          <div class="range">
            <div class="scDelete">
-             <form action="../Checkout/Checkout.php" method="post">
+             <form action="" method="post">
                <input value="Delete select items" type="submit" name="deleteBtn">
              </form>
            </div>
@@ -93,12 +93,9 @@
             $ProductsID[$i] = "x";
           }
 
-          
+
 
           $i++;
-
-          
-
         }
 
 
@@ -111,8 +108,8 @@
 
             $i1 = $_POST['i'];
             $ProductsAmount[$i1]--;
-            if($ProductsAmount[$i1]<1){
-              $ProductsAmount[$i1]=1;
+            if ($ProductsAmount[$i1] < 1) {
+              $ProductsAmount[$i1] = 1;
             }
             $sql = "UPDATE cart SET Amount = $ProductsAmount[$i1] WHERE userID = $UserID AND productID =  $ProductsID[$i1] ";
             mysqli_query($db, $sql);
@@ -136,7 +133,7 @@
             $i3 = $_POST['i'];
             # error_reporting(0);
 
-            $result =mysqli_query($db,"SELECT * FROM cart WHERE userID = $UserID AND productID = $ProductsID[$i3] LIMIT 1") ;
+            $result = mysqli_query($db, "SELECT * FROM cart WHERE userID = $UserID AND productID = $ProductsID[$i3] LIMIT 1");
 
             if (mysqli_num_rows($result) > 0) {
               $sql = "DELETE FROM cart WHERE userID = $UserID AND productID = $ProductsID[$i3]";
@@ -227,9 +224,9 @@
    <?php
     if (isset($_POST['deleteBtn'])) {
       if (isset($_SESSION['username'])) {
-        mysqli_query($db, "DELETE FROM cart WHERE UserID = '" . $UserID . "' ");
+        mysqli_query($db, "DELETE FROM cart WHERE UserID = $UserID ");
 
-        
+
         echo '<script>window.location.href = "../Home/Home.php";</script>';
         exit();
       }
