@@ -61,11 +61,13 @@
       <button><a href="../AllProducts/Products.php">All Products</a></button>
       </div> 
     </div>
+    
     <div class="parag">
     <h1>Notre Engagement : Votre Partenaire de Confiance dans la Technologie</h1>
     <p>Chez Lapshop, nous privilégions la transparence et l'intégrité, garantissant des informations précises sur nos produits et pratiques. Nous nous engageons également envers la responsabilité sociale et environnementale, tout en cultivant des relations durables fondées sur la confiance et le respect mutuel.
     </p>
     </div>
+
     <div class="img02">
       <div class="part02">
         <h1>Exploration et Collaboration : Joignez-vous à notre Communauté Créative</h1>

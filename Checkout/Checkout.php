@@ -36,7 +36,7 @@
          <div class="range">
            <div class="scDelete">
              <form action="../Checkout/Checkout.php" method="post">
-               <input value="Delete select items" type="submit" name="deleteBtn">
+               <input value="Delete items" type="submit" name="deleteBtn">
              </form>
            </div>
 
@@ -213,7 +213,7 @@
             $j++;
           }
           mysqli_query($db, "DELETE FROM cart WHERE UserID = '" . $UserID . "' ");
-          echo '<script>window.location.href = "../Home/Home.php";</script>';
+          echo '<script>window.location.href = "../Orders/Orders.php";</script>';
         }
       }
     }
