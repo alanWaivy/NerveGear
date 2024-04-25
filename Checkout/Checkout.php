@@ -25,7 +25,7 @@
  <body>
 
    <?php include("../CommenParts/Header/Header.php"); ?>
-
+   <?php  error_reporting(0);?>
 
    <!---shopping cart start -->
    <div id="scContainer">
